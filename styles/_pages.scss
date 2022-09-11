@@ -201,11 +201,12 @@ footer {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
  
   .content-container {
     padding: 1.5em;
     height: auto;
+    width: 100vmin;
   }
   .home-hero {
     justify-content: flex-start;
@@ -237,9 +238,6 @@ footer {
     }
     
   }
-   
-  }
-
   .contact-hero {
     .content-container {
       .email {
@@ -256,3 +254,7 @@ footer {
     }
 
   
+   
+  }
+
+ 
