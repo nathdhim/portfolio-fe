@@ -9,7 +9,7 @@ export default function Home() {
         <div className="content-container">
         <div className="hero-video"></div>
           <div className="hero-text">
-            <h1>A crazy designer who’s designing crazy products.</h1>
+            <h1>Haha</h1>
            <div className="hero-contact">
            <div className="contact-container">
             <p>Get in touch</p>
