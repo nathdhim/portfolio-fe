@@ -205,8 +205,10 @@ footer {
  
   .content-container {
     padding: 1.5em;
+    height: auto;
   }
   .home-hero {
+    justify-content: flex-start;
     .content-container {
       flex-direction: column-reverse;
       justify-content: end;
