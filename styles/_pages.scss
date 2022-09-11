@@ -142,6 +142,7 @@ footer {
     height: 100vh;
 
     h1 {
+      text-align: center;
       margin-bottom: 0.75em;
     }
 
@@ -204,7 +205,6 @@ footer {
  
   .content-container {
     padding: 1.5em;
-    width: 100vh;
   }
   .home-hero {
     .content-container {
@@ -224,12 +224,33 @@ footer {
       .hero-text {
         flex-direction: column;
         gap: 2em;
+        .total {
+          display: none;
+        }
       }
       .work-item-container {
         flex-direction: column;
         align-items: center;
        }
     }
+    
+  }
    
   }
-}
+
+  .contact-hero {
+    .content-container {
+      .email {
+        @include h3();
+      }
+    }
+  }
+
+  footer {
+    .content-container {
+      flex-direction: column-reverse;
+      gap: 2em;
+    }
+    }
+
+  
