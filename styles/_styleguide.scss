@@ -1,0 +1,133 @@
+//////// Typeface ////////@at-root
+
+@font-face {
+  font-family: "uncut";
+  src: url(../assets/font/Uncut-Sans-Medium.otf);
+  font-weight: 500;
+}
+
+
+@font-face {
+  font-family: "uncut";
+  src: url(../assets/font/Uncut-Sans-Regular.otf);
+  font-weight: 400;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+//////// Color Style ////////@at-root
+
+$neutral-08: #07080a;
+$neutral-07: #0F1114;
+$neutral-06: #151A21;
+$neutral-05: #515860;
+$neutral-04: #bdbdbd;
+$neutral-03: #e0e0e0;
+$neutral-02: #f2f2f2;
+$neutral-01: #f8f8f8;
+
+//////// Text Style ////////@at-root
+
+@mixin display {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 4em;
+  font-weight: 400;
+  line-height: 125%;
+  color: $neutral-01;
+}
+
+@mixin h1 {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 125%;
+  color: $neutral-01;
+}
+
+@mixin h2 {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 125%;
+  color: $neutral-01;
+}
+
+@mixin h3 {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 125%;
+  color: $neutral-01;
+}
+
+@mixin paragraph {
+  font-family: "uncut", sans-serif;
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 130%;
+  color: $neutral-01;
+}
+
+
+@mixin caption {
+  font-family: "uncut", sans-serif;
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 130%;
+  color: $neutral-01;
+}
+
+
+
+//////// Container Style ////////@at-root
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: $neutral-08;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: $neutral-08;
+}
+
+.display {
+  @include display();
+}
+
+h1 {
+  @include h1();
+  margin: 0;
+}
+
+h2 {
+  @include h2();
+  margin: 0;
+}
+
+h3 {
+  @include h3();
+  margin: 0;
+}
+
+p {
+  @include paragraph();
+  margin: 0;
+}
+
+.desc {
+  color: $neutral-05;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}

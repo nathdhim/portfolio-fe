@@ -1,0 +1,235 @@
+///////// Home Page ////////@at-root
+.content-container {
+  display: flex;
+  padding: 2em;
+}
+
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100vh;
+
+  .content-container {
+    padding-top: 6em;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2em;
+    height: 100vh;
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 7em;
+
+      .hero-contact {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+
+        .contact-container {
+          p {
+            @include paragraph();
+            color: $neutral-05;
+            margin-bottom: 1em;
+          }
+
+          .contact-btn {
+            display: flex;
+            gap: 1em;
+
+            span {
+              @include paragraph();
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .hero-video {
+      width: 84.5em;
+      height: 100%;
+      border-radius: 0.25em;
+      background-image: url(../assets/img/home-img.webp);
+      background-size: cover;
+    }
+  }
+}
+
+///////// Work Page ////////@at-root
+
+.work-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  .content-container {
+    padding-top: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4em;
+
+    .hero-text {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .total {
+        color: $neutral-05;
+      }
+    }
+
+    .work-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      .work-item-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5em;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  .content-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  p {
+    color: $neutral-05;
+  }
+  .social-link {
+    display: flex;
+    gap: 2em;
+    .nav-item {
+      @include caption();
+      text-decoration: none;
+      color: $neutral-05;
+      transition: color ease 100ms;
+
+      &:hover {
+        color: $neutral-01;
+      }
+    }
+  }
+}
+
+//////// Waiting Page ////////@at-root
+
+.waiting-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100vh;
+  .content-container {
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h1 {
+      margin-bottom: 0.75em;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+//////// Contact Page ////////@at-root
+
+.contact-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100vh;
+  .content-container {
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .email {
+      @include display();
+      color: $neutral-01;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid $neutral-06;
+      transition: all ease 200ms;
+
+      &:hover {
+        border-bottom: 1px solid $neutral-01;
+      }
+    }
+    .contact-container {
+      position: absolute;
+      bottom: 2em;
+      p {
+        @include paragraph();
+        color: $neutral-05;
+        margin-bottom: 1em;
+        text-align: center;
+      }
+
+      .contact-btn {
+        display: flex;
+        gap: 1em;
+
+        span {
+          @include paragraph();
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) {
+ 
+  .content-container {
+    padding: 1.5em;
+    width: 100vh;
+  }
+  .home-hero {
+    .content-container {
+      flex-direction: column-reverse;
+      justify-content: end;
+      .hero-video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/4;
+      }
+    }
+  }
+
+  .work-hero {
+    .content-container {
+      
+      .hero-text {
+        flex-direction: column;
+        gap: 2em;
+      }
+      .work-item-container {
+        flex-direction: column;
+        align-items: center;
+       }
+    }
+   
+  }
+}
