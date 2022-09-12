@@ -56,6 +56,7 @@
       border-radius: 0.25em;
       background-image: url(../assets/img/home-img.webp);
       background-size: cover;
+      background-position: center;
     }
   }
 }
@@ -210,8 +211,9 @@ footer {
   .home-hero {
     justify-content: flex-start;
     .content-container {
+      padding-top:10em;
       flex-direction: column-reverse;
-      justify-content: end;
+      justify-content: start;
       .hero-video {
         width: 100%;
         height: auto;
@@ -222,7 +224,6 @@ footer {
 
   .work-hero {
     .content-container {
-      
       .hero-text {
         flex-direction: column;
         gap: 2em;

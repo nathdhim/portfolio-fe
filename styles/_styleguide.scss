@@ -17,13 +17,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
 //////// Color Style ////////@at-root
 
-$neutral-08: #07080a;
-$neutral-07: #0F1114;
-$neutral-06: #151A21;
-$neutral-05: #515860;
-$neutral-04: #bdbdbd;
-$neutral-03: #e0e0e0;
-$neutral-02: #f2f2f2;
+$neutral-08: #0A0A0A;
+$neutral-07: #0D0F11;
+$neutral-06: #33383F;
+$neutral-05: #5B626A;
+$neutral-04: #9F9F9F;
+$neutral-03: #BDBDBD;
+$neutral-02: #D4D4D4;
 $neutral-01: #f8f8f8;
 
 //////// Text Style ////////@at-root
@@ -62,7 +62,7 @@ $neutral-01: #f8f8f8;
 
 @mixin paragraph {
   font-family: "uncut", sans-serif;
-  font-size: 0.85em;
+  font-size: 0.9em;
   font-weight: 400;
   line-height: 130%;
   color: $neutral-01;
@@ -71,7 +71,7 @@ $neutral-01: #f8f8f8;
 
 @mixin caption {
   font-family: "uncut", sans-serif;
-  font-size: 0.85em;
+  font-size: 0.9em;
   font-weight: 400;
   line-height: 130%;
   color: $neutral-01;
