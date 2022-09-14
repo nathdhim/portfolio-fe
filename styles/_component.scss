@@ -54,7 +54,7 @@ nav {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: $neutral-08 24%;
+  background-color: $neutral-08 16%;
   backdrop-filter: blur(48px);
   z-index: 1;
 
@@ -72,20 +72,32 @@ nav {
       }
       cursor: pointer;
     }
-
+    .logo-container {
+      width: 100%;
+      display: flex;
+      justify-content: left;
+    }
     .nav-item-container {
       display: flex;
+      justify-content: center;
       gap: 2em;
+      width: 100%;
+    }
 
-      .nav-item {
-        @include caption();
-        text-decoration: none;
-        color: $neutral-05;
-        transition: color ease 100ms;
+    .contact-container {
+      width: 100%;
+      display: flex;
+      justify-content: right;
+    }
 
-        &:hover {
-          color: $neutral-01;
-        }
+    .nav-item {
+      @include caption();
+      text-decoration: none;
+      color: $neutral-05;
+      transition: color ease 100ms;
+
+      &:hover {
+        color: $neutral-01;
       }
     }
   }
@@ -95,27 +107,26 @@ nav {
 
 .client-card {
   width: 100%;
-  background-color: $neutral-07;
-  padding: 1em;
-  border-radius: 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1em;
-  transition: all ease 200ms;
-
-  .client-video {
-    width: 100%;
-    padding: 3em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .video {
-      background-color: $neutral-05;
-      width: 70%;
-      aspect-ratio: 1440/900;
+  .video {
+    position: relative;
+    background-color: $neutral-07;
+    aspect-ratio: 1440/900;
+    transition: all ease 200ms;
+    margin-bottom: 1em;
+    .icon-container {
       transition: all ease 200ms;
+      position: absolute;
+      bottom: 0.5em;
+      right: 0.5em;
+      padding: 0.8em;
+      background-color: $neutral-07;
+      border: 1px solid $neutral-06;
+      border-radius: 100em;
+      .icon {
+        width: 0.75em;
+        height: 0.75em;
+        background: url(../assets/icon/arrow-right-up.svg) center;
+      }
     }
   }
   .client-detail {
@@ -130,21 +141,17 @@ nav {
     .info {
       display: flex;
       gap: 1em;
-      
     }
   }
 
   &:hover {
-    background-color: $neutral-06;
-    .client-video {
-      .video {
-        transform: scale(1.075);
-      }
-    }
     .client-detail {
       p {
         color: $neutral-01;
       }
+    }
+    .icon-container {
+      background-color: $neutral-06;
     }
   }
 }

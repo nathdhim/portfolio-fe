@@ -18,27 +18,19 @@
 //////// Color Style ////////@at-root
 
 $neutral-08: #0A0A0A;
-$neutral-07: #0D0F11;
-$neutral-06: #1B2027;
-$neutral-05: #5B626A;
+$neutral-07: #131313;
+$neutral-06: #242424;
+$neutral-05: #707070;
 $neutral-04: #9F9F9F;
 $neutral-03: #BDBDBD;
 $neutral-02: #D4D4D4;
-$neutral-01: #f8f8f8;
+$neutral-01: #FFFFFF;
 
 //////// Text Style ////////@at-root
 
-@mixin display {
-  font-family: 'IBM Plex Serif', serif;
-  font-size: 4em;
-  font-weight: 400;
-  line-height: 125%;
-  color: $neutral-01;
-}
-
 @mixin h1 {
   font-family: 'IBM Plex Serif', serif;
-  font-size: 2.5em;
+  font-size: 4em;
   font-weight: 400;
   line-height: 125%;
   color: $neutral-01;
@@ -62,7 +54,7 @@ $neutral-01: #f8f8f8;
 
 @mixin paragraph {
   font-family: "uncut", sans-serif;
-  font-size: 0.9em;
+  font-size: 0.875em;
   font-weight: 400;
   line-height: 130%;
   color: $neutral-01;
@@ -71,7 +63,7 @@ $neutral-01: #f8f8f8;
 
 @mixin caption {
   font-family: "uncut", sans-serif;
-  font-size: 0.9em;
+  font-size: 0.875em;
   font-weight: 400;
   line-height: 130%;
   color: $neutral-01;
@@ -97,10 +89,9 @@ section {
   margin: 0;
   width: 100%;
   background-color: $neutral-08;
-}
-
-.display {
-  @include display();
+  .content-container {
+    background: url(../assets/img/noise.png)100%;
+  }
 }
 
 h1 {
@@ -130,4 +121,8 @@ p {
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
 }

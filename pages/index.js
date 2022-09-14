@@ -1,34 +1,24 @@
 import Layout from "../component/Layout";
 import plus from "../assets/img/plus.svg";
 import Image from "next/dist/client/image";
+import ClientCard from "../component/ClientCard";
 
 export default function Home() {
   return (
     <Layout>
       <section className="home-hero">
         <div className="content-container">
-        <div className="hero-video"></div>
           <div className="hero-text">
-            <h1>A crazy designer who’s designing crazy products.</h1>
-           <div className="hero-contact">
-           <div className="contact-container">
-            <p>Get in touch</p>
-           <div className="contact-btn">
-              <a className="btn-link">
-                Email
-              </a>
-              <span>/</span>
-              <a className="btn-link">
-                Dribbble
-              </a>
-              <span>/</span>
-              <a className="btn-link">
-                Linkedin
-              </a>
-            </div>
-           </div>
-           <Image src={plus}/>
-           </div>
+            <Image src={plus} alt="" />
+            <h1 className="text-center" >Just Crazy Product Designer</h1>
+            <p className="desc text-center" >Magnam amet iste quidem magnam voluptatibus. Qui veniam debitis minima necessitatibus est minus dolores.</p>
+          </div>
+
+          <div className="hero-showcase">
+            <ClientCard clientname='Client Name' category='Blockchain' year='2022' />
+            <ClientCard clientname='Client Name' category='Blockchain' year='2022' />
+            <ClientCard clientname='Client Name' category='Blockchain' year='2022' />
+            
           </div>
         </div>
       </section>

@@ -8,11 +8,16 @@ export default function contact() {
       <section className="contact-hero">
         <div className="content-container">
         <a className="email" href="#">hello@dhimasputra.com</a>
+        <p className="desc">Let’s connect your brain with me, and build a crazy product.</p>
         <div className="contact-container">
-            <p>Visit my socials</p>
+            <p>Follow my socials</p>
            <div className="contact-btn">
               <a className="btn-link">
                 Upwork
+              </a>
+              <span>/</span>
+              <a className="btn-link">
+                Twitter
               </a>
               <span>/</span>
               <a className="btn-link">

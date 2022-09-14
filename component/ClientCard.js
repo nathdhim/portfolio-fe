@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { dot } from "../assets/icon/dot.svg";
+import { arrow_right_up } from "../assets/icon/arrow-right-up.svg";
 
 const ClientCard = (props) => {
   return (
     <a className="client-card">
-      <div className="client-video">
-        <div className="video"></div>
+      <div className="video">
+        <div className="icon-container"><div className="icon"></div></div>
       </div>
       <div className="client-detail">
         <p className="desc client-name">{props.clientname}</p>
