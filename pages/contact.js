@@ -7,8 +7,8 @@ export default function contact() {
     <Layout>
       <section className="contact-hero">
         <div className="content-container">
-        <a className="email" href="#">hello@dhimasputra.com</a>
-        <p className="desc">Let’s connect your brain with me, and build a crazy product.</p>
+        <a className="email" href="#"><h1>hello@dhimasputra.com</h1></a>
+        <p className="desc text-center">Let’s connect your brain with me, and build a crazy product.</p>
         <div className="contact-container">
             <p>Follow my socials</p>
            <div className="contact-btn">

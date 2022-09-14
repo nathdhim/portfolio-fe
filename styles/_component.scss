@@ -40,7 +40,7 @@
   gap: 0.5em;
   align-items: center;
   border-bottom: 1px solid $neutral-08;
-  transition: all ease 200ms;
+  transition: $transition;
   cursor: pointer;
 
   &:hover {
@@ -94,7 +94,7 @@ nav {
       @include caption();
       text-decoration: none;
       color: $neutral-05;
-      transition: color ease 100ms;
+      transition: $transition;
 
       &:hover {
         color: $neutral-01;
@@ -111,10 +111,10 @@ nav {
     position: relative;
     background-color: $neutral-07;
     aspect-ratio: 1440/900;
-    transition: all ease 200ms;
+    transition: $transition;
     margin-bottom: 1em;
     .icon-container {
-      transition: all ease 200ms;
+      transition: $transition;
       position: absolute;
       bottom: 0.5em;
       right: 0.5em;
@@ -135,7 +135,7 @@ nav {
     width: 100%;
 
     p {
-      transition: all ease 200ms;
+      transition: $transition;
     }
 
     .info {
@@ -166,6 +166,6 @@ nav {
     }
   }
   .client-card {
-    width: 91%;
+    width: 100%;
   }
 }
