@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
 
+
 export default function Layout(props) {
   return (
     <div id="smooth-wrapper">
