@@ -1,22 +1,21 @@
 import React from "react";
-import Image from "next/image";
-import { arrow_right_up } from "../assets/icon/arrow-right-up.svg";
+import Link from "next/link";
 
 const ClientCard = (props) => {
   return (
-    <a className="client-card">
-      <div className="video">
-        <div className="icon-container"><div className="icon"></div></div>
+    <Link href={props.page}><a className="client-card">
+    <div className="video">
+      <div className="btn-icon"><div className="icon i-arrow-right-up"></div></div>
+    </div>
+    <div className="client-detail">
+      <p className="desc client-name">{props.clientname}</p>
+      <div className="info">
+        <p className="desc">{props.category}</p>
+        <p className="desc">/</p>
+        <p className="desc">{props.year}</p>
       </div>
-      <div className="client-detail">
-        <p className="desc client-name">{props.clientname}</p>
-        <div className="info">
-          <p className="desc">{props.category}</p>
-          <p className="desc">/</p>
-          <p className="desc">{props.year}</p>
-        </div>
-      </div>
-    </a>
+    </div>
+  </a></Link>
   );
 };
 

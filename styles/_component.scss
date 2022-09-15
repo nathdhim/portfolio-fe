@@ -14,23 +14,17 @@
 }
 
 .btn-icon {
-  @include paragraph;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $neutral-08;
-  width: 2.75em;
-  height: 2.75em;
-  border: 1px solid $neutral-07;
+  transition: $transition;
+  padding: 0.8em;
+  background-color: $neutral-07;
+  border: 1px solid $neutral-06;
   border-radius: 100em;
-  transition: border ease 200ms;
-
-  &:hover {
-    border: 1px solid $neutral-01;
-  }
-
   .icon {
-    margin: 0;
+    width: 0.75em;
+    height: 0.75em;
+  }
+  &:hover {
+    background-color: $neutral-06;
   }
 }
 
@@ -46,6 +40,131 @@
   &:hover {
     border-bottom: 1px solid $neutral-01;
   }
+}
+
+//////// Image & Icons ////////@at-root
+
+.img-lg {
+  width: 40em;
+  aspect-ratio: 4/3;
+  margin-bottom: 1em;
+}
+
+.img1-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img2-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img3-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img4-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+
+.img5-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img6-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img1-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img2-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img3-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img4-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+
+.img5-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img6-case1 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+
+
+.img1-case2 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img2-case2 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img3-case2 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img4-case2 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+
+.img5-case2 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+.img6-case2 {
+  background: url(../assets/img/showcase-1.png) center;
+  background-size: cover;
+}
+
+
+.img1-case3 {
+  background: url(../assets/img/showcase-1.png);
+  background-size: cover;
+}
+.img2-case3 {
+  background: url(../assets/img/showcase-1.png);
+  background-size: cover;
+}
+.img3-case3 {
+  background: url(../assets/img/showcase-1.png);
+  background-size: cover;
+}
+.img4-case3 {
+  background: url(../assets/img/showcase-1.png);
+  background-size: cover;
+}
+
+.img5-case3 {
+  background: url(../assets/img/showcase-1.png);
+  background-size: cover;
+}
+.img6-case3 {
+  background: url(../assets/img/showcase-1.png);
+  background-size: cover;
+}
+
+
+
+/////////////////////////////////////////////////////
+
+.i-arrow-right-up {
+  background: url(../assets/icon/arrow-right-up.svg) center;
+}
+
+.i-close {
+  background: url(../assets/icon/close.svg) center;
 }
 
 //////// Navigation Bar ////////
@@ -109,25 +228,11 @@ nav {
   width: 100%;
   .video {
     position: relative;
-    background-color: $neutral-07;
+    background: url(../assets/img/showcase-1.png) center;
+    background-size: cover;
     aspect-ratio: 1440/900;
     transition: $transition;
     margin-bottom: 1em;
-    .icon-container {
-      transition: $transition;
-      position: absolute;
-      bottom: 0.5em;
-      right: 0.5em;
-      padding: 0.8em;
-      background-color: $neutral-07;
-      border: 1px solid $neutral-06;
-      border-radius: 100em;
-      .icon {
-        width: 0.75em;
-        height: 0.75em;
-        background: url(../assets/icon/arrow-right-up.svg) center;
-      }
-    }
   }
   .client-detail {
     display: flex;
@@ -144,13 +249,19 @@ nav {
     }
   }
 
+  .btn-icon {
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+  }
+
   &:hover {
     .client-detail {
       p {
         color: $neutral-01;
       }
     }
-    .icon-container {
+    .btn-icon {
       background-color: $neutral-06;
     }
   }

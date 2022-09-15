@@ -11,7 +11,7 @@
   height: 100vh;
 
   .content-container {
-    padding-top: 5.5em;
+    padding-top: 6em;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -36,67 +36,32 @@
   }
 }
 
-///////// Work Page ////////@at-root
+///////// About Page ////////@at-root
 
-.work-hero {
+.about-hero {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: end;
+  height: 100vh;
   .content-container {
-    padding-top: 6em;
+
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 4em;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 100vh;
+
+    .hero-img {
+      background: url(../assets/img/my-self.png) center;
+      background-size: cover;
+      width: 26em;
+      aspect-ratio: 1/1;
+    }
 
     .hero-text {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-
-      .total {
-        color: $neutral-05;
-      }
-    }
-
-    .work-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5em;
-      .work-item-container {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        gap: 0.5em;
-      }
-    }
-  }
-}
-
-footer {
-  display: flex;
-  .content-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  p {
-    color: $neutral-05;
-  }
-  .social-link {
-    display: flex;
-    gap: 2em;
-    .nav-item {
-      @include caption();
-      text-decoration: none;
-      color: $neutral-05;
-      transition: color ease 100ms;
-
-      &:hover {
-        color: $neutral-01;
+      width: 26em;
+      h2, p {
+        margin-bottom: 0.5em;
       }
     }
   }
@@ -110,7 +75,6 @@ footer {
   justify-content: end;
   height: 100vh;
   .content-container {
-    padding: 4em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,12 +82,7 @@ footer {
     height: 100vh;
 
     h1 {
-      text-align: center;
       margin-bottom: 0.5em;
-    }
-
-    p {
-      text-align: center;
     }
   }
 }
@@ -137,7 +96,6 @@ footer {
   height: 100vh;
   .content-container {
     position: relative;
-    padding: 4em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,13 +104,12 @@ footer {
 
     .email {
       color: $neutral-01;
-      
+
       border-bottom: 1px solid $neutral-06;
       transition: $transition;
       margin-bottom: 1.5em;
-      h1{
+      h1 {
         margin-bottom: 0.25em;
-        
       }
 
       &:hover {
@@ -181,22 +138,84 @@ footer {
   }
 }
 
-@media only screen and (max-width: 700px) {
+//////// Case Page ////////@at-root
+
+.case-hero {
+  display: flex;
   .content-container {
-    padding: 1.5em;
-    height: auto;
+    width: 100%;
+    padding-top: 6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5em ;
+
+   .title-container {
+    width: 40em;
+    .client-name {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5em;
+    }
+    .client-detail {
+      display: flex;
+      gap: 1em;
+    }
+   }
+
+   .text-container {
+    width: 40em;
+    display: flex;
+    gap: 2em;
+    h2 {
+      width: 22rem;
+    }
+    p {
+      width: 100%;
+    }
+   }
+   
   }
+}
+
+//////// Responsive Mobile ////////
+
+@media only screen and (max-width: 700px) {
+
   .home-hero {
     justify-content: flex-start;
     .content-container {
-      padding-top: 10em;
       flex-direction: column;
       justify-content: start;
+      height: auto;
       .hero-showcase {
         flex-direction: column;
       }
     }
   }
+
+  .about-hero {
+    .content-container {
+      flex-direction: column;
+      .hero-text, .hero-img {
+        width: 100%;
+      }
+    }
+  }
+
+  .case-hero {
+    .content-container {
+      .title-container, .text-container{
+        width: 100%;
+      }
+      .text-container {
+        flex-direction: column;
+      }
+      .img-lg {
+        width: 100vw;
+        aspect-ratio: 4/3;
+      }
+    }
+  }
+  
 }
-
-

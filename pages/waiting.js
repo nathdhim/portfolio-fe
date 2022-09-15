@@ -8,8 +8,8 @@ export default function waiting() {
       <section className="waiting-hero">
         <div className="content-container">
         <div className="hero-text">
-        <h1>This feature is under development :)</h1>
-        <p className="desc" >Keep Waiting, I’ll launch the feature ASAP.</p>
+        <h1 className="text-center" >This page is under development :)</h1>
+        <p className="desc text-center" >Keep Waiting, I’ll launch the feature ASAP.</p>
         </div>
         </div>
       </section>

@@ -15,9 +15,9 @@ export default function Home() {
           </div>
 
           <div className="hero-showcase">
-            <ClientCard clientname='Client Name' category='Blockchain' year='2022' />
-            <ClientCard clientname='Client Name' category='Blockchain' year='2022' />
-            <ClientCard clientname='Client Name' category='Blockchain' year='2022' />
+            <ClientCard page='/case1' clientname='Client Name' category='Blockchain' year='2022' />
+            <ClientCard page='/case2' clientname='Client Name' category='Blockchain' year='2022' />
+            <ClientCard page='/case3' clientname='Client Name' category='Blockchain' year='2022' />
             
           </div>
         </div>

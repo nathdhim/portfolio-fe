@@ -92,7 +92,7 @@ section {
   width: 100%;
   background-color: $neutral-08;
   .content-container {
-    background: url(../assets/img/noise.png)100%;
+    background: url(../assets/img/noise.png)100% repeat;
   }
 }
 
@@ -129,7 +129,7 @@ a {
   text-align: center;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   h1 {
     @include h2();
   }

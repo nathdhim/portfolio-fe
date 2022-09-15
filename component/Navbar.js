@@ -11,7 +11,7 @@ export default function Navbar() {
             <div className="nav-item-container">
                 <Link href='/#'><a className='nav-item'>Works</a></Link>
                 <Link href='/waiting'><a className='nav-item'>Resources</a></Link>
-                <Link href='/waiting'><a className='nav-item'>FAQS</a></Link>
+                <Link href='/about'><a className='nav-item'>About</a></Link>
             </div>
             <div className="contact-container">
             <Link href='/contact'><a className='nav-item'>Contact</a></Link>
