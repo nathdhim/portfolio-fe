@@ -35,7 +35,7 @@ export default function Case(props) {
           <div className={props.classimg5}></div>
           <div className={props.classimg6}></div>
           </div>
-          <p>© 2022 Dribbble. All rights reserved.</p>
+          <p>© 2022 Dhimasputra. All rights reserved.</p>
         </div>
       </section>
     </Layout>
