@@ -194,7 +194,8 @@
 
   .about-hero {
     .content-container {
-      padding-top: 6em;
+      align-items: flex-start;
+      padding-top: 4.5em;
       flex-direction: column;
       .hero-text, .hero-img {
         width: 100%;
