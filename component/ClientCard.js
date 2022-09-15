@@ -4,8 +4,9 @@ import Link from "next/link";
 const ClientCard = (props) => {
   return (
     <Link href={props.page}><a className="client-card">
-    <div className="video">
+    <div className="video-container">
       <div className="btn-icon"><div className="icon i-arrow-right-up"></div></div>
+      <video autoPlay loop src={"/case1.mp4"} ></video>
     </div>
     <div className="client-detail">
       <p className="desc client-name">{props.clientname}</p>

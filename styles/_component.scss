@@ -226,13 +226,18 @@ nav {
 
 .client-card {
   width: 100%;
-  .video {
+ 
+  .video-container {
     position: relative;
-    background: url(../assets/img/showcase-1.png) center;
-    background-size: cover;
+    background: $neutral-07;
     aspect-ratio: 1440/900;
     transition: $transition;
     margin-bottom: 1em;
+    overflow: hidden;
+
+    video {
+      width: 100%;
+    }
   }
   .client-detail {
     display: flex;
