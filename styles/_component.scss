@@ -234,6 +234,8 @@ nav {
     transition: $transition;
     margin-bottom: 1em;
     overflow: hidden;
+    align-items: center;
+    display: flex;
 
     video {
       width: 100%;
