@@ -12,19 +12,19 @@ export default function contact() {
         <div className="contact-container">
             <p>Follow my socials</p>
            <div className="contact-btn">
-              <a href="https://www.upwork.com/freelancers/~010554d3d91f1f3997" target='_blank' className="btn-link">
+              <a href="https://www.upwork.com/freelancers/~010554d3d91f1f3997" ref='noreferer' target='_blank' className="btn-link">
                 Upwork
               </a>
               <span>/</span>
-              <a href="https://twitter.com/nathdhim" className="btn-link" target='_blank'>
+              <a href="https://twitter.com/nathdhim" className="btn-link" target='_blank'  ref='noreferer' >
                 Twitter
               </a>
               <span>/</span>
-              <a href="https://dribbble.com/nathdhim" className="btn-link" target='_blank'>
+              <a href="https://dribbble.com/nathdhim" className="btn-link" target='_blank'  ref='noreferer' >
                 Dribbble
               </a>
               <span>/</span>
-              <a href="https://www.linkedin.com/in/nathdhim/" className="btn-link" target='_blank'>
+              <a href="https://www.linkedin.com/in/nathdhim/" className="btn-link" target='_blank'  ref='noreferer' >
                 Linkedin
               </a>
             </div>
