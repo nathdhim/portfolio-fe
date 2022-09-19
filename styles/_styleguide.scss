@@ -26,7 +26,7 @@ $neutral-03: #BDBDBD;
 $neutral-02: #D4D4D4;
 $neutral-01: #FFFFFF;
 
-$transition : all ease 200ms;
+$transition : all ease 300ms;
 
 //////// Text Style ////////@at-root
 
@@ -82,9 +82,26 @@ body {
   background-color: $neutral-08;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  width: 0.4em;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: url(../assets/img/noise.png)100% repeat;
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 100em;
+  background: $neutral-06; 
+  transition: $transition;
+  &:hover {
+    background: $neutral-05; 
+  }
+}
+
 
 section {
   padding: 0;

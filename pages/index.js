@@ -11,7 +11,7 @@ export default function Home() {
           <div className="hero-text">
             <Image src={plus} alt="" />
             <h1 className="text-center" >Just Crazy Product Designer</h1>
-            <p className="desc text-center" >Magnam amet iste quidem magnam voluptatibus. Qui veniam debitis minima necessitatibus est minus dolores.</p>
+            <p className="desc text-center" >A passionate and creative designer who can easily understand the your wish and consistently delivers outstanding quality product.</p>
           </div>
 
           <div className="hero-showcase">

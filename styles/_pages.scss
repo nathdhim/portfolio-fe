@@ -11,7 +11,7 @@
   height: 100vh;
 
   .content-container {
-    padding-top: 5.5em;
+    padding-top: 5em;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,8 @@
     height: 100vh;
 
     .hero-img {
-      background: url(https://res.cloudinary.com/dtwh4nrmh/image/upload/v1663436285/my-self_z9r4go.png) center;
+      background: url(https://res.cloudinary.com/dtwh4nrmh/image/upload/v1663436285/my-self_z9r4go.png)
+        center;
       background-size: cover;
       width: 26em;
       aspect-ratio: 1/1;
@@ -58,7 +59,8 @@
 
     .hero-text {
       width: 26em;
-      h2, p {
+      h2,
+      p {
         margin-bottom: 0.5em;
       }
     }
@@ -146,42 +148,51 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:5em ;
+    gap: 5em;
 
-   .title-container {
-    width: 40em;
-    .client-name {
+    .title-container {
+      width: 40em;
+
+      .client-name {
+        width: 40em;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5em;
+      }
+      .client-detail {
+        display: flex;
+        gap: 1em;
+      }
+    }
+
+    .text-container {
+      width: 40em;
+      display: flex;
+      gap: 2em;
+      h2 {
+        width: 22rem;
+      }
+      p {
+        width: 100%;
+      }
+    }
+
+    .footer {
+      margin-bottom: 1em;
+      width: 40em;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 0.5em;
+      .btn-container {
+        display: flex;
+        gap: 1em;
+      }
     }
-    .client-detail {
-      display: flex;
-      gap: 1em;
-    }
-   }
-
-   .text-container {
-    width: 40em;
-    display: flex;
-    gap: 2em;
-    h2 {
-      width: 22rem;
-    }
-    p {
-      width: 100%;
-    }
-   }
-
-   
-   
   }
 }
 
 //////// Responsive Mobile ////////
 
 @media only screen and (max-width: 700px) {
-
   .home-hero {
     justify-content: flex-start;
     .content-container {
@@ -199,7 +210,8 @@
       align-items: flex-start;
       padding-top: 4.5em;
       flex-direction: column;
-      .hero-text, .hero-img {
+      .hero-text,
+      .hero-img {
         width: 100%;
       }
     }
@@ -207,7 +219,8 @@
 
   .case-hero {
     .content-container {
-      .title-container, .text-container{
+      .title-container,
+      .text-container {
         width: 100%;
       }
       .text-container {
@@ -218,12 +231,11 @@
         display: flex;
         flex-direction: column;
         gap: 0.5em;
-       }
-      
+      }
     }
   }
 
-.content-container {
-  padding: 1.5em;
-}
+  .content-container {
+    padding: 1.5em;
+  }
 }

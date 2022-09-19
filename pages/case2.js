@@ -14,6 +14,8 @@ export default function case2() {
       classimg6="img5-case1 img-lg"
       about="Ut voluptatem fugiat eos officiis tempora explicabo non illo possimus. Hic qui placeat quia sit et dolores expedita fugiat. Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.eque omnis soluta amet est et."
       task="Ut voluptatem fugiat eos officiis tempora explicabo non illo possimus. Hic qui placeat quia sit et dolores expedita fugiat. Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.eque omnis soluta amet est et."
+      next="/case3"
+      prev="/case1"
     />
   );
 }
