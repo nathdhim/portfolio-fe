@@ -13,7 +13,7 @@ export default function case3() {
       classimg5="img5-case1 img-lg"
       classimg6="img5-case1 img-lg"
       about="Ut voluptatem fugiat eos officiis tempora explicabo non illo possimus. Hic qui placeat quia sit et dolores expedita fugiat. Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.eque omnis soluta amet est et."
-      unique="Ut voluptatem fugiat eos officiis tempora explicabo non illo possimus. Hic qui placeat quia sit et dolores expedita fugiat. Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.eque omnis soluta amet est et."
+      task="Ut voluptatem fugiat eos officiis tempora explicabo non illo possimus. Hic qui placeat quia sit et dolores expedita fugiat. Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.eque omnis soluta amet est et."
     />
   );
 }

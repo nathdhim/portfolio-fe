@@ -28,8 +28,8 @@ export default function Case(props) {
           <div className={props.classimg4}></div>
           </div>
           <div className="text-container">
-            <h2>Unique Point</h2>
-            <p className="desc" >{props.unique}</p>
+            <h2>What I do</h2>
+            <p className="desc" >{props.task}</p>
           </div>
           <div className="img-container">
           <div className={props.classimg5}></div>
