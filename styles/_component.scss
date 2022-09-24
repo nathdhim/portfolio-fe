@@ -30,15 +30,23 @@
 
 .btn-link {
   @include paragraph();
-  display: flex;
-  gap: 0.5em;
+  display: block;
   align-items: center;
-  border-bottom: 1px solid $neutral-08;
   transition: $transition;
   cursor: pointer;
+  &::after {
+    content: '';
+    width: 0;
+    display: block;
+    height: 1px;
+    background-color: $neutral-01;
+    transition: $transition;
+  }
 
   &:hover {
-    border-bottom: 1px solid $neutral-01;
+    &::after {
+      width: 100%;
+    }
   }
 }
 

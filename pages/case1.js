@@ -3,8 +3,8 @@ import Case from "../component/case";
 export default function case1() {
   return (
     <Case
-      clientname="Reily.co"
-      category="Beautycare"
+      clientname="Quibee.io"
+      category="Blockchain"
       year="2022"
       classimg1="img1-case1 img-lg"
       classimg2="img2-case1 img-lg"

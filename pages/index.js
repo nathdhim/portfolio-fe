@@ -15,7 +15,7 @@ export default function Home() {
           </div>
 
           <div className="hero-showcase">
-            <ClientCard page='/case1' clientname='Reily.co' category='Beautycare' year='2022' source="https://res.cloudinary.com/an-cloud/video/upload/q_75,w_1000,c_limit/v1663189236/Louis-Paquet-Prev.mp4"/>
+            <ClientCard page='/case1' clientname='Quibee.io' category='Beautycare' year='2022' source="https://res.cloudinary.com/an-cloud/video/upload/q_75,w_1000,c_limit/v1663189236/Louis-Paquet-Prev.mp4"/>
             <ClientCard page='/case2' clientname='Client Name' category='Blockchain' year='2022' source="https://res.cloudinary.com/an-cloud/video/upload/q_75,w_1000,c_limit/v1656877791/Exo-Preview.mp4"/>
             <ClientCard page='/case3' clientname='Client Name' category='Blockchain' year='2022' source="https://res.cloudinary.com/an-cloud/video/upload/q_75,w_1000,c_limit/v1653247647/mmp-Prev.mp4"/>
             

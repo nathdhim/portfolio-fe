@@ -7,7 +7,7 @@ export default function contact() {
     <Layout>
       <section className="contact-hero">
         <div className="content-container">
-        <a className="email" href="mailto:hello@dhimasputra.com" target='_blank' rel="noopener noreferrer"><h1>hello@dhimasputra.com</h1></a>
+        <a className="email btn-link" href="mailto:hello@dhimasputra.com" target='_blank' rel="noopener noreferrer"><h1>hello@dhimasputra.com</h1></a>
         <p className="desc text-center">Let’s connect your brain with me, and build a crazy product.</p>
         <div className="contact-container">
             <p>Follow my socials</p>
