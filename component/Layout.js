@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "./Navbar";
+import NavigationBar from "./Navbar";
 
 
 export default function Layout(props) {
@@ -9,7 +9,7 @@ export default function Layout(props) {
         <Head>
           <title>Dhimasputra.com | Expert Product Designer</title>
         </Head>
-        <Navbar />
+        <NavigationBar />
         {props.children}
       </div>
     </div>

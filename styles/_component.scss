@@ -175,6 +175,9 @@
   background: url(../assets/icon/close.svg) center;
 }
 
+.i-burger-menu {
+  background: url(../assets/icon/burger-menu.svg) center;
+}
 //////// Navigation Bar ////////
 
 nav {
@@ -191,6 +194,14 @@ nav {
     align-items: center;
     padding: 0 2em;
     height: 4em;
+
+    .toggle-menu {
+      display: none;
+      .icon {
+        width: 2em;
+        height: 2em;
+      }
+    }
 
     .logo {
       span {
@@ -225,6 +236,34 @@ nav {
 
       &:hover {
         color: $neutral-01;
+      }
+    }
+  }
+}
+
+//////// Menu ////////@at-root
+
+.menu-item-container {
+  
+  padding: 1.5em;
+  height: 100vh;
+  .nav-item {
+    @include h2();
+    padding-top: 1.5em;
+    border-bottom: 1px solid $neutral-06;
+    &::after {
+      content: '';
+      margin-top: 1.5em;
+      width: 0;
+      display: block;
+      height: 1px;
+      background-color: $neutral-01;
+      transition: $transition;
+    }
+  
+    &:hover {
+      &::after {
+        width: 100%;
       }
     }
   }
@@ -292,6 +331,12 @@ nav {
       padding: 0 1.5em;
       .nav-item-container {
         gap: 1.5em;
+      }
+      .toggle-menu {
+        display: inline;
+      }
+      .nav-item-container, .contact-container {
+        display: none;
       }
     }
   }
