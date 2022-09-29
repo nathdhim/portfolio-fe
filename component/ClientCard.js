@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
+
 const ClientCard = (props) => {
   return (
     <Link href={props.page}><a className="client-card">

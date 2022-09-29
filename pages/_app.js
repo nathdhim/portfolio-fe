@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 function MyApp({ Component, pageProps , router}) {
   return  (
-    <motion.div key={router.route} initial='pageInitial' animate='pageAnimate' variants={{
+    <motion.div transition={{ ease: "easeIn", duration: 0.5 }} key={router.route} initial='pageInitial' animate='pageAnimate' variants={{
       pageInitial: {
         
         opacity: 0
