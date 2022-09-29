@@ -11,7 +11,7 @@ const ClientCard = (props) => {
           style={{originY:1}}
           initial={{ scaleY: 0 }}
           animate={{ scaleY: 1}}
-          transition={{duration: 0.25, ease: "easeOut", delay: 0.5}}
+          transition={{duration: 0.25, ease: "easeIn", delay: 0.5}}
          
         >
           <div className="btn-icon">
