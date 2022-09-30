@@ -7,7 +7,7 @@ export default function Layout(props) {
     <div id="smooth-wrapper">
       <div className="container" id="smooth-content">
         <Head>
-          <title>Dhimasputra.com | Expert Product Designer</title>
+          <title>Dhimas Putra | Expert Product Designer</title>
         </Head>
         <NavigationBar />
         {props.children}
