@@ -3,7 +3,7 @@ import Image from "next/future/image";
 import { motion } from "framer-motion";
 
 const myLoader = ({ src, width, quality }) => {
-  return `https://cloudinary.com//${src}?w=${width}&q=${quality || 75}`
+  return `https://res.cloudinary.com//${src}?w=${width}&q=${quality || 75}`
 }
 
 export default function about() {
@@ -32,7 +32,7 @@ export default function about() {
               <Image
               loader={myLoader}
                 src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
+                  "dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img"
                 fill
