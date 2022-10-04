@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/future/image";
 
 const myLoader = ({ src, width, quality }) => {
-  return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+  return `https://res.cloudinary.com/${src}?w=${width}&q=${quality || 75}`
 }
 
 const CaseCard = (props) => {
@@ -36,7 +36,7 @@ const CaseCard = (props) => {
             loader={myLoader}
               className="img"
               src={
-                "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664817039/samples/2_3.2_xyousp.png"
+                "/dtwh4nrmh/image/upload/v1664817039/samples/2_3.2_xyousp.png"
               }
               fill
             />
