@@ -1,0 +1,53 @@
+//////// Button ////////
+
+.btn-primary {
+  @include paragraph;
+  padding: 1em 2em;
+  border: none;
+  background-color: $neutral-07;
+  border-radius: 100em;
+  transition: background-color ease 200ms;
+
+  &:hover {
+    background-color: $neutral-06;
+  }
+}
+
+.btn-icon {
+  transition: $transition;
+  padding: 0.8em;
+  background-color: $neutral-07;
+  border: 1px solid $neutral-06;
+  border-radius: 100em;
+  .icon {
+    width: 0.75em;
+    height: 0.75em;
+  }
+  &:hover {
+    background-color: $neutral-06;
+  }
+}
+
+.btn-link {
+  @include paragraph();
+  color: $neutral-05;
+  display: block;
+  align-items: center;
+  transition: $transition;
+  cursor: pointer;
+  &::after {
+    content: "";
+    width: 0;
+    display: block;
+    height: 1px;
+    background-color: $neutral-01;
+    transition: $transition;
+  }
+
+  &:hover {
+    color: $neutral-01;
+    &::after {
+      width: 100%;
+    }
+  }
+}

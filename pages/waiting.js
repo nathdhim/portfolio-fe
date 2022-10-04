@@ -1,6 +1,5 @@
 import Layout from "../component/Layout";
-import plus from "../assets/img/plus.svg";
-import Image from "next/dist/client/image";
+
 
 export default function waiting() {
   return (

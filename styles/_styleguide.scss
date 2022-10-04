@@ -6,71 +6,58 @@
   font-weight: 500;
 }
 
-
 @font-face {
   font-family: "uncut";
   src: url(../assets/font/Uncut-Sans-Regular.otf);
   font-weight: 400;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
 //////// Color Style ////////@at-root
 
 $neutral-08: #121212;
 $neutral-07: #131313;
 $neutral-06: #242424;
 $neutral-05: #707070;
-$neutral-04: #9F9F9F;
-$neutral-03: #BDBDBD;
-$neutral-02: #D4D4D4;
-$neutral-01: #FFFFFF;
+$neutral-04: #9f9f9f;
+$neutral-03: #bdbdbd;
+$neutral-02: #d4d4d4;
+$neutral-01: #ffffff;
 
-$transition : all ease 300ms;
+$transition: all ease 300ms;
 
 //////// Text Style ////////@at-root
 
 @mixin h1 {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: "uncut", sans-serif;
   font-size: 4em;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 125%;
   color: $neutral-01;
 }
 
 @mixin h2 {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: "uncut", sans-serif;
   font-size: 1.75em;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 125%;
   color: $neutral-01;
 }
 
 @mixin h3 {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: "uncut", sans-serif;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 125%;
   color: $neutral-01;
 }
 
 @mixin paragraph {
   font-family: "uncut", sans-serif;
-  font-size: 0.875em;
+  font-size: 0.9em;
   font-weight: 400;
   line-height: 130%;
   color: $neutral-01;
 }
-
-
-@mixin caption {
-  font-family: "uncut", sans-serif;
-  font-size: 0.875em;
-  font-weight: 400;
-  line-height: 130%;
-  color: $neutral-01;
-}
-
 
 
 //////// Container Style ////////@at-root
@@ -82,34 +69,14 @@ body {
   background-color: $neutral-08;
 }
 
-::-webkit-scrollbar {
-  width: 0.4em;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: url(../assets/img/noise.png)100% repeat;
-  
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  border-radius: 100em;
-  background: $neutral-06; 
-  transition: $transition;
-  &:hover {
-    background: $neutral-05; 
-  }
-}
-
-
 section {
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: $neutral-08;
+  
   .content-container {
-    background: url(../assets/img/noise.png)100% repeat;
+    display: flex;
+    padding: 2em;
   }
 }
 

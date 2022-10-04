@@ -4,4 +4,19 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+
+module.exports = {
+    devIndicators: {
+        buildActivity: false
+    },
+    experimental: {
+      images: {
+        allowFutureImage: true,
+      },
+    },
+    images: {
+  
+      domains: ['res.cloudinary.com'],
+    },
+}
+

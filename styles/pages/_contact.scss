@@ -1,0 +1,32 @@
+.contact-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100vh;
+    .content-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  
+      .email {
+        color: $neutral-01;
+        border-bottom: 1px solid $neutral-06;
+        transition: $transition;
+        margin: 1.5em 0;
+        h1 {
+          margin-bottom: 0.25em;
+        }
+      }
+      .text-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        flex-direction: column;
+        position: absolute;
+        bottom: 4em;
+      }
+    }
+  }

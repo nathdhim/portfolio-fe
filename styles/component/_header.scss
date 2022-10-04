@@ -1,0 +1,101 @@
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: $neutral-08 16%;
+    backdrop-filter: blur(48px);
+    z-index: 1;
+  
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2em;
+      height: 4em;
+  
+      .toggle-menu {
+        display: none;
+        .icon {
+          width: 2em;
+          height: 2em;
+        }
+      }
+  
+      .logo {
+        span {
+          @include paragraph();
+          font-size: 0.5em;
+        }
+        cursor: pointer;
+      }
+      .logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+      }
+      .nav-item-container {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        width: 100%;
+      }
+  
+      .contact-container {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+      }
+  
+      
+    }
+  }
+  
+  //////// Menu ////////@at-root
+  
+  .menu-item-container {
+    
+    padding: 1.5em;
+    height: 100vh;
+    .nav-item {
+      @include h2();
+      padding-top: 1.5em;
+      border-bottom: 1px solid $neutral-06;
+      &::after {
+        content: '';
+        margin-top: 1.5em;
+        width: 0;
+        display: block;
+        height: 1px;
+        background-color: $neutral-01;
+        transition: $transition;
+      }
+    
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+//////// Responsive Mobile ////////
+
+@media only screen and (max-width: 700px) {
+    nav {
+      .nav-container {
+        padding: 0 1.5em;
+        padding-right: 0.75em;
+        .nav-item-container {
+          gap: 1.5em;
+        }
+        .toggle-menu {
+          display: inline;
+        }
+        .nav-item-container, .contact-container {
+          display: none;
+        }
+      }
+    }
+    
+  }
+  

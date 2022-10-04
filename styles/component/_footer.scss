@@ -1,0 +1,42 @@
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: $neutral-08 16%;
+    backdrop-filter: blur(48px);
+    z-index: 1;
+  
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2em;
+      height: 4em;
+  
+      .toggle-menu {
+        display: none;
+        .icon {
+          width: 2em;
+          height: 2em;
+        }
+      }
+  
+      .logo {
+        span {
+          @include paragraph();
+          font-size: 0.5em;
+        }
+        cursor: pointer;
+      }
+    
+      .footer-item-container {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        width: 100%;
+      }
+  
+      
+    }
+  }
