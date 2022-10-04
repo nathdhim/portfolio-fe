@@ -8,12 +8,9 @@ const CaseCard = (props) => {
     <Link href="#">
       <motion.a
         className="case-card"
-       
-       
       >
         <motion.div
           className="container"
-          
           animate={{ width: ["0%", "100%"] }}
           transition={{
             ease: [0.75, -0.01, 0.34, 1],
