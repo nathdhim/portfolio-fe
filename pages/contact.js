@@ -1,5 +1,5 @@
 import Layout from "../component/Layout";
-import Footer from "../component/footer";
+import Footer from "../component/Footer";
 import Image from "next/future/image";
 
 export default function contact() {
