@@ -1,6 +1,6 @@
-import Layout from "../component/layout";
-import CaseCard from "../component/case-card";
-import Footer from "../component/footer";
+import Layout from "../component/Layout";
+import CaseCard from "../component/CaseCard";
+import Footer from "../component/Footer";
 
 export default function Work() {
   return (

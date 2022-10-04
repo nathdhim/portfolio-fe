@@ -1,5 +1,5 @@
 import Head from "next/head";
-import NavigationBar from "./navbar";
+import NavigationBar from "./Navbar";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import { useRef } from "react";
