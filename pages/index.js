@@ -1,5 +1,5 @@
 import Layout from "../component/layout";
-import CaseCard from "../component/casecard";
+import CaseCard from "../component/case-card";
 import Footer from "../component/footer";
 
 export default function Work() {
