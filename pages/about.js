@@ -6,15 +6,22 @@ export default function about() {
     <Layout>
       <section className="about-hero">
         <div className="content-container">
-          <div className="hero-img">
-            <Image
-              src={
-                "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1663336177/samples/cloudinary-group.jpg"
-              }
-              className="img"
-              fill
-            />
-          </div>
+          <motion.div className="hero-img"
+          animate={{ width: ["0%", "100%"] }}
+          transition={{
+            ease: [0.75, -0.01, 0.34, 1],
+            duration: 1,
+            delay: 0.5,
+          }}><motion.div className="img-wrapper">
+          <Image
+            src={
+              "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1663336177/samples/cloudinary-group.jpg"
+            }
+            className="img"
+            fill
+          />
+        </motion.div></motion.div>
+          
           <div className="text-container">
             <p className="titled desc">About</p>
             <div className="content">

@@ -14,12 +14,17 @@
       width: 56em;
       aspect-ratio: 6/2;
       position: relative;
-      .img {
-        object-fit: cover;
+
+      .img-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        
+        .img {
+          object-fit: cover;
+        }
       }
     }
-
-    
   }
 }
 
