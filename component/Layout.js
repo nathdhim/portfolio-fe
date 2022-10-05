@@ -22,12 +22,12 @@ const Layout = (props) => {
   }, []);
 
   return (
-    <div className="container" ref={scrollRef}>
+    <div className="container" >
       <Head>
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
       <NavigationBar />
-      <div className="scroll-wrapper" data-scroll-section>
+      <div className="scroll-wrapper"ref={scrollRef} >
         {props.children}
       </div>
     </div>
