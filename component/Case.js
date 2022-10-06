@@ -5,7 +5,7 @@ import { FooterCase } from "./Footer";
 export default function Case(props) {
   return (
     <Layout>
-      <section className="case-hero">
+      <section className="case-hero" data-scroll-container>
         <div className="content-container">
           <div className="hero-text">
             <h3 className="desc">Quibee.io</h3>
@@ -22,7 +22,7 @@ export default function Case(props) {
           </div>
         </div>
       </section>
-      <section className="case-about">
+      <section className="case-about" data-scroll-container>
         <div className="content-container">
           <div className="text-container">
             <p className="titled desc">About</p>

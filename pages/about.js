@@ -110,26 +110,7 @@ export default function about() {
                 className="img" fill/>
                 </div>
              </div>
-             <div className="img-container">
-                <div className="img-wrapper">
-                <Image  src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img" fill/>
-                </div>
-                <div className="img-wrapper">
-                <Image  src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img" fill/>
-                </div>
-                <div className="img-wrapper">
-                <Image  src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img" fill/>
-                </div>
-             </div>
+            
              <div className="img-container">
              
                 <div className="img-wrapper">

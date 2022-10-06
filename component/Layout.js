@@ -13,14 +13,16 @@ const Layout = (props) => {
       return;
     }
 
-    const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
+    const _scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
       new LocomotiveScroll.default({
         el: scrollRef.current,
         smooth: true,
+        lerp: 0.025
       });
+     
+      
     });
   }, []);
-
  
 
   return (
@@ -30,7 +32,7 @@ const Layout = (props) => {
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
       <NavigationBar />
-      <div className="scroll-wrapper" ref={scrollRef}>
+      <div className="scroll-wrapper" ref={scrollRef} >
         {props.children}
       </div>
     </div>
