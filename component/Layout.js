@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 const Layout = (props) => {
 
   const scrollRef = useRef();
+
+  
   
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -17,17 +19,18 @@ const Layout = (props) => {
         smooth: true
       });
     });
-
    
+  
   }, []);
 
+ 
   return (
     <div className="container" >
       <Head>
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
       <NavigationBar />
-      <div className="scroll-wrapper"ref={scrollRef} >
+      <div className="scroll-wrapper"ref={scrollRef}>
         {props.children}
       </div>
     </div>

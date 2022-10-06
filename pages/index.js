@@ -1,6 +1,6 @@
 import Layout from "../component/Layout";
 import CaseCard from "../component/CaseCard";
-import Footer from "../component/Footer";
+import {FooterSocial} from "../component/Footer";
 
 export default function Work() {
   return (
@@ -8,15 +8,15 @@ export default function Work() {
       <section className="work-hero">
         <div className="content-container">
           <div className="hero-showcase">
-            <CaseCard/>
-            <CaseCard/>
-            <CaseCard/>
-            <CaseCard/>
-            <CaseCard/>
+            <CaseCard to="/cases/case1"/>
+            <CaseCard to="/cases/case1"/>
+            <CaseCard to="/cases/case1"/>
+            <CaseCard to="/cases/case1"/>
+            <CaseCard to="/cases/case1"/>
           </div>
         </div>
       </section>
-      <Footer/>
+      <FooterSocial/>
     </Layout>
   );
 }

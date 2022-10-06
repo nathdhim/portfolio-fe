@@ -3,9 +3,11 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/future/image";
 
+const easeCustom = [0.75, -0.01, 0.34, 1];
+
 const CaseCard = (props) => {
   return (
-    <Link href="#">
+    <Link href={props.to}>
       <motion.a
         className="case-card"
       >
@@ -13,7 +15,7 @@ const CaseCard = (props) => {
           className="container"
           animate={{ width: ["0%", "100%"] }}
           transition={{
-            ease: [0.75, -0.01, 0.34, 1],
+            ease: easeCustom,
             duration: 1,
             delay: 0.5,
           }}
@@ -21,9 +23,9 @@ const CaseCard = (props) => {
           <motion.div
             className="img-wrapper"
             
-            animate={{ scale: [1.35,1] }}
+            animate={{ scale: [1.5,1] }}
             transition={{
-              ease: [0.75, -0.01, 0.34, 1],
+              ease: easeCustom,
               duration: 1,
               delay: 0.5,
             }}

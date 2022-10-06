@@ -1,6 +1,6 @@
 import Layout from "../component/Layout";
-import Footer from "../component/Footer";
 import Image from "next/future/image";
+import {FooterSocial} from "../component/Footer";
 
 export default function contact() {
   return (
@@ -25,7 +25,7 @@ export default function contact() {
             <p>Follow my socials</p>
             <Image src="/icon/arrow-down.svg" width={24} height={24}/>
           </div>
-          <Footer/>
+          <FooterSocial/>
         </div>
       </section>
     </Layout>

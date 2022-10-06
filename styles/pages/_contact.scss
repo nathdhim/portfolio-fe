@@ -11,15 +11,7 @@
       align-items: center;
       height: 100vh;
   
-      .email {
-        color: $neutral-01;
-        border-bottom: 1px solid $neutral-06;
-        transition: $transition;
-        margin: 1.5em 0;
-        h1 {
-          margin-bottom: 0.25em;
-        }
-      }
+      
       .text-container {
         display: flex;
         align-items: center;
@@ -28,5 +20,14 @@
         position: absolute;
         bottom: 4em;
       }
+    }
+  }
+  .email {
+    color: $neutral-01;
+    border-bottom: 1px solid $neutral-06;
+    transition: $transition;
+    margin: 1.5em 0;
+    h1 {
+      margin-bottom: 0.25em;
     }
   }
