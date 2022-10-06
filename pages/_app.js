@@ -1,15 +1,27 @@
-import '../styles/global.scss'
-import { motion } from "framer-motion"
+import "../styles/global.scss";
+import { AnimatePresence, motion } from "framer-motion";
 
-function MyApp({ Component, pageProps , router}) {
-  
-  return  (
-    <motion.div>
-    <Component {...pageProps} />
-    </motion.div>
-      
-  )
+const easeCustom = [0.75, -0.01, 0.34, 1];
 
+function MyApp({ Component, pageProps, router }) {
+  return (
+    <AnimatePresence exitBeforeEnter>
+      <motion.div key={router.asPath}>
+        <motion.div
+          className="pages-wrapper"
+          initial={{ height: ["100%", "0%"] }}
+          animate={{ height: ["100%", "0%"] }}
+          transition={{
+            ease: easeCustom,
+            duration: 1,
+            delay: 0.5,
+          }}
+          exit={{ height: ["0%", "100%"] }}
+        ></motion.div>
+        <Component {...pageProps} key={router.pathname} />
+      </motion.div>
+    </AnimatePresence>
+  );
 }
 
-export default MyApp
+export default MyApp;

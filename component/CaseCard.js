@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/future/image";
 
 const easeCustom = [0.75, -0.01, 0.34, 1];
 
 const CaseCard = (props) => {
   return (
-    <Link href={props.to}>
+    <AnimatePresence exitBeforeEnter>
+      <Link href={props.to}>
       <motion.a
         className="case-card"
       >
@@ -17,8 +18,9 @@ const CaseCard = (props) => {
           transition={{
             ease: easeCustom,
             duration: 1,
-            delay: 0.5,
+            delay: 2,
           }}
+          exit={{width: ["100%", "%"]}}
         >
           <motion.div
             className="img-wrapper"
@@ -27,7 +29,7 @@ const CaseCard = (props) => {
             transition={{
               ease: easeCustom,
               duration: 1,
-              delay: 0.5,
+              delay: 2,
             }}
           >
             <Image
@@ -41,6 +43,8 @@ const CaseCard = (props) => {
         </motion.div>
       </motion.a>
     </Link>
+    </AnimatePresence>
+    
   );
 };
 

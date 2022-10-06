@@ -17,7 +17,7 @@ export default function about() {
             transition={{
               ease: easeCustom,
               duration: 1,
-              delay: 0.5,
+              delay: 2,
             }}
           >
             <motion.div
@@ -26,7 +26,7 @@ export default function about() {
               transition={{
                 ease: easeCustom,
                 duration: 1,
-                delay: 0.5,
+                delay: 2,
               }}
             >
               <Image
