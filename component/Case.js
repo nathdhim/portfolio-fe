@@ -48,7 +48,7 @@ export default function Case(props) {
                 duration: 1,
                 delay: 2,
               }}>
-            <Image
+            <Image data-scroll data-scroll-speed="1"
               className="img"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
@@ -95,7 +95,7 @@ export default function Case(props) {
          <div className="img-container">
          <div className="img-wrapper">
           
-            <Image
+            <Image data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
@@ -104,7 +104,7 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper">
-            <Image
+            <Image data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
@@ -113,7 +113,7 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper">
-            <Image
+            <Image data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
@@ -122,7 +122,7 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper">
-            <Image
+            <Image data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
@@ -131,8 +131,8 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper">
-            <Image
-              src={
+            <Image data-scroll data-scroll-speed="1"
+              src={ 
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
               className="img"
@@ -140,7 +140,7 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper">
-            <Image
+            <Image data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }

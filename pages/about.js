@@ -29,7 +29,7 @@ export default function about() {
                 delay: 2,
               }}
             >
-              <Image
+              <Image data-scroll data-scroll-speed="1"
                 src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
@@ -92,19 +92,19 @@ export default function about() {
             <div className="content img-content">
              <div className="img-container">
                 <div className="img-wrapper">
-                <Image  src={
+                <Image data-scroll data-scroll-speed="1" src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
                 </div>
                 <div className="img-wrapper">
-                <Image  src={
+                <Image data-scroll data-scroll-speed="1" src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
                 </div>
                 <div className="img-wrapper">
-                <Image  src={
+                <Image data-scroll data-scroll-speed="1" src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
@@ -114,19 +114,19 @@ export default function about() {
              <div className="img-container">
              
                 <div className="img-wrapper">
-                <Image  src={
+                <Image data-scroll data-scroll-speed="1" src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
                 </div>
                 <div className="img-wrapper">
-                <Image  src={
+                <Image data-scroll data-scroll-speed="1" src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
                 </div>
                 <div className="img-wrapper">
-                <Image  src={
+                <Image data-scroll data-scroll-speed="1" src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
