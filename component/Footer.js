@@ -1,4 +1,4 @@
-
+import Image from "next/future/image";
 function FooterSocial() {
   return (
     <>
@@ -66,7 +66,7 @@ function FooterCase() {
           >
             <h1>hello@dhimasputra.com</h1>
           </a>
-          <img src="/icon/dot.svg" width={72} height={72} />
+          <Image className="img" src="/icon/dot.svg" width={72} height={72} />
           </div>
          </div>
           <div className="bottom-container">

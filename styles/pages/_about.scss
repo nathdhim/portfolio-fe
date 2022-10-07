@@ -81,13 +81,11 @@
 @media only screen and (max-width: 700px) {
   .about-hero {
     .content-container {
-      align-items: flex-start;
-      padding-top: 4.5em;
-      flex-direction: column;
-      .hero-text,
-      .hero-img {
-        width: 100%;
-      }
+      padding: 8em 1.5em;
+    gap: 8em;
+     .hero-img-wrapper {
+      width: 100%;
+     }
     }
   }
 }

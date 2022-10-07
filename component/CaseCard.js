@@ -20,7 +20,6 @@ const CaseCard = (props) => {
             duration: 1,
             delay: 2,
           }}
-          exit={{width: ["100%", "%"]}}
         >
           <motion.div
             className="img-wrapper"
