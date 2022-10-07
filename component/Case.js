@@ -1,4 +1,4 @@
-import Layout from "./Layout";
+import LayoutCase from "./LayoutCase";
 import Image from "next/future/image";
 import { FooterCase } from "./Footer";
 import { motion } from "framer-motion";
@@ -9,7 +9,7 @@ export default function Case(props) {
 
 
   return (
-    <Layout>
+    <LayoutCase>
       <section className="case-hero" data-scroll-container>
         <div className="content-container">
           <div className="hero-text">
@@ -152,6 +152,6 @@ export default function Case(props) {
         </div>
       </section>
       <FooterCase/>
-    </Layout>
+    </LayoutCase>
   );
 }

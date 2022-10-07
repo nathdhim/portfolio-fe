@@ -20,10 +20,10 @@ export default function Navigationbar() {
     menu = (
       <div className="menu-item-container">
         <Link href="/#">
-          <a className="btn-link">Works</a>
+          <a className="btn-link">Work</a>
         </Link>
         <Link href="/waiting">
-          <a className="btn-link">Resources</a>
+          <a className="btn-link">Resource</a>
         </Link>
         <Link href="/about">
           <a className="btn-link">About</a>
@@ -45,10 +45,10 @@ export default function Navigationbar() {
           </div>
           <div className="nav-item-container">
             <Link href="/#">
-              <a className="btn-link">Works</a>
+              <a className="btn-link">Work</a>
             </Link>
             <Link href="/waiting">
-              <a className="btn-link">Resources</a>
+              <a className="btn-link">Resource</a>
             </Link>
             <Link href="/about">
               <a className="btn-link">About</a>
@@ -84,3 +84,5 @@ export default function Navigationbar() {
     </>
   );
 }
+
+
