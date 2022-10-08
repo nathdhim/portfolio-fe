@@ -15,7 +15,7 @@ export default function NavigationCase() {
                 <a className="btn-link">Back</a>
               </Link>
             </div>
-            <div className="contact-container">
+            <div className="right-container">
             <Link href="/cases/case2">
                 <a className="btn-link">Prev</a>
               </Link>
