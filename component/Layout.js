@@ -13,7 +13,7 @@ function Layout(props) {
     let scroll;
     import("locomotive-scroll").then((locomotiveModule) => {
         scroll = new locomotiveModule.default({
-            el: document.querySelector("[data-scroll-container]"),
+            el: scrollRef.current,
             smooth: true,
             smoothMobile: false,
             resetNativeScroll: true,
@@ -22,9 +22,9 @@ function Layout(props) {
     });
 
     // `useEffect`'s cleanup phase
-    // return () => {
-    //     if (scroll) scroll.destroy();
-    // }
+    return () => {
+        if (scroll) scroll.destroy();
+    }
 });
 
   return (
@@ -34,7 +34,7 @@ function Layout(props) {
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
       <NavigationBar />
-      <div className="scroll-wrapper" ref={scrollRef} data-scroll-container>
+      <div className="scroll-wrapper" ref={scrollRef}>
         {props.children}
       </div>
     </div>
@@ -56,9 +56,9 @@ function LayoutCase(props) {
     });
 
     // `useEffect`'s cleanup phase
-    // return () => {
-    //     if (scroll) scroll.destroy();
-    // }
+    return () => {
+        if (scroll) scroll.destroy();
+    }
 });
 
   return (
@@ -68,7 +68,7 @@ function LayoutCase(props) {
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
       <NavigationCase />
-      <div className="scroll-wrapper" data-scroll-container>
+      <div className="scroll-wrapper" ref={scrollRef}>
         {props.children}
       </div>
     </div>
