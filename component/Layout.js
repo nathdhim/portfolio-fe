@@ -10,6 +10,10 @@ function Layout(props) {
   const scrollRef = useRef();
 
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
     let scroll;
     import("locomotive-scroll").then((locomotiveModule) => {
         scroll = new locomotiveModule.default({
@@ -43,11 +47,17 @@ function Layout(props) {
 
 function LayoutCase(props) {
 
+  const scrollRef = useRef();
+
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
     let scroll;
     import("locomotive-scroll").then((locomotiveModule) => {
         scroll = new locomotiveModule.default({
-            el: document.querySelector("[data-scroll-container]"),
+            el: scrollRef.current,
             smooth: true,
             smoothMobile: false,
             resetNativeScroll: true,
