@@ -1,6 +1,6 @@
-import {Layout} from "./component/Layout";
+import {Layout} from "../component/Layout";
 import Image from "next/future/image";
-import {FooterSocial} from "./component/Footer";
+import {FooterSocial} from "../component/Footer";
 
 export default function contact() {
   return (
