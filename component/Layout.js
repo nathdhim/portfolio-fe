@@ -22,9 +22,9 @@ function Layout(props) {
     });
 
     // `useEffect`'s cleanup phase
-    return () => {
-        if (scroll) scroll.destroy();
-    }
+    // return () => {
+    //     if (scroll) scroll.destroy();
+    // }
 });
 
   return (
@@ -56,9 +56,9 @@ function LayoutCase(props) {
     });
 
     // `useEffect`'s cleanup phase
-    return () => {
-        if (scroll) scroll.destroy();
-    }
+    // return () => {
+    //     if (scroll) scroll.destroy();
+    // }
 });
 
   return (
