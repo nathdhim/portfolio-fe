@@ -1,4 +1,4 @@
-import LayoutCase from "./LayoutCase";
+import {LayoutCase} from "./Layout";
 import Image from "next/future/image";
 import { FooterCase } from "./Footer";
 import { motion } from "framer-motion";
@@ -20,7 +20,7 @@ export default function Case(props) {
             transition={{
                 ease: easeCustom,
                 duration: 1.5,
-                delay: 2.5,
+                delay: 2.3,
               }}>Quibee.io</motion.h3>
             </div>
             <div className="text-wrapper-h1">
@@ -29,7 +29,7 @@ export default function Case(props) {
             transition={{
                 ease: easeCustom,
                 duration: 1.5,
-                delay: 2.5,
+                delay: 2.3,
               }}>Crypto Token Swap App</motion.h1>
             </div>
           </div>
@@ -39,14 +39,14 @@ export default function Case(props) {
             transition={{
               ease: easeCustom,
               duration: 1,
-              delay: 2,
+              delay: 1.8,
             }}>
             <motion.div className="img-wrapper" 
               animate={{ scale: [1.5, 1] }}
               transition={{
                 ease: easeCustom,
                 duration: 1,
-                delay: 2,
+                delay: 1.8,
               }}>
             <Image data-scroll data-scroll-speed="1"
               className="img"
@@ -78,7 +78,7 @@ export default function Case(props) {
             </div>
           </div>
           <div className="text-container">
-            <p className="titled desc">About</p>
+            <p className="titled desc">My Role</p>
             <div className="content">
               <h2>
                 Ut voluptatem fugiat eos officiis tempora explicabo non illo
@@ -103,7 +103,7 @@ export default function Case(props) {
               fill
             />
           </div>
-          <div className="img-wrapper">
+          <div className="img-wrapper" >
             <Image data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"

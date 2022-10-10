@@ -1,29 +1,31 @@
 import Head from "next/head";
-import NavigationBar from "./Navbar";
+import {NavigationBar, NavigationCase} from "./Navbar";
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 
 
-const Layout = (props) => {
+
+function Layout(props) {
+  
   const scrollRef = useRef();
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const _scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
-      new LocomotiveScroll.default({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.025
-      });
-     
-      
+    let scroll;
+    import("locomotive-scroll").then((locomotiveModule) => {
+        scroll = new locomotiveModule.default({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+            smoothMobile: false,
+            resetNativeScroll: true,
+            lerp: 0.03
+        });
     });
-  }, []);
- 
+
+    // `useEffect`'s cleanup phase
+    return () => {
+        if (scroll) scroll.destroy();
+    }
+});
 
   return (
     <div className="container">
@@ -32,10 +34,45 @@ const Layout = (props) => {
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
       <NavigationBar />
-      <div className="scroll-wrapper" ref={scrollRef} >
+      <div className="scroll-wrapper" ref={scrollRef} data-scroll-container>
         {props.children}
       </div>
     </div>
   );
 };
-export default Layout;
+
+function LayoutCase(props) {
+
+  useEffect(() => {
+    let scroll;
+    import("locomotive-scroll").then((locomotiveModule) => {
+        scroll = new locomotiveModule.default({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+            smoothMobile: false,
+            resetNativeScroll: true,
+            lerp: 0.03
+        });
+    });
+
+    // `useEffect`'s cleanup phase
+    return () => {
+        if (scroll) scroll.destroy();
+    }
+});
+
+  return (
+    <div className="container">
+      
+      <Head>
+        <title>Dhimas Putra | Expert Product Designer</title>
+      </Head>
+      <NavigationCase />
+      <div className="scroll-wrapper" data-scroll-container>
+        {props.children}
+      </div>
+    </div>
+  );
+};
+
+export {Layout, LayoutCase};

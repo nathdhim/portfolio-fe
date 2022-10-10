@@ -18,7 +18,7 @@ const CaseCard = (props) => {
           transition={{
             ease: easeCustom,
             duration: 1,
-            delay: 2,
+            delay: 1.8,
           }}
         >
           <motion.div
@@ -28,7 +28,7 @@ const CaseCard = (props) => {
             transition={{
               ease: easeCustom,
               duration: 1,
-              delay: 2,
+              delay: 1.8,
             }}
           >
             <Image

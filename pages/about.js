@@ -1,4 +1,4 @@
-import Layout from "../component/Layout";
+import {Layout} from "../component/Layout";
 import Image from "next/future/image";
 import { motion } from "framer-motion";
 import {FooterCase} from '../component/Footer';
@@ -17,7 +17,7 @@ export default function about() {
             transition={{
               ease: easeCustom,
               duration: 1,
-              delay: 2,
+              delay: 1.8,
             }}
           >
             <motion.div
@@ -26,7 +26,7 @@ export default function about() {
               transition={{
                 ease: easeCustom,
                 duration: 1,
-                delay: 2,
+                delay: 1.8,
               }}
             >
               <Image data-scroll data-scroll-speed="1"
@@ -92,19 +92,19 @@ export default function about() {
             <div className="content img-content">
              <div className="img-container">
                 <div className="img-wrapper">
-                <Image data-scroll data-scroll-speed="1" src={
+                <Image src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
                 </div>
                 <div className="img-wrapper">
-                <Image data-scroll data-scroll-speed="1" src={
+                <Image src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
                 </div>
                 <div className="img-wrapper">
-                <Image data-scroll data-scroll-speed="1" src={
+                <Image src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
@@ -114,19 +114,19 @@ export default function about() {
              <div className="img-container">
              
                 <div className="img-wrapper">
-                <Image data-scroll data-scroll-speed="1" src={
+                <Image src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
                 </div>
                 <div className="img-wrapper">
-                <Image data-scroll data-scroll-speed="1" src={
+                <Image src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>
                 </div>
                 <div className="img-wrapper">
-                <Image data-scroll data-scroll-speed="1" src={
+                <Image src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                 }
                 className="img" fill/>

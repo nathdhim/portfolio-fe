@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import { useTransition, animated } from 'react-spring'
 
-export default function Navigationbar() {
+function NavigationBar() {
   const [isOpen, setOpen] = useState(false);
   const transitions = useTransition(isOpen, {
     from: { opacity: 0 },
@@ -85,4 +85,33 @@ export default function Navigationbar() {
   );
 }
 
+function NavigationCase() {
+ 
+  return (
+    <>
+      <nav>
+        <div className="nav-container">
+          <div className="logo-container">
+            <Link href="/#">
+              <a className="btn-link">Back</a>
+            </Link>
+          </div>
+          <div className="right-container">
+          <Link href="/cases/case2">
+              <a className="btn-link">Prev</a>
+            </Link>
+            <p className="desc">—</p>
+            <Link href="/cases/case3">
+              <a className="btn-link">Next</a>
+            </Link>
+          </div>
+        </div>
+        
+        
+      </nav>
+    </>
+  );
+}
+
+export {NavigationBar, NavigationCase};
 

@@ -1,4 +1,4 @@
-import Layout from "../component/Layout";
+import {Layout} from "../component/Layout";
 import CaseCard from "../component/CaseCard";
 import {FooterSocial} from "../component/Footer";
 
