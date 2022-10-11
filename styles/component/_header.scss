@@ -2,8 +2,8 @@ nav {
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: $neutral-08 8%;
-    backdrop-filter: blur(24px);
+    // background-color: $neutral-08 8%;
+    // backdrop-filter: blur(24px);
     z-index: 3;
   
     .nav-container {
@@ -49,6 +49,7 @@ nav {
   
       
     }
+   
   }
   
   //////// Menu ////////@at-root

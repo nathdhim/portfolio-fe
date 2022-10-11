@@ -1,5 +1,5 @@
 import {Layout} from "../component/Layout";
-import CaseCard from "../component/CaseCard";
+import {CaseCard} from "../component/Card";
 import {FooterSocial} from "../component/Footer";
 
 export default function Work() {

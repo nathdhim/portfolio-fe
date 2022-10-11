@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {NavigationBar, NavigationCase} from "./Navbar";
+import {NavigationBar, NavigationCase} from "./Header";
 import { useEffect, useRef, useState } from "react";
 
 

@@ -6,6 +6,7 @@
   font-weight: 500;
 }
 
+
 @font-face {
   font-family: "uncut";
   src: url(../public/font/Uncut-Sans-Regular.otf);
@@ -14,14 +15,14 @@
 
 //////// Color Style ////////@at-root
 
-$neutral-08: #0E0E0E;
-$neutral-07: #131313;
-$neutral-06: #242424;
-$neutral-05: #707070;
-$neutral-04: #9f9f9f;
-$neutral-03: #bdbdbd;
-$neutral-02: #d4d4d4;
-$neutral-01: #ffffff;
+$neutral-08: #281E09;
+$neutral-07: #443B29;
+$neutral-06: #615949;
+$neutral-05: #7E7769;
+$neutral-04: #9B968A;
+$neutral-03: #B8B4AA;
+$neutral-02: #E6E3DC;
+$neutral-01: #F3F1EC;
 
 $transition: all ease 300ms;
 
@@ -32,7 +33,7 @@ $transition: all ease 300ms;
   font-size: 4em;
   font-weight: 500;
   line-height: 125%;
-  color: $neutral-01;
+  color: $neutral-08;
 }
 
 @mixin h2 {
@@ -40,7 +41,7 @@ $transition: all ease 300ms;
   font-size: 1.8em;
   font-weight: 500;
   line-height: 125%;
-  color: $neutral-01;
+  color: $neutral-08;
 }
 
 @mixin h3 {
@@ -48,15 +49,15 @@ $transition: all ease 300ms;
   font-size: 1.5em;
   font-weight: 500;
   line-height: 125%;
-  color: $neutral-01;
+  color: $neutral-08;
 }
 
 @mixin paragraph {
   font-family: "uncut", sans-serif;
   font-size: 0.9em;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 130%;
-  color: $neutral-01;
+  color: $neutral-08;
 }
 
 
@@ -66,7 +67,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: $neutral-08;
+  background-color: $neutral-01;
 }
 
 section {
@@ -113,6 +114,14 @@ a {
   text-align: center;
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
 @media only screen and (max-width: 700px) {
   h1 {
     @include h2();

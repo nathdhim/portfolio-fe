@@ -1,0 +1,26 @@
+.resource-hero {
+ 
+  .content-container {
+    padding: 6em 2em 3em 2em;
+    gap: 3em;
+
+    .hero-text {
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .left-container {
+        justify-content: end;
+        align-items: center;
+        gap: 0.5em;
+      }
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 2em;
+      grid-row-gap: 2.5em;
+      width: 100%;
+    }
+  }
+}

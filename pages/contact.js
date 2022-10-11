@@ -5,7 +5,7 @@ import {FooterSocial} from "../component/Footer";
 export default function contact() {
   return (
     <Layout>
-      <section className="contact-hero">
+      <section className="contact-hero column">
         <div className="content-container">
 
         <p className="desc text-center">

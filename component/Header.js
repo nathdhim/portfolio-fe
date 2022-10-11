@@ -22,7 +22,7 @@ function NavigationBar() {
         <Link href="/#">
           <a className="btn-link">Work</a>
         </Link>
-        <Link href="/waiting">
+        <Link href="/resource">
           <a className="btn-link">Resource</a>
         </Link>
         <Link href="/about">
@@ -39,15 +39,17 @@ function NavigationBar() {
       <nav>
         <div className="nav-container">
           <div className="logo-container">
+          <Link href="/#">
             <h2 className="logo">
               DP<span>©</span>{" "}
             </h2>
+            </Link>
           </div>
           <div className="nav-item-container">
             <Link href="/#">
               <a className="btn-link">Work</a>
             </Link>
-            <Link href="/waiting">
+            <Link href="/resource">
               <a className="btn-link">Resource</a>
             </Link>
             <Link href="/about">
