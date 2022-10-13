@@ -66,6 +66,12 @@ function ProductCard(props) {
   return (
     <div>
       <motion.a className="product-card column">
+      <motion.div className="detail-product row">
+            <div className="item-container row">
+            <p className="title">Dinamic Island - Prototype</p>
+            <BtnIcon to="#" src="/icon/download.svg" />
+            </div>
+            </motion.div>
         <motion.div
           onClick={openModal}
           className="container"
@@ -76,6 +82,8 @@ function ProductCard(props) {
             delay: 1.8,
           }}
         >
+         
+
           <motion.div
             className="img-wrapper"
             animate={{ scale: [1.5, 1] }}
@@ -88,23 +96,11 @@ function ProductCard(props) {
             <Image
               className="img"
               src={
-                "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1665474962/original-1f20bdbf3586bb83583b71b4b067733b_ltwpqy.webp"
+                "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1665641752/Product_Card_lefr5l.png"
               }
               fill
             />
           </motion.div>
-        </motion.div>
-        <motion.div
-          className="detail-product row"
-          animate={{ opacity: ["0%", "100%"] }}
-          transition={{
-            ease: easeCustom,
-            duration: 1,
-            delay: 1.8,
-          }}
-        >
-          <p className="title desc">Dinamic Island - Prototype</p>
-          <BtnIcon to="#" src="/icon/download.svg" />
         </motion.div>
       </motion.a>
       <Modal
@@ -115,20 +111,18 @@ function ProductCard(props) {
         className="preview-modal"
         overlayClassName="overlay"
       >
-       <AnimatePresence>
-       <motion.div
-          className="btn-icon row"
-        >
-          <Image
-            className="icon"
-            src="/icon/close.svg"
-            width={24}
-            height={24}
-            onClick={closeModal}
-          />
-        </motion.div>
-        <Preview />
-       </AnimatePresence>
+        <AnimatePresence>
+          <motion.div className="btn-icon row">
+            <Image
+              className="icon"
+              src="/icon/close.svg"
+              width={24}
+              height={24}
+              onClick={closeModal}
+            />
+          </motion.div>
+          <Preview />
+        </AnimatePresence>
       </Modal>
     </div>
   );

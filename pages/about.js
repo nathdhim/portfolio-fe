@@ -40,7 +40,7 @@ export default function about() {
           </motion.div>
           </div>
 
-          <div className="text-container">
+          <div className="text-container desc-component">
             <p className="titled desc">About</p>
             <div className="content">
               <h2>
@@ -55,7 +55,7 @@ export default function about() {
               </h2>
             </div>
           </div>
-          <div className="text-container">
+          <div className="text-container desc-component">
             <p className="titled desc">Experience</p>
             <div className="content">
               <div className="work-card">
@@ -76,7 +76,7 @@ export default function about() {
               </div>
             </div>
           </div>
-          <div className="text-container">
+          <div className="text-container desc-component">
             <p className="titled desc">Expertise</p>
             <div className="content">
               <h2>Interface Design</h2>
@@ -87,7 +87,7 @@ export default function about() {
               <h2>Front-end developing</h2>
             </div>
           </div>
-          <div className="text-container">
+          <div className="text-container desc-component">
             <p className="titled desc">Interest</p>
             <div className="content img-content">
              <div className="img-container">

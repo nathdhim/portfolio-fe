@@ -62,7 +62,7 @@ export default function Case(props) {
       </section>
       <section className="case-about" data-scroll-container>
         <div className="content-container">
-          <div className="text-container">
+          <div className="text-container desc-component">
             <p className="titled desc">About</p>
             <div className="content">
               <h2>
@@ -77,7 +77,7 @@ export default function Case(props) {
               </h2>
             </div>
           </div>
-          <div className="text-container">
+          <div className="text-container desc-component">
             <p className="titled desc">My Role</p>
             <div className="content">
               <h2>

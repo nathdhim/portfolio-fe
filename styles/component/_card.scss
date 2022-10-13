@@ -36,7 +36,7 @@
     background: $neutral-01;
     justify-content: flex-end;
     overflow: hidden;
-    gap: 1em;
+    
   
     .container {
       width: 100%;
@@ -44,6 +44,26 @@
       position: relative;
       overflow: hidden;
     }
+
+    .detail-product {
+      align-items: center;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+      position: absolute;
+      width: 100%;
+      height: 3em;
+      bottom: -3em;
+      z-index: 1;
+      
+      transition: $transition;
+    .item-container {
+      padding: 0.5em;
+      width: 100%;
+      justify-content: space-between;
+      .title {color: $neutral-01;}
+    }
+      
+    }
+
     .img-wrapper {
       width: 100%;
       height: 100%;
@@ -56,23 +76,17 @@
       transition: $transition;
     }
    
-    .detail-product {
-      justify-content: space-between;
-      align-items: center;
-      .title {
-        transition: $transition;
-      }
-    }
+   
     &:hover {
       .img {
         transform: scale(105%);
       }
       .detail-product {
-        .title {
-          color: $neutral-08;
-        }
+        
+        bottom: 0;
       }
     }
+    
   }
   
   @media only screen and (max-width: 700px) {
