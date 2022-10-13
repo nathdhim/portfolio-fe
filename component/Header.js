@@ -67,7 +67,7 @@ function NavigationBar() {
             <Hamburger
               toggled={isOpen}
               toggle={setOpen}
-              color="#ffffff"
+              color="#281E09"
               size={24}
               onToggle={(toggled) => {
                 if (toggled) {

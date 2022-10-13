@@ -49,7 +49,7 @@ nav {
   //////// Menu ////////@at-root
   
   .menu-item-container {
-    
+    background-color: $neutral-01;
     padding: 1.5em;
     height: 100vh;
     .btn-link {
@@ -65,7 +65,7 @@ nav {
     nav {
       .nav-container {
         padding: 0 1.5em;
-        padding-right: 0.75em;
+        
         .nav-item-container {
           gap: 1.5em;
         }

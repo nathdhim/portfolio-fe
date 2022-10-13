@@ -7,7 +7,7 @@ function Preview() {
   return (
     <AnimatePresence>
       <div className="overlay-wrapper"></div>
-      <div className="content-container row">
+      <div className="preview-container row">
       
       </div>
     </AnimatePresence>
