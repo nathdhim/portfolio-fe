@@ -1,6 +1,6 @@
 import {Layout} from "../component/Layout";
 import {CaseCard} from "../component/Card";
-import {FooterSocial} from "../component/Footer";
+import {FooterDefault} from "../component/Footer";
 
 export default function Work() {
   return (
@@ -15,8 +15,9 @@ export default function Work() {
             <CaseCard to="/cases/case1"/>
           </div>
         </div>
+        <FooterDefault/>
       </section>
-      <FooterSocial/>
+      
     </Layout>
   );
 }

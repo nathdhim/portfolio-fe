@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
-import { useTransition, animated } from 'react-spring'
+import { useTransition, animated } from "react-spring";
 
 function NavigationBar() {
   const [isOpen, setOpen] = useState(false);
@@ -12,8 +12,9 @@ function NavigationBar() {
     leave: { opacity: 0 },
     reverse: isOpen,
     delay: 200,
-    
-    onRest: () => set(!isOpen),})
+
+    onRest: () => set(!isOpen),
+  });
 
   let menu;
   if (isOpen) {
@@ -22,11 +23,11 @@ function NavigationBar() {
         <Link href="/#">
           <a className="btn-link">Work</a>
         </Link>
-        <Link href="/resource">
-          <a className="btn-link">Resource</a>
-        </Link>
         <Link href="/about">
           <a className="btn-link">About</a>
+        </Link>
+        <Link href="/resource">
+          <a className="btn-link">Resource</a>
         </Link>
         <Link href="/contact">
           <a className="btn-link">Contact</a>
@@ -37,26 +38,27 @@ function NavigationBar() {
   return (
     <>
       <nav>
-        <div className="nav-container">
-          <div className="logo-container">
-          <Link href="/#">
-            <h2 className="logo">
-              DP<span>©</span>{" "}
-            </h2>
-            </Link>
-          </div>
-          <div className="nav-item-container">
+        <div className="nav-container row">
+          <div className="logo-container row">
             <Link href="/#">
-              <a className="btn-link">Work</a>
+              <h2 className="logo">
+                DP<span>©</span>{" "}
+              </h2>
             </Link>
-            <Link href="/resource">
-              <a className="btn-link">Resource</a>
-            </Link>
-            <Link href="/about">
-              <a className="btn-link">About</a>
-            </Link>
+            <div className="nav-item-container row">
+              <Link href="/#">
+                <a className="btn-link">Work</a>
+                
+              </Link>
+              <Link href="/about">
+                  <a className="btn-link">About</a>
+                </Link>
+              <Link href="/resource">
+                <a className="btn-link">Resource</a>
+              </Link>
+            </div>
           </div>
-          <div className="contact-container">
+          <div className="contact-container row">
             <Link href="/contact">
               <a className="btn-link">Contact</a>
             </Link>
@@ -77,29 +79,27 @@ function NavigationBar() {
             />
           </div>
         </div>
-        {
-          transitions(
-            (styles, item) => item && <animated.div style={styles}>{menu}</animated.div>)
-        }
-        
+        {transitions(
+          (styles, item) =>
+            item && <animated.div style={styles}>{menu}</animated.div>
+        )}
       </nav>
     </>
   );
 }
 
 function NavigationCase() {
- 
   return (
     <>
       <nav>
-        <div className="nav-container">
+        <div className="nav-container row">
           <div className="logo-container">
             <Link href="/#">
               <a className="btn-link">Back</a>
             </Link>
           </div>
-          <div className="right-container">
-          <Link href="/cases/case2">
+          <div className="right-container row">
+            <Link href="/cases/case2">
               <a className="btn-link">Prev</a>
             </Link>
             <p className="desc">—</p>
@@ -108,12 +108,9 @@ function NavigationCase() {
             </Link>
           </div>
         </div>
-        
-        
       </nav>
     </>
   );
 }
 
-export {NavigationBar, NavigationCase};
-
+export { NavigationBar, NavigationCase };

@@ -1,0 +1,90 @@
+.preview-modal {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  display: flex;
+  .btn-icon {
+    position: absolute;
+    right: 2em;
+    top: -3em;
+  }
+}
+
+.overlay-wrapper {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1000;
+  background: rgba(42, 31, 9, 0.24);
+  backdrop-filter: blur(28px);
+  transition: $transition-custom;
+ 
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+ 
+}
+
+.content-container {
+  background: $neutral-01;
+  width: 100%;
+  gap: 6em;
+  padding: 3em;
+  .product-desc {
+    align-items: flex-start;
+    width: 80%;
+    gap: 3em;
+
+    .product-title {
+      gap: 1em;
+    }
+  }
+  .product-img {
+    width: 100%;
+    gap: 2em;
+    .img-wrapper {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+      .img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.ReactModal__Content {
+    
+    transition: $transition-custom;
+    transform: translateY(100%);
+    .overlay-wrapper {
+        opacity: 0;
+    }
+}
+
+.ReactModal__Content--after-open{
+    transform: translateY(0%);
+    .overlay-wrapper {
+        opacity: 1;
+    }
+}
+
+.ReactModal__Content--before-close{
+    transform: translateY(100%);
+    .overlay-wrapper {
+        opacity: 0;
+    }
+}
+

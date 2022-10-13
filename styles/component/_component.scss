@@ -1,5 +1,6 @@
 //////// Button ////////
 
+
 .btn-primary {
   @include paragraph;
   padding: 1em 2em;
@@ -7,6 +8,10 @@
   background-color: $neutral-02;
   border-radius: 100em;
   transition: background-color ease 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
 
   &:hover {
     background-color: $neutral-03;
@@ -21,7 +26,6 @@
   border-radius: 10em;
   justify-content: center;
   align-items: center;
-
 
   &:hover {
     background-color: $neutral-03;
@@ -60,7 +64,7 @@
   }
 }
 
-/////// Transition ////////@at-root
+
 
 .pages-wrapper {
   position: absolute;

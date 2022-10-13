@@ -49,10 +49,10 @@ function FooterSocial() {
   );
 }
 
-function FooterResource() {
+function FooterDefault() {
   return (
     <>
-      <footer className="footer-resource">
+      <footer className="footer-default">
         <div className="footer-container row">
           <p className="desc">©Dhimasputra.com  - 2022 </p>
           <div className="footer-item-container">
@@ -166,4 +166,4 @@ function FooterCase() {
   );
 }
 
-export {FooterSocial, FooterCase, FooterResource};
+export {FooterSocial, FooterCase, FooterDefault};

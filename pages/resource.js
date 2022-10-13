@@ -1,9 +1,11 @@
 import { Layout } from "../component/Layout";
 import {ProductCard} from "../component/Card";
 import Image from "next/future/image";
-import { FooterResource } from "../component/Footer";
+import { FooterDefault } from "../component/Footer";
+
 
 export default function resource() {
+  
   return (
     <Layout>
       <section className="resource-hero column">
@@ -34,7 +36,8 @@ export default function resource() {
           </div>
         </div>
       </section>
-      <FooterResource/>
+      <FooterDefault/>
     </Layout>
+    
   );
 }

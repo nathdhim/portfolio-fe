@@ -17,6 +17,12 @@
         gap: 2em;
       }
     }
+    .footer-default {
+      position: fixed;
+      bottom: 0;
+      background-color: $neutral-01;
+      z-index: 1;
+    }
   }
 
 //////// Responsive Mobile ////////
