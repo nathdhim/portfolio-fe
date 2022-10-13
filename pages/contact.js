@@ -23,7 +23,7 @@ export default function contact() {
          
           <div className="text-container">
             <p>Follow my socials</p>
-            <Image src="/icon/arrow-down.svg" width={24} height={24}/>
+            <Image  alt="image" src="/icon/arrow-down.svg" width={24} height={24}/>
           </div>
           
         </div>

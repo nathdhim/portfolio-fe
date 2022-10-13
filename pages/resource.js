@@ -16,7 +16,7 @@ export default function resource() {
               <h1>startups to design faster</h1>
             </div>
             <div className="left-container row">
-            <Image className="img" src="/icon/dot.svg" width={16} height={16} />
+            <Image alt="image" className="img" src="/icon/dot.svg" width={16} height={16} />
               <p className="desc">Note : All the design resources is 100% free.</p>
             </div>
           </div>
