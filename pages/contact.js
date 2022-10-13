@@ -6,7 +6,7 @@ export default function contact() {
   return (
     <Layout>
       <section className="contact-hero column">
-        <div className="content-container">
+        <div className="content-container column">
 
         <p className="desc text-center">
           Let’s connect your brain with me.

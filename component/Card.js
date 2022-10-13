@@ -65,6 +65,7 @@ function ProductCard(props) {
 
   return (
     <div>
+      <div onClick={openModal}>
       <motion.a className="product-card column">
       <motion.div className="detail-product row">
             <div className="item-container row">
@@ -73,7 +74,7 @@ function ProductCard(props) {
             </div>
             </motion.div>
         <motion.div
-          onClick={openModal}
+          
           className="container"
           animate={{ height: ["0%", "100%"] }}
           transition={{
@@ -103,6 +104,7 @@ function ProductCard(props) {
           </motion.div>
         </motion.div>
       </motion.a>
+      </div>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}

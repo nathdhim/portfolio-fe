@@ -3,10 +3,9 @@
     .content-container {
      width: auto;
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+     gap: 2em;
       height: 100vh;
   
       
@@ -21,11 +20,13 @@
     }
   }
   .email {
+    
     color: $neutral-01;
     border-bottom: 1px solid $neutral-03;
     transition: $transition;
-    margin: 1.5em 0;
+    
     h1 {
+      
       margin-bottom: 0.25em;
     }
   }
