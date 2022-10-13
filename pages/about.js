@@ -2,8 +2,7 @@ import {Layout} from "../component/Layout";
 import Image from "next/future/image";
 import { motion } from "framer-motion";
 import {FooterCase} from '../component/Footer';
-
-const easeCustom = [0.75, -0.01, 0.34, 1];
+const easeCustom = [0.8, 0, 0.28, 1];
 
 export default function about() {
   return (

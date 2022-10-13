@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/future/image";
-const easeCustom = [0.75, -0.01, 0.34, 1];
+const easeCustom = [0.8, 0, 0.28, 1];
 
 function Preview() {
   return (

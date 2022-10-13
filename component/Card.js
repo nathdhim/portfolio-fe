@@ -6,7 +6,7 @@ import Modal from "react-modal";
 import { useState } from "react";
 import Preview from "./Preview";
 
-const easeCustom = [0.75, -0.01, 0.34, 1];
+const easeCustom = [0.8, 0, 0.28, 1];
 
 const CaseCard = (props) => {
   return (

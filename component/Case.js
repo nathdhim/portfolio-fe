@@ -3,7 +3,7 @@ import Image from "next/future/image";
 import { FooterCase } from "./Footer";
 import { motion } from "framer-motion";
 
-const easeCustom = [0.75, -0.01, 0.34, 1];
+const easeCustom = [0.8, 0, 0.28, 1];
 
 export default function Case(props) {
 

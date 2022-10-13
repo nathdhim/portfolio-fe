@@ -1,7 +1,7 @@
 import "../styles/global.scss";
 import { AnimatePresence, motion } from "framer-motion";
 
-const easeCustom = [0.75, -0.01, 0.34, 1];
+const easeCustom = [0.8, 0, 0.28, 1];
 
 function MyApp({ Component, pageProps, router }) {
 
