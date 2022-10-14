@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import BtnIcon from "./Button";
+import {BtnIcon} from "./Button";
 import Image from "next/future/image";
 import Modal from "react-modal";
 import { useState } from "react";
@@ -32,7 +32,7 @@ const CaseCard = (props) => {
               }}
             >
               <Image
-                className="img"
+                className="img" alt="image"
                 src={
                   "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1665516339/2_3.2_aqlhwq.png"
                 }
@@ -95,7 +95,7 @@ function ProductCard(props) {
             }}
           >
             <Image
-              className="img"
+              className="img" alt="image"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1665641752/Product_Card_lefr5l.png"
               }
@@ -116,6 +116,7 @@ function ProductCard(props) {
         <AnimatePresence>
           <motion.div className="btn-icon row">
             <Image
+            alt="icon"
               className="icon"
               src="/icon/close.svg"
               width={24}

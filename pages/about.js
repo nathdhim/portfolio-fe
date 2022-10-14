@@ -1,42 +1,45 @@
-import {Layout} from "../component/Layout";
+import { Layout } from "../component/Layout";
 import Image from "next/future/image";
 import { motion } from "framer-motion";
-import {FooterCase} from '../component/Footer';
+import { FooterCase } from "../component/Footer";
 const easeCustom = [0.8, 0, 0.28, 1];
 
 export default function about() {
   return (
     <Layout>
-      <section className="about-hero" >
+      <section className="about-hero">
         <div className="content-container">
-          <div className="hero-img-wrapper" >
-          <motion.div
-            className="hero-img"
-            animate={{ height: ["0", "20em"] }}
-            transition={{
-              ease: easeCustom,
-              duration: 1,
-              delay: 1.8,
-            }}
-          >
+          <div className="hero-img-wrapper">
             <motion.div
-              className="img-wrapper"
-              animate={{ scale: [1.5, 1] }}
+              className="hero-img"
+              animate={{ height: ["0", "20em"] }}
               transition={{
                 ease: easeCustom,
                 duration: 1,
                 delay: 1.8,
               }}
             >
-              <Image alt="image" data-scroll data-scroll-speed="1"
-                src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img"
-                fill
-              />
+              <motion.div
+                className="img-wrapper"
+                animate={{ scale: [1.5, 1] }}
+                transition={{
+                  ease: easeCustom,
+                  duration: 1,
+                  delay: 1.8,
+                }}
+              >
+                <Image
+                  alt="image"
+                  data-scroll
+                  data-scroll-speed="1"
+                  src={
+                    "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
+                  }
+                  className="img"
+                  fill
+                />
+              </motion.div>
             </motion.div>
-          </motion.div>
           </div>
 
           <div className="text-container desc-component">
@@ -46,8 +49,8 @@ export default function about() {
                 Ut voluptatem fugiat eos officiis tempora explicabo non illo
                 possimus. Hic qui placeat quia sit et dolores expedita fugiat.
                 Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.
-              </h2>
-              <h2>
+                <br />
+                <br />
                 Ut voluptatem fugiat eos officiis tempora explicabo non illo
                 possimus. Hic qui placeat quia sit et dolores expedita fugiat.
                 Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.
@@ -89,53 +92,73 @@ export default function about() {
           <div className="text-container desc-component">
             <p className="titled desc">Interest</p>
             <div className="content img-content">
-             <div className="img-container">
+              <div className="img-container">
                 <div className="img-wrapper">
-                <Image alt="image" src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img" fill/>
+                  <Image
+                    alt="image"
+                    src={
+                      "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
+                    }
+                    className="img"
+                    fill
+                  />
                 </div>
                 <div className="img-wrapper">
-                <Image alt="image" src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img" fill/>
+                  <Image
+                    alt="image"
+                    src={
+                      "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
+                    }
+                    className="img"
+                    fill
+                  />
                 </div>
                 <div className="img-wrapper">
-                <Image alt="image" src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img" fill/>
-                </div>
-             </div>
-            
-             <div className="img-container">
-             
-                <div className="img-wrapper">
-                <Image alt="image" src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img" fill/>
+                  <Image
+                    alt="image"
+                    src={
+                      "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
+                    }
+                    className="img"
+                    fill
+                  />
                 </div>
                 <div className="img-wrapper">
-                <Image alt="image" src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img" fill/>
+                  <Image
+                    alt="image"
+                    src={
+                      "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
+                    }
+                    className="img"
+                    fill
+                  />
                 </div>
                 <div className="img-wrapper">
-                <Image alt="image" src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img" fill/>
+                  <Image
+                    alt="image"
+                    src={
+                      "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
+                    }
+                    className="img"
+                    fill
+                  />
                 </div>
-             </div>
+                <div className="img-wrapper">
+                  <Image
+                    alt="image"
+                    src={
+                      "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
+                    }
+                    className="img"
+                    fill
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <FooterCase/>
+      <FooterCase />
     </Layout>
   );
 }

@@ -19,9 +19,8 @@
     .product-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 1fr);
       grid-column-gap: 2em;
-      grid-row-gap: 2.5em;
+      grid-row-gap: 2em;
       width: 100%;
     }
   }
@@ -29,7 +28,7 @@
 
 ////////////////////// Responsive /////////////////////////
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 786px) {
   .resource-hero {
     .content-container {
       padding: 5em 1.5em;

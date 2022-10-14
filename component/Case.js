@@ -48,7 +48,7 @@ export default function Case(props) {
                 duration: 1,
                 delay: 1.8,
               }}>
-            <Image data-scroll data-scroll-speed="1"
+            <Image alt="img" data-scroll data-scroll-speed="1"
               className="img"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
@@ -69,23 +69,24 @@ export default function Case(props) {
                 Ut voluptatem fugiat eos officiis tempora explicabo non illo
                 possimus. Hic qui placeat quia sit et dolores expedita fugiat.
                 Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.
-              </h2>
-              <h2>
+                <br/>
+                <br/>
                 Ut voluptatem fugiat eos officiis tempora explicabo non illo
                 possimus. Hic qui placeat quia sit et dolores expedita fugiat.
                 Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.
               </h2>
+             
             </div>
           </div>
           <div className="text-container desc-component">
             <p className="titled desc">My Role</p>
             <div className="content">
-              <h2>
+            <h2>
                 Ut voluptatem fugiat eos officiis tempora explicabo non illo
                 possimus. Hic qui placeat quia sit et dolores expedita fugiat.
                 Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.
-              </h2>
-              <h2>
+                <br/>
+                <br/>
                 Ut voluptatem fugiat eos officiis tempora explicabo non illo
                 possimus. Hic qui placeat quia sit et dolores expedita fugiat.
                 Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.
@@ -95,7 +96,7 @@ export default function Case(props) {
          <div className="img-container">
          <div className="img-wrapper">
           
-            <Image data-scroll data-scroll-speed="1"
+            <Image alt="img" data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
@@ -104,7 +105,7 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper" >
-            <Image data-scroll data-scroll-speed="1"
+            <Image alt="img" data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
@@ -113,7 +114,7 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper">
-            <Image data-scroll data-scroll-speed="1"
+            <Image alt="img" data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
@@ -122,7 +123,7 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper">
-            <Image data-scroll data-scroll-speed="1"
+            <Image alt="img" data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
@@ -131,7 +132,7 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper">
-            <Image data-scroll data-scroll-speed="1"
+            <Image alt="img" data-scroll data-scroll-speed="1"
               src={ 
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }
@@ -140,7 +141,7 @@ export default function Case(props) {
             />
           </div>
           <div className="img-wrapper">
-            <Image data-scroll data-scroll-speed="1"
+            <Image alt="img" data-scroll data-scroll-speed="1"
               src={
                 "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
               }

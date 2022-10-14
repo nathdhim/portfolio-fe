@@ -2,7 +2,7 @@ nav {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 999;
   
     .nav-container {
      justify-content: space-between;
@@ -50,19 +50,24 @@ nav {
   
   .menu-item-container {
     background-color: $neutral-01;
+    
+    
     padding: 1.5em;
     height: 100vh;
+   
     .btn-link {
       @include h2();
       padding: 1.5em 0;
       
     }
+    
   }
   
 //////// Responsive Mobile ////////
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 786px) {
     nav {
+      background-color: $neutral-01;
       .nav-container {
         padding: 0 1.5em;
         

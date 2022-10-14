@@ -1,11 +1,11 @@
 .preview-modal {
   position: absolute;
-  top: 4em;
-  left: 0;
-  right: 0;
+  
+  top: auto;
   bottom: 0;
   border: none;
   display: flex;
+  width: 100vw;
   .btn-icon {
     position: absolute;
     right: 2em;
@@ -20,7 +20,7 @@
   right: 0;
   bottom: 0;
   z-index: -1000;
-  background: rgba(42, 31, 9, 0.56);
+  background: rgba(42, 31, 9, 0.64);
   transition: $transition-custom;
  
 }
@@ -36,13 +36,56 @@
 }
 
 .preview-container {
+  position: relative;
   background: $neutral-01;
   align-items: flex-start;
+  justify-content: center;
   width: 100%;
-  gap: 5em;
-  padding: 3em;
-
-
+  .desc-row {
+    gap: 0.5em;
+  }
+  .content-container {
+    gap: 3em;
+    width: 100%;
+    padding: 2em 2em 0 2em ;
+    .product-header {
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2em;
+      .product-title {
+        gap: 1.5em;
+        .product-detail {
+          
+          gap: 2em;
+        }
+      }
+    }
+    .product-img {
+      gap: 2em;
+      width: 100%;
+      .img-wrapper {
+        width: 100%;
+        aspect-ratio: 4/3;
+        position: relative;
+      }
+      .img {
+        width: initial;
+        height: initial;
+        object-fit: cover;
+        transition: $transition;
+      }
+    }
+    .product-note {
+      justify-content: space-between;
+    }
+  }
+    .footer-default {
+      .footer-container {
+        padding: 0;
+      }
+    }
+  
   }
   
 
@@ -71,3 +114,43 @@
     }
 }
 
+//////// Responsive Mobile ////////
+
+@media only screen and (max-width: 786px) {
+  .preview-modal {
+    top: 4em;
+ 
+    .btn-icon {
+     
+      right: 1.5em;
+     
+    }
+  }
+  .preview-container {
+    overflow: auto;
+    .content-container {
+      
+      .desc-row {
+        align-items: flex-start;
+      }
+      .product-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5em;
+        .product-title {
+          .product-detail {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5em;
+          }
+        }
+      }
+     .product-img {
+      flex-direction: column;
+     }
+      .size {
+        display: none;
+      }
+    }
+  }
+}

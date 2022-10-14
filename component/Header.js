@@ -19,7 +19,9 @@ function NavigationBar() {
   let menu;
   if (isOpen) {
     menu = (
+     
       <div className="menu-item-container">
+         
         <Link href="/#">
           <a className="btn-link">Work</a>
         </Link>
@@ -38,6 +40,7 @@ function NavigationBar() {
   return (
     <>
       <nav>
+     
         <div className="nav-container row">
           <div className="logo-container row">
             <Link href="/#">
