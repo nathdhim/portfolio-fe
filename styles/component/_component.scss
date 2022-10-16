@@ -7,7 +7,7 @@
   border: none;
   background-color: $neutral-02;
   border-radius: 100em;
-  transition: background-color ease 200ms;
+  transition:$transition;
   display: flex;
   justify-content: center;
   align-items: center;

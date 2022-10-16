@@ -1,20 +1,24 @@
-import {LayoutCase} from "./Layout";
+import {LayoutCase} from "../../component/Layout";
 import Image from "next/future/image";
-import { FooterCase } from "./Footer";
+import { FooterCase } from "../../component/Footer";
 import { motion } from "framer-motion";
+
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
-export default function Case(props) {
+export default function Case({cases}) {
 
 
   return (
+   
     <LayoutCase>
-      <section className="case-hero" data-scroll-container>
+   
+      <section className="case-hero" data-scroll-container >
         <div className="content-container">
           <div className="hero-text">
           <div className="text-wrapper-h3">
             <motion.h3
+           
             className="desc"
             animate={{y:[100, 0]}}
             transition={{
@@ -156,3 +160,14 @@ export default function Case(props) {
     </LayoutCase>
   );
 }
+
+Case.getInitialProps = async ctx => {
+  try {
+    const res = await axios.get('http://localhost:1337/api/cases?populate=*');
+    const cases = res.data;
+    return { cases };
+  } catch (error) {
+    return { error };
+  }
+};
+

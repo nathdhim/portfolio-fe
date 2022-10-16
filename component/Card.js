@@ -6,13 +6,17 @@ import Modal from "react-modal";
 import { useState } from "react";
 import Preview from "./Preview";
 
+
+
+
 const easeCustom = [0.8, 0, 0.28, 1];
 
-const CaseCard = (props) => {
+const CaseCard = ({val}) => {
   return (
-    <AnimatePresence exitBeforeEnter>
-      <Link href={props.to}>
-        <motion.a className="case-card row">
+    
+     
+        <motion.div className="case-card row">
+          
           <motion.div
             className="container"
             animate={{ height: ["0%", "100%"] }}
@@ -31,18 +35,17 @@ const CaseCard = (props) => {
                 delay: 1.8,
               }}
             >
+              
               <Image
                 className="img" alt="image"
-                src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1665516339/2_3.2_aqlhwq.png"
-                }
+                src="https://res.cloudinary.com/dtwh4nrmh/image/upload/v1665516339/2_3.2_aqlhwq.png"
                 fill
               />
             </motion.div>
           </motion.div>
-        </motion.a>
-      </Link>
-    </AnimatePresence>
+        </motion.div>
+     
+  
   );
 };
 

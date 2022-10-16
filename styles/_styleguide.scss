@@ -24,7 +24,7 @@ $neutral-03: #B8B4AA;
 $neutral-02: #E6E3DC;
 $neutral-01: #F3F1EC;
 
-$transition: all ease 350ms;
+$transition: all ease 300ms;
 $transition-custom: all cubic-bezier(.8,0,.16,1) 1s;
 
 //////// Text Style ////////@at-root
@@ -39,7 +39,7 @@ $transition-custom: all cubic-bezier(.8,0,.16,1) 1s;
 
 @mixin h2 {
   font-family: "uncut", sans-serif;
-  font-size: 2em;
+  font-size: 1.875em;
   font-weight: 500;
   line-height: 125%;
   color: $neutral-08;
@@ -55,7 +55,7 @@ $transition-custom: all cubic-bezier(.8,0,.16,1) 1s;
 
 @mixin paragraph {
   font-family: "uncut", sans-serif;
-  font-size: 0.9em;
+  font-size: 0.925em;
   font-weight: 500;
   line-height: 130%;
   color: $neutral-08;

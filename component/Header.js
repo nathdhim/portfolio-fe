@@ -102,11 +102,11 @@ function NavigationCase() {
             </Link>
           </div>
           <div className="right-container row">
-            <Link href="/cases/case2">
+            <Link href="#">
               <a className="btn-link">Prev</a>
             </Link>
             <p className="desc">—</p>
-            <Link href="/cases/case3">
+            <Link href="#">
               <a className="btn-link">Next</a>
             </Link>
           </div>

@@ -6,7 +6,7 @@ const easeCustom = [0.8, 0, 0.28, 1];
 function MyApp({ Component, pageProps, router }) {
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode='wait'>
       <motion.div key={router.asPath}>
         <motion.div
           className="pages-wrapper"
