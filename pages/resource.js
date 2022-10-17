@@ -46,8 +46,9 @@ export async function getStaticProps() {
   return {
     props: {
       showProducts: productRes,
+      fallback: false,
     },
-    fallback: false,
+    
   };
 }
 
