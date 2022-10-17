@@ -12,6 +12,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.75em;
+  cursor: pointer;
 
   &:hover {
     background-color: $neutral-03;
@@ -26,7 +27,7 @@
   border-radius: 10em;
   justify-content: center;
   align-items: center;
-
+  cursor: pointer;
   &:hover {
     background-color: $neutral-03;
   }

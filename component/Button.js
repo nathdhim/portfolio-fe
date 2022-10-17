@@ -15,8 +15,8 @@ function BtnIcon(props) {
 function BtnPrimary(props) {
   return (
     <div>
-      <Link href={props.to}>
-      <div className="btn-primary"><p>{props.label}</p><Image alt="icon" className="icon" src={props.src} width={20} height={20}/></div>
+      <Link href={props.to} target="_blank" passHref>
+      <a target="_blank"><div className="btn-primary"><p>{props.label}</p><Image alt="icon" className="icon" src={props.src} width={20} height={20}/></div></a>
       </Link>
     </div>
     

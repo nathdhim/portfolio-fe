@@ -5,7 +5,7 @@ import { BtnPrimary } from "./Button";
 import Image from "next/future/image";
 const easeCustom = [0.8, 0, 0.28, 1];
 
-function Preview() {
+function Preview({showProduct}) {
   return (
     <AnimatePresence>
       <div className="overlay-wrapper"></div>

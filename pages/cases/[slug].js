@@ -1,20 +1,13 @@
-import { LayoutCase } from "../component/Layout";
+import { LayoutCase } from "../../component/Layout";
 import Image from "next/future/image";
-import { FooterCase } from "../component/Footer";
+import { FooterCase } from "../../component/Footer";
 import { motion } from "framer-motion";
-import { ApolloClient, InMemoryCache } from "@apollo/client";
-import { GET_ALL_SLUGS, GET_INDIVIDUAL_CASE } from "../graphql/queries";
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
+import { fetcher } from "../../lib/api";
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
-const client = new ApolloClient({
-  uri: "http://localhost:1337/graphql",
-  cache: new InMemoryCache(),
-});
 
-export default function Case({ showcase }) {
+export default function Case({showcase}) {
   return (
     <LayoutCase>
       <section className="case-hero" data-scroll-container>
@@ -30,7 +23,7 @@ export default function Case({ showcase }) {
                   delay: 2.3,
                 }}
               >
-                {showcase.title}
+                {showcase.attributes.title}
               </motion.h3>
             </div>
             <div className="text-wrapper-h1">
@@ -42,7 +35,7 @@ export default function Case({ showcase }) {
                   delay: 2.3,
                 }}
               >
-                {showcase.subtitle}
+               {showcase.attributes.subtitle}
               </motion.h1>
             </div>
           </div>
@@ -70,9 +63,7 @@ export default function Case({ showcase }) {
                   data-scroll
                   data-scroll-speed="1"
                   className="img"
-                  src={
-                    "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                  }
+                  src={showcase.attributes.cover}
                   fill
                 />
               </motion.div>
@@ -86,7 +77,7 @@ export default function Case({ showcase }) {
             <p className="titled desc">About</p>
             <div className="content">
               <h2>
-               {showcase.about}
+              {showcase.attributes.about}
               </h2>
             </div>
           </div>
@@ -94,7 +85,7 @@ export default function Case({ showcase }) {
             <p className="titled desc">My Role</p>
             <div className="content">
               <h2>
-              {showcase.role}
+              {showcase.attributes.role}
               </h2>
             </div>
           </div>
@@ -102,11 +93,8 @@ export default function Case({ showcase }) {
             <div className="img-wrapper">
               <Image
                 alt="img"
-                data-scroll
-                data-scroll-speed="1"
-                src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
+                
+                src={showcase.attributes.showcase1}
                 className="img"
                 fill
               />
@@ -114,11 +102,8 @@ export default function Case({ showcase }) {
             <div className="img-wrapper">
               <Image
                 alt="img"
-                data-scroll
-                data-scroll-speed="1"
-                src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
+                
+                src={showcase.attributes.showcase2}
                 className="img"
                 fill
               />
@@ -126,11 +111,8 @@ export default function Case({ showcase }) {
             <div className="img-wrapper">
               <Image
                 alt="img"
-                data-scroll
-                data-scroll-speed="1"
-                src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
+                
+                src={showcase.attributes.showcase3}
                 className="img"
                 fill
               />
@@ -138,11 +120,8 @@ export default function Case({ showcase }) {
             <div className="img-wrapper">
               <Image
                 alt="img"
-                data-scroll
-                data-scroll-speed="1"
-                src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
+                
+                src={showcase.attributes.showcase4}
                 className="img"
                 fill
               />
@@ -150,23 +129,8 @@ export default function Case({ showcase }) {
             <div className="img-wrapper">
               <Image
                 alt="img"
-                data-scroll
-                data-scroll-speed="1"
-                src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
-                className="img"
-                fill
-              />
-            </div>
-            <div className="img-wrapper">
-              <Image
-                alt="img"
-                data-scroll
-                data-scroll-speed="1"
-                src={
-                  "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
-                }
+                
+                src={showcase.attributes.showcase5}
                 className="img"
                 fill
               />
@@ -178,39 +142,15 @@ export default function Case({ showcase }) {
     </LayoutCase>
   );
 }
-export async function getStaticPaths() {
 
-  const { data } = await client.query({ query: GET_ALL_SLUGS });
 
-  const paths = data.cases.data.map((showcase) => {
-      return { params: { slug: showcase.attributes.urlSlug } }
-  });
-
-  return {
-      paths,
-      fallback: false
+export async function getServerSideProps({params}) {
+const {slug} = params;
+const casesRes = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/cases/${slug}`);
+console.log(params);
+return {
+  props: {
+    showcase: casesRes.data
   }
 }
-
-export async function getStaticProps({ params }) {
-
-  const { data } = await client.query({
-      query: GET_INDIVIDUAL_CASE,
-      variables: { slugUrl: params.slug }
-  });
-
-  const attrs = data.cases.data[0].attributes;
-
- 
-
-  return {
-      props: {
-          showcase: {
-              title: attrs.title,
-              subtitle: attrs.subtitle,
-              about: attrs.about,
-              role: attrs.role,
-          }
-      }
-  }
 }

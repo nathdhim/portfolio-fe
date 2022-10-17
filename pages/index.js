@@ -1,51 +1,39 @@
-import {Layout} from "../component/Layout";
-import {CaseCard} from "../component/Card";
-import {FooterDefault} from "../component/Footer";
-import {useState, useEffect} from "react";
-import { GET_ALL_CASES } from '../graphql/queries';
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { Layout } from "../component/Layout";
+import { CaseCard } from "../component/Card";
+import { FooterDefault } from "../component/Footer";
+import { fetcher } from "../lib/api";
 import Link from "next/link";
 
-export default function Work({ showcase }) {
-  
+export default function Work({showcases}) {
   return (
     <Layout>
       <section className="work-hero">
         <div className="content-container">
           <div className="hero-showcase">
-          {showcase.map((val, i) => {
-        return (
-          <>
-          <Link key={i} href={val.attributes.urlSlug}>
-            <a className="card-wrapper"><CaseCard val={val} key={i}/></a>
-          
-          </Link>
-          </>
-        )
-      })}
+            {showcases &&
+              showcases.data.map((showcase) => {
+                return (
+                  <Link href={`cases/` + showcase.id} key={showcase.id}>
+                    <a className="card-wrapper">
+                    <CaseCard showcase={showcase} key={showcase}/>
+                    </a>
+                  </Link>
+                );
+              })}
           </div>
         </div>
-        <FooterDefault/>
+        <FooterDefault />
       </section>
-      
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-
-  const client = new ApolloClient({
-    uri: "http://localhost:1337/graphql",
-    cache: new InMemoryCache()
-  });
-
-  const { data } = await client.query({
-    query: GET_ALL_CASES
-  })
-
+  const casesRes = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/cases`);
+  console.log(casesRes);
   return {
     props: {
-      showcase: data.cases.data
-    }
-  }
+      showcases: casesRes,
+    },
+  };
 }

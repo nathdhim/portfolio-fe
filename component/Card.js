@@ -1,17 +1,18 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import {BtnIcon} from "./Button";
+import {BtnIcon, BtnPrimary} from "./Button";
 import Image from "next/future/image";
+import { FooterDefault } from "./Footer";
 import Modal from "react-modal";
 import { useState } from "react";
-import Preview from "./Preview";
+
 
 
 
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
-const CaseCard = ({val}) => {
+const CaseCard = ({showcase}) => {
   return (
     
      
@@ -26,6 +27,7 @@ const CaseCard = ({val}) => {
               delay: 1.8,
             }}
           >
+           
             <motion.div
               className="img-wrapper"
               animate={{ scale: [1.5, 1] }}
@@ -35,14 +37,16 @@ const CaseCard = ({val}) => {
                 delay: 1.8,
               }}
             >
-              
+               
               <Image
                 className="img" alt="image"
-                src="https://res.cloudinary.com/dtwh4nrmh/image/upload/v1665516339/2_3.2_aqlhwq.png"
+                src={showcase.attributes.thumbnail}
                 fill
               />
             </motion.div>
+            
           </motion.div>
+          
         </motion.div>
      
   
@@ -51,7 +55,7 @@ const CaseCard = ({val}) => {
 
 ///////////////////////////////////// Product Preview /////////////////////////////////////////////////
 
-function ProductCard(props) {
+function ProductCard({showProduct}) {
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
@@ -69,10 +73,10 @@ function ProductCard(props) {
   return (
     <div>
       <div onClick={openModal}>
-      <motion.a className="product-card column">
+      <motion.div className="product-card column">
       <motion.div className="detail-product row">
             <div className="item-container row">
-            <p className="title">Dinamic Island - Prototype</p>
+            <p className="title">{showProduct.attributes.title}</p>
             <BtnIcon to="#" src="/icon/download.svg" />
             </div>
             </motion.div>
@@ -99,14 +103,12 @@ function ProductCard(props) {
           >
             <Image
               className="img" alt="image"
-              src={
-                "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1665641752/Product_Card_lefr5l.png"
-              }
+              src={showProduct.attributes.thumbnail}
               fill
             />
           </motion.div>
         </motion.div>
-      </motion.a>
+      </motion.div>
       </div>
       <Modal
         isOpen={modalIsOpen}
@@ -127,7 +129,90 @@ function ProductCard(props) {
               onClick={closeModal}
             />
           </motion.div>
-          <Preview />
+          <div className="overlay-wrapper"></div>
+      <section className="preview-container row">
+        <div className="content-container column">
+          <div className="product-header row ">
+            <div className="product-title column">
+              <h1>{showProduct.attributes.title}</h1>
+              <div className="product-detail row">
+                <div className="desc-row row">
+                  <Image
+                    alt="icon"
+                    className="icon"
+                    src="/icon/dot.svg"
+                    width={16}
+                    height={16}
+                  />
+                  <p>
+                    <span className="desc">Created by </span> {showProduct.attributes.creator}
+                  </p>
+                </div>
+                <div className="desc-row row">
+                  <Image
+                    alt="icon"
+                    className="icon"
+                    src="/icon/dot.svg"
+                    width={16}
+                    height={16}
+                  />
+                  <p>
+                    <span className="desc">Compatible with </span>{showProduct.attributes.compatible}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <BtnPrimary to={showProduct.attributes.link} src="/icon/download.svg" label="Download" />
+          </div>
+          <div className="product-img row">
+            <div className="img-wrapper">
+              <Image
+                className="img"
+                alt="image"
+                src={showProduct.attributes.showcase1}
+                fill
+              />
+            </div>
+            
+            <div className="img-wrapper">
+              <Image
+                className="img"
+                alt="image"
+                src={showProduct.attributes.showcase2}
+                fill
+              />
+            </div>
+            <div className="img-wrapper">
+              <Image
+                className="img"
+                alt="image"
+                src={showProduct.attributes.showcase3}
+                fill
+              />
+            </div>
+           
+          </div>
+          <div className="product-note row">
+            <div className="desc-row row">
+                  <Image
+                    alt="icon"
+                    className="icon"
+                    src="/icon/warning.svg"
+                    width={16}
+                    height={16}
+                  />
+                  <p className="desc">
+                  Please don't trade these design assets because you get them for free
+
+                  </p>
+                </div>
+                <p className="size">
+                    <span className="desc ">File size :</span> {showProduct.attributes.size}<span> Mb</span>
+                  </p>
+            </div>
+          <FooterDefault />
+        </div>
+      </section>
         </AnimatePresence>
       </Modal>
     </div>

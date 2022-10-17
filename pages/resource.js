@@ -2,8 +2,10 @@ import { Layout } from "../component/Layout";
 import { ProductCard } from "../component/Card";
 import Image from "next/future/image";
 import { FooterDefault } from "../component/Footer";
+import Link from "next/link";
+import { fetcher } from "../lib/api";
 
-export default function resource() {
+export default function resource({showProducts}) {
   return (
     <Layout>
       <section className="resource-hero column">
@@ -24,26 +26,26 @@ export default function resource() {
             </div>
           </div>
           <div className="product-grid">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+          {showProducts &&
+              showProducts.data.map((showProduct) => {
+                return (
+                  <ProductCard showProduct={showProduct} key={showProduct}/>
+                );
+              })}
           </div>
         </div>
       </section>
       <FooterDefault />
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const productRes = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/products`);
+  console.log(productRes);
+  return {
+    props: {
+      showProducts: productRes,
+    },
+  };
 }
