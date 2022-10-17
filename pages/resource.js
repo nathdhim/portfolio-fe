@@ -5,7 +5,7 @@ import { FooterDefault } from "../component/Footer";
 import Link from "next/link";
 import { fetcher } from "../lib/api";
 
-export default function resource({showProducts}) {
+function resource({showProducts}) {
   return (
     <Layout>
       <section className="resource-hero column">
@@ -50,3 +50,5 @@ export async function getStaticProps() {
     fallback: false,
   };
 }
+
+export default resource

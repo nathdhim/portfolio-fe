@@ -30,10 +30,7 @@ export default function Work({showcases}) {
 
 export async function getStaticProps() {
   const casesRes = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/cases`);
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
+  console.log(casesRes);
   return {
     props: {
       showcases: casesRes,
