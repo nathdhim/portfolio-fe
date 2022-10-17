@@ -13,7 +13,7 @@ export default function Work({showcases}) {
             {showcases &&
               showcases.data.map((showcase) => {
                 return (
-                  <Link href={`cases/` + showcase.id} key={showcase.id}>
+                  <Link href={`cases/` + (showcase.id)} key={showcase.id}>
                     <a className="card-wrapper">
                     <CaseCard showcase={showcase} key={showcase}/>
                     </a>
@@ -30,7 +30,10 @@ export default function Work({showcases}) {
 
 export async function getStaticProps() {
   const casesRes = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/cases`);
-  console.log(casesRes);
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
   return {
     props: {
       showcases: casesRes,

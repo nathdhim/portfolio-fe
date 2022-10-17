@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import { useTransition, animated } from "react-spring";
 
-function NavigationBar() {
+function NavigationBar({showcase}) {
   const [isOpen, setOpen] = useState(false);
   const transitions = useTransition(isOpen, {
     from: { opacity: 0 },
@@ -102,11 +102,11 @@ function NavigationCase() {
             </Link>
           </div>
           <div className="right-container row">
-            <Link href="#">
+            <Link href={`cases/` + (showcase.id - 1)}>
               <a className="btn-link">Prev</a>
             </Link>
             <p className="desc">—</p>
-            <Link href="#">
+            <Link href={`cases/` + (showcase.id + 1)}>
               <a className="btn-link">Next</a>
             </Link>
           </div>
