@@ -4,7 +4,7 @@ import { FooterDefault } from "../component/Footer";
 import { fetcher } from "../lib/api";
 import Link from "next/link";
 
-export default function Work({showcases}) {
+function Work({showcases}) {
   return (
     <Layout>
       <section className="work-hero">
@@ -34,6 +34,9 @@ export async function getStaticProps() {
   return {
     props: {
       showcases: casesRes,
+      fallback: false,
     },
   };
 }
+
+export default Work
