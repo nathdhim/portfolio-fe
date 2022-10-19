@@ -110,7 +110,7 @@ function FooterCase() {
           <div className="email-wrapper">
           <a
             className="email btn-link"
-            href="mailto:hello@dhimasputra.com"
+            href="mailto:connect@halodhimas.com"
             target="_blank"
             rel="noopener noreferrer"
           >

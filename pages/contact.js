@@ -14,7 +14,7 @@ export default function contact() {
           
           <a
             className="email btn-link"
-            href="mailto:hello@dhimasputra.com"
+            href="mailto:connect@halodhimas.com"
             target="_blank"
             rel="noopener noreferrer"
           >
