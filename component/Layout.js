@@ -1,7 +1,7 @@
 import Head from "next/head";
 import {NavigationBar, NavigationCase} from "./Header";
 import { useEffect, useRef, useState } from "react";
-
+import Link from "next/link";
 
 
 
@@ -45,7 +45,7 @@ function Layout(props) {
   );
 };
 
-function LayoutCase(props) {
+function LayoutCase({showcase, children}) {
 
   const scrollRef = useRef();
 
@@ -77,9 +77,9 @@ function LayoutCase(props) {
       <Head>
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
-      <NavigationCase />
+      <NavigationCase prev={`${showcase.id - 1 < 1 ? showcase.id + 4 : showcase.id - 1 }`} next={`${showcase.id + 1 > 5 ? showcase.id - 4 : showcase.id + 1 }`} key={showcase.id}/>
       <div className="scroll-wrapper" ref={scrollRef}>
-        {props.children}
+        {children}
       </div>
     </div>
   );

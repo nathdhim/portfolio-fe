@@ -2,7 +2,6 @@ import { Layout } from "../component/Layout";
 import { ProductCard } from "../component/Card";
 import Image from "next/future/image";
 import { FooterDefault } from "../component/Footer";
-import Link from "next/link";
 import { fetcher } from "../lib/api";
 
 function resource({showProducts}) {
@@ -46,7 +45,7 @@ export async function getStaticProps() {
   return {
     props: {
       showProducts: productRes,
-      fallback: false,
+      fallback: true,
     },
     
   };

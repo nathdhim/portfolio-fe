@@ -16,16 +16,16 @@ function FooterSocial() {
               </a>
 
               <a
-                href="https://twitter.com/nathdhim"
+                href="https://instagram.com/halodhimas"
                 className="btn-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+                Instagram
               </a>
 
               <a
-                href="https://dribbble.com/nathdhim"
+                href="https://dribbble.com/halodhimas"
                 className="btn-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,7 +34,7 @@ function FooterSocial() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/nathdhim/"
+                href="https://www.linkedin.com/in/halodhimas/"
                 className="btn-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,7 +54,7 @@ function FooterDefault() {
     <>
       <footer className="footer-default">
         <div className="footer-container row">
-          <p className="desc">©Dhimasputra.com  - 2022 </p>
+          <p className="desc">©halodhimas.com • 2022</p>
           <div className="footer-item-container">
           <a
                 href="https://www.upwork.com/freelancers/~010554d3d91f1f3997"
@@ -66,16 +66,16 @@ function FooterDefault() {
               </a>
 
               <a
-                href="https://twitter.com/nathdhim"
+                href="https://instagram.com/halodhimas"
                 className="btn-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+                Instagram
               </a>
 
               <a
-                href="https://dribbble.com/nathdhim"
+                href="https://dribbble.com/halodhimas"
                 className="btn-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -84,7 +84,7 @@ function FooterDefault() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/nathdhim/"
+                href="https://www.linkedin.com/in/halodhimas/"
                 className="btn-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,13 +114,13 @@ function FooterCase() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h1>hello@dhimasputra.com</h1>
+            <h1>connect@halodhimas.com</h1>
           </a>
-          <Image className="img" src="/icon/dot.svg" width={72} height={72} />
+          <Image alt="icon" className="img" src="/icon/dot.svg" width={72} height={72} />
           </div>
          </div>
           <div className="bottom-container">
-            <p className="desc">©Dhimasputra.com  - 2022 </p>
+            <p className="desc">©halodhimas.com • 2022</p>
             
           <div className="footer-item-container">
           <a
@@ -133,16 +133,16 @@ function FooterCase() {
               </a>
 
               <a
-                href="https://twitter.com/nathdhim"
+                href="https://instagram.com/halodhimas"
                 className="btn-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+                Instagram
               </a>
 
               <a
-                href="https://dribbble.com/nathdhim"
+                href="https://dribbble.com/halodhimas"
                 className="btn-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -151,7 +151,7 @@ function FooterCase() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/nathdhim/"
+                href="https://www.linkedin.com/in/halodhimas/"
                 className="btn-link"
                 target="_blank"
                 rel="noopener noreferrer"

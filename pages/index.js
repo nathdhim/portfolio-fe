@@ -34,7 +34,7 @@ export async function getStaticProps() {
   return {
     props: {
       showcases: casesRes,
-      fallback: false,
+      fallback: true,
     },
   };
 }

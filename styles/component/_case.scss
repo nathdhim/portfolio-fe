@@ -1,6 +1,10 @@
+
+
 .case-hero {
+  
   display: flex;
   .content-container {
+    background-color: $neutral-01;
     width: 100%;
     padding: 0;
     display: flex;
@@ -39,7 +43,7 @@
       }
     }
     .hero-img-wrapper {
-    
+   
       display: flex;
       align-items: flex-end;
       
@@ -63,8 +67,11 @@
 }
 
 .case-about {
+ 
   display: flex;
   .content-container {
+    background-color: $neutral-01;
+    
     padding: 11.25em 0;
     width: 100%;
     display: flex;
@@ -96,8 +103,16 @@
     display: block;
     .content-container {
       width: auto;
+     .hero-img-wrapper {
+      .hero-img {
+        width: 100vw;
+        aspect-ratio: 1/1;
+      }
+     }
     }
   }
+
+ 
   .case-about {
     .content-container{
       padding: 8em 1.5em;

@@ -4,32 +4,14 @@ import { FooterCase } from "../../component/Footer";
 import { motion } from "framer-motion";
 import { fetcher } from "../../lib/api";
 import Link from "next/link";
-import {LayoutBlank} from '../../component/Layout';
+import {LayoutCase} from '../../component/Layout';
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
 
 export default function Case({showcase}) {
   return (
-    <LayoutBlank>
-    <nav>
-        <div className="nav-container row">
-          <div className="logo-container">
-            <Link href="/#">
-              <a className="btn-link">Back</a>
-            </Link>
-          </div>
-          <div className="right-container row">
-            <Link href={'' + (showcase.id - 1)} key={showcase.id}>
-              <a className="btn-link">Prev</a>
-            </Link>
-            <p className="desc">—</p>
-            <Link href={'' + (showcase.id + 1)} key={showcase.id}>
-              <a className="btn-link">Next</a>
-            </Link>
-          </div>
-        </div>
-      </nav>
+    <LayoutCase showcase={showcase} key={showcase}>
       <section className="case-hero" data-scroll-container>
         <div className="content-container">
           <div className="hero-text">
@@ -159,7 +141,7 @@ export default function Case({showcase}) {
         </div>
       </section>
       <FooterCase />
-      </LayoutBlank>
+      </LayoutCase>
   );
 }
 

@@ -76,7 +76,7 @@ function ProductCard({showProduct}) {
       <motion.div className="detail-product row">
             <div className="item-container row">
             <p className="title">{showProduct.attributes.title}</p>
-            <BtnIcon to="#" src="/icon/download.svg" />
+            
             </div>
             </motion.div>
         <motion.div
@@ -113,7 +113,7 @@ function ProductCard({showProduct}) {
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
-        closeTimeoutMS={1000}
+        closeTimeoutMS={950}
         className="preview-modal"
         overlayClassName="overlay"
       >

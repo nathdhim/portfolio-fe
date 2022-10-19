@@ -4,8 +4,8 @@ import Link from "next/link"
 function BtnIcon(props) {
   return (
     <div>
-      <Link href={props.to}>
-      <div className="btn-icon row"><Image alt="icon" className="icon" src={props.src} width={20} height={20}/></div>
+      <Link href={props.to}  target="_blank">
+      <a  target="_blank" className="btn-icon row"><Image alt="icon" className="icon" src={props.src} width={20} height={20}/></a>
       </Link>
     </div>
     

@@ -18,11 +18,11 @@ export default function contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h1>hello@dhimasputra.com</h1>
+            <h1>connect@halodhimas.com</h1>
           </a>
          
           <div className="text-container">
-            <p>Follow my socials</p>
+            <p>Get in touch</p>
             <Image  alt="image" src="/icon/arrow-down.svg" width={24} height={24}/>
           </div>
           
