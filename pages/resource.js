@@ -48,7 +48,7 @@ export async function getStaticProps() {
       showProducts: productRes,
       fallback: false,
     },
-    
+    revalidate: 10,
   };
 }
 
