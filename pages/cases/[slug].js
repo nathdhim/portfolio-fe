@@ -3,7 +3,7 @@ import Image from "next/future/image";
 import { FooterCase } from "../../component/Footer";
 import { motion } from "framer-motion";
 import { fetcher } from "../../lib/api";
-import Link from "next/link";
+
 import {LayoutCase} from '../../component/Layout';
 
 const easeCustom = [0.8, 0, 0.28, 1];
