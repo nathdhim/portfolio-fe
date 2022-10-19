@@ -32,7 +32,8 @@ export async function getStaticProps() {
   const showcases = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/cases`)
 
   return {
-    props: { showcases }
+    props: { showcases },
+    revalidate: 10,
   }
 }
 export default Work
