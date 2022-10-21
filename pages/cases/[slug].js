@@ -91,8 +91,7 @@ export default function Case({showcase}) {
               >
                 <Image
                   alt="img"
-                  data-scroll
-                  data-scroll-speed="1"
+                  
                   className="img"
                   src={showcase.attributes.cover}
                   fill
