@@ -57,6 +57,7 @@ export default function Case({showcase}) {
             </div>
             <div className="text-wrapper-h3">
               <motion.h3
+              className="desc"
                 animate={{ y: [100, 0] }}
                 transition={{
                   ease: easeCustom,
