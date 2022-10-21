@@ -41,6 +41,34 @@ export default function Case({showcase}) {
               </motion.h1>
             </div>
           </div>
+          <div className="hero-text-detail row">
+            <div className="text-wrapper-h3">
+              <motion.h3
+                className="desc"
+                animate={{ y: [100, 0] }}
+                transition={{
+                  ease: easeCustom,
+                  duration: 1.5,
+                  delay: 2.3,
+                }}
+              >
+                {showcase.attributes.category}
+              </motion.h3>
+            </div>
+            <div className="text-wrapper-h3">
+              <motion.h3
+                animate={{ y: [100, 0] }}
+                transition={{
+                  ease: easeCustom,
+                  duration: 1.5,
+                  delay: 2.3,
+                }}
+              >
+                
+               {showcase.attributes.year}
+              </motion.h3>
+            </div>
+          </div>
           <div className="hero-img-wrapper">
             <motion.div
               className="hero-img"
