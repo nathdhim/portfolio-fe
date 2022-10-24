@@ -23,7 +23,7 @@ const CaseCard = ({showcase}) => {
             transition={{
               ease: easeCustom,
               duration: 1,
-              delay: 1.8,
+              delay: 1.5,
             }}
           >
            
@@ -33,7 +33,7 @@ const CaseCard = ({showcase}) => {
               transition={{
                 ease: easeCustom,
                 duration: 1,
-                delay: 1.8,
+                delay: 1.5,
               }}
             >
                
@@ -86,7 +86,7 @@ function ProductCard({showProduct}) {
           transition={{
             ease: easeCustom,
             duration: 1,
-            delay: 1.8,
+            delay: 1.5,
           }}
         >
          
@@ -97,7 +97,7 @@ function ProductCard({showProduct}) {
             transition={{
               ease: easeCustom,
               duration: 1,
-              delay: 1.8,
+              delay: 1.5,
             }}
           >
             <Image
