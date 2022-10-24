@@ -165,6 +165,15 @@ export default function Case({showcase}) {
                 fill
               />
             </div>
+            <div className="img-wrapper">
+              <Image
+                alt="img"
+                
+                src={showcase.attributes.showcase6}
+                className="img"
+                fill
+              />
+            </div>
           </div>
         </div>
       </section>
