@@ -30,8 +30,7 @@ export default function about() {
               >
                 <Image
                   alt="image"
-                  data-scroll
-                  data-scroll-speed="1"
+                  
                   src={
                     "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                   }

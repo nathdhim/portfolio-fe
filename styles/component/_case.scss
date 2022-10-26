@@ -50,7 +50,7 @@
       .hero-img {
         width: 56em;
         aspect-ratio: 1920/1000;
-   
+        border-radius: $border-radius;
         overflow: hidden;
         .img-wrapper {
           width: 100%;
@@ -85,6 +85,7 @@
       flex-direction: column;
       gap: 2em;
       .img-wrapper {
+        border-radius: $border-radius;
         width: 100%;
         aspect-ratio: 4/3;
         position: relative;

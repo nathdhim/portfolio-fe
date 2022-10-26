@@ -64,10 +64,13 @@
     .product-img {
       gap: 2em;
       width: 100%;
+      
       .img-wrapper {
         width: 100%;
         aspect-ratio: 4/3;
         position: relative;
+        border-radius: $border-radius;
+        overflow: hidden;
       }
       .img {
         width: initial;
