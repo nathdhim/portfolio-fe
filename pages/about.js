@@ -30,7 +30,6 @@ export default function about() {
               >
                 <Image
                   alt="image"
-                  
                   src={
                     "https://res.cloudinary.com/dtwh4nrmh/image/upload/v1664864703/Rectangle_1_cooxah.png"
                   }
@@ -45,14 +44,14 @@ export default function about() {
             <p className="titled desc">About</p>
             <div className="content">
               <h2>
-                Ut voluptatem fugiat eos officiis tempora explicabo non illo
-                possimus. Hic qui placeat quia sit et dolores expedita fugiat.
-                Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.
+                Hi I'm Dhimas Putra. I’m a product designer with more than 4
+                years of experience in designing products such as mobile apps,
+                websites, company branding, and illustrations. 
                 <br />
                 <br />
-                Ut voluptatem fugiat eos officiis tempora explicabo non illo
-                possimus. Hic qui placeat quia sit et dolores expedita fugiat.
-                Impedit ut non ex. Qui eaque at. Sit voluptatem nam maxime.
+                I’ve worked with
+                various companies in various fields such as SaaS, blockchain,
+                healthcare, architecture and various other types of industries.
               </h2>
             </div>
           </div>
