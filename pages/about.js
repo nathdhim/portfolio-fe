@@ -49,8 +49,7 @@ export default function about() {
                 websites, company branding, and illustrations. 
                 <br />
                 <br />
-                I’ve worked with
-                various companies in various fields such as SaaS, blockchain,
+                I’ve worked with various companies in various fields such as SaaS, blockchain,
                 healthcare, architecture and various other types of industries.
               </h2>
             </div>
@@ -81,10 +80,11 @@ export default function about() {
             <div className="content">
               <h2>Interface Design</h2>
               <h2>User Experience Design</h2>
+              <h2>Data Visualization</h2>
               <h2>Prototyping</h2>
               <h2>Branding</h2>
               <h2>Illustration</h2>
-              <h2>Front-end developing</h2>
+              <h2>Front-end Developing</h2>
             </div>
           </div>
           <div className="text-container desc-component">
