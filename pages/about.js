@@ -156,7 +156,7 @@ export default function about() {
           </div>
         </div>
       </section>
-      <FooterCase />
+     
     </Layout>
   );
 }
