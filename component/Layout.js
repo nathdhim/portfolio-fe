@@ -1,127 +1,56 @@
 import Head from "next/head";
-import {NavigationBar, NavigationCase} from "./Header";
-import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { NavigationBar } from "./Header";
+import { FooterDefault } from "./Footer";
+import { AnimatePresence, motion } from "framer-motion";
 
+const easeCustom = [0.8, 0, 0.28, 1];
 
-
-function Layout(props) {
-  
-  const scrollRef = useRef();
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    let scroll;
-    import("locomotive-scroll").then((locomotiveModule) => {
-        scroll = new locomotiveModule.default({
-            el: scrollRef.current,
-            smooth: true,
-            smoothMobile: false,
-            resetNativeScroll: true,
-            lerp: 0.03
-        });
-    });
-
-    // `useEffect`'s cleanup phase
-    return () => {
-        if (scroll) scroll.destroy();
-    }
-});
-
+function Layout(props, router) {
   return (
-    <div className="container">
-      
+    <div className="main-container">
       <Head>
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
       <NavigationBar />
-      <div className="scroll-wrapper" ref={scrollRef}>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          ease: easeCustom,
+          duration: 1,
+        }}
+      >
         {props.children}
-      </div>
+        <FooterDefault />
+      </motion.div>
     </div>
   );
-};
+}
 
-function LayoutCase({showcase, children}) {
-
-  const scrollRef = useRef();
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    let scroll;
-    import("locomotive-scroll").then((locomotiveModule) => {
-        scroll = new locomotiveModule.default({
-            el: scrollRef.current,
-            smooth: true,
-            smoothMobile: false,
-            resetNativeScroll: true,
-            lerp: 0.03
-        });
-    });
-
-    // `useEffect`'s cleanup phase
-    return () => {
-        if (scroll) scroll.destroy();
-    }
-});
-
+function LayoutNoFooter(props, router) {
   return (
-    <div className="container">
-      
+    <div className="main-container">
       <Head>
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
-      <NavigationCase prev={`${showcase.id - 1 < 1 ? showcase.id + 4 : showcase.id - 1 }`} next={`${showcase.id + 1 > 5 ? showcase.id - 4 : showcase.id + 1 }`} key={showcase.id}/>
-      <div className="scroll-wrapper" ref={scrollRef}>
-        {children}
-      </div>
-    </div>
-  );
-};
+      <NavigationBar />
 
-function LayoutBlank(props) {
-
-  const scrollRef = useRef();
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    let scroll;
-    import("locomotive-scroll").then((locomotiveModule) => {
-        scroll = new locomotiveModule.default({
-            el: scrollRef.current,
-            smooth: true,
-            smoothMobile: false,
-            resetNativeScroll: true,
-            lerp: 0.03
-        });
-    });
-
-    // `useEffect`'s cleanup phase
-    return () => {
-        if (scroll) scroll.destroy();
-    }
-});
-
-  return (
-    <div className="container">
-      
-      <Head>
-        <title>Dhimas Putra | Expert Product Designer</title>
-      </Head>
-      <div className="scroll-wrapper" ref={scrollRef}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          ease: easeCustom,
+          duration: 1,
+        }}
+      >
         {props.children}
-      </div>
+       
+      </motion.div>
     </div>
   );
-};
+}
 
-export {Layout, LayoutCase, LayoutBlank};
+export { Layout, LayoutNoFooter };

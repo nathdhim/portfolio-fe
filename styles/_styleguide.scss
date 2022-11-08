@@ -1,4 +1,9 @@
 //////// Typeface ////////@at-root
+@font-face {
+  font-family: "uncut";
+  src: url(../public/font/Uncut-Sans-Semibold.otf);
+  font-weight: 600;
+}
 
 @font-face {
   font-family: "uncut";
@@ -6,42 +11,42 @@
   font-weight: 500;
 }
 
-
 @font-face {
   font-family: "uncut";
   src: url(../public/font/Uncut-Sans-Regular.otf);
   font-weight: 400;
 }
 
-//////// Color Style ////////@at-root
+//////// Color Style & Mixin ////////@at-root
 
-$neutral-08: #0A0A0A;
-$neutral-07: #2B2B2B;
-$neutral-06: #4D4D4D;
-$neutral-05: #6F6F6F;
+$neutral-08: #0a0a0a;
+$neutral-07: #151515;
+$neutral-06: #2D2D2D;
+$neutral-05: #6f6f6f;
 $neutral-04: #919191;
-$neutral-03: #B3B3B3;
-$neutral-02: #E8E8E8;
-$neutral-01: #F8F8F8;
+$neutral-03: #b3b3b3;
+$neutral-02: #e8e8e8;
+$neutral-01: #f8f8f8;
 
-$transition: all ease 300ms;
-$transition-custom: all cubic-bezier(.8,0,.16,1) 1s;
+$transition: all cubic-bezier(.165,.84,.44,1) .6s;
+$transition-custom: all cubic-bezier(0.8, 0, 0.16, 1) 1s;
 $border-radius: 0.2em;
+$border: 1px $neutral-03 solid;
 
 //////// Text Style ////////@at-root
 
 @mixin h1 {
   font-family: "uncut", sans-serif;
   font-size: 4em;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 125%;
   color: $neutral-08;
 }
 
 @mixin h2 {
   font-family: "uncut", sans-serif;
-  font-size: 1.825em;
-  font-weight: 500;
+  font-size: 2.2em;
+  font-weight: 600;
   line-height: 125%;
   color: $neutral-08;
 }
@@ -49,39 +54,49 @@ $border-radius: 0.2em;
 @mixin h3 {
   font-family: "uncut", sans-serif;
   font-size: 1.25em;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 125%;
   color: $neutral-08;
 }
 
 @mixin paragraph {
   font-family: "uncut", sans-serif;
-  font-size: 0.925em;
-  font-weight: 500;
+  font-size: .96em;
+  font-weight: 400;
   line-height: 130%;
   color: $neutral-08;
 }
 
-
 //////// Container Style ////////@at-root
 
-body {
+
+
+html, body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   background-color: $neutral-01;
+  
+}
+
+html {
+  overflow-y: overlay;
 }
 
 section {
   padding: 0;
   margin: 0;
   width: 100%;
-  
-  .content-container {
-    width: auto;
-    display: flex;
-    padding: 2em;
-  }
+  background-color: $neutral-01;
+
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.regular {
+  font-weight: 400;
 }
 
 h1 {
@@ -102,10 +117,15 @@ h3 {
 p {
   @include paragraph();
   margin: 0;
+  
 }
 
-.desc {
+.grey {
   color: $neutral-05;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 a {
@@ -122,12 +142,98 @@ a {
   align-items: center;
 }
 
-.column {
+.col {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (max-width: 786px) {
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.sb {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+}
+
+.w-50 {
+ width: 50em; 
+}
+
+.gap-160 {
+  gap: 10em;
+}
+
+.gap-120 {
+  gap: 7.5em;
+}
+
+.gap-80 {
+  gap: 5em;
+}
+
+.gap-64 {
+  gap: 4em;
+}
+
+.gap-56 {
+  gap: 3.5;
+}
+
+.gap-48 {
+  gap: 3em;
+}
+
+.gap-40 {
+  gap: 2.5em;
+}
+
+.gap-32 {
+  gap: 2em;
+}
+
+.gap-24 {
+  gap: 1.5em;
+}
+
+.gap-16 {
+  gap: 1em;
+}
+
+.gap-12 {
+  gap: 0.75em;
+}
+
+.gap-8 {
+  gap: 0.5em;
+}
+
+.ph-120 {
+  padding: 0 7.5em;
+}
+
+
+@media only screen and (max-width: 912px) {
   h1 {
     @include h2();
+  }
+
+  h2 {
+    @include h3()
+  }
+
+  .w-50 {
+    width: 100%;
   }
 }

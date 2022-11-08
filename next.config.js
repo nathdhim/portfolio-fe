@@ -10,6 +10,7 @@ module.exports = {
         buildActivity: false
     },
     experimental: {
+ 
       images: {
         allowFutureImage: true,
       },

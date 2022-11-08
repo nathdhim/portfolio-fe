@@ -1,47 +1,70 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { BtnIcon, BtnPrimary } from "./Button";
 import Image from "next/future/image";
 import { FooterDefault } from "./Footer";
 import Modal from "react-modal";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
 const CaseCard = ({ showcase }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const textAnimation = {
+    
+    animate: { y:[100,0], transition: {ease: [0.8, 0, 0.28, 1], duration: 1.5,} },
+
+  }
+
   return (
-    <motion.div className="case-card row">
-      <motion.div className="detail-product detail-hover row">
-        <div className="item-container row">
-          <p className="title">{showcase.attributes.title}</p>
-          <p className="title">{showcase.attributes.category}</p>
+    <motion.div
+      className="case-card col gap-32"
+      ref={ref}
+      style={{
+        transform: isInView ? "none" : "translateY(5em)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 1s cubic-bezier(0.8, 0, 0.16, 1) ",
+      }}
+    >
+      <div className="case-detail row sb align-end gap-120 of-hidden">
+        <div className="case-title-container row gap-16 align-start">
+          <div className="category-container row gap-16 of-hidden">
+       
+                <motion.p variants={textAnimation} animate="animate" className="grey">{showcase.attributes.category}</motion.p>
+                
+            <div className="line"></div>
+          </div>
+          <div className="case-title col gap-16">
+          <div className="of-hidden">
+                <motion.h2 variants={textAnimation} animate="animate">{showcase.attributes.slug}</motion.h2>
+                </div>
+                <div className="of-hidden">
+                <motion.p variants={textAnimation} animate="animate" className="grey">{showcase.attributes.subtitle}</motion.p>
+                </div>
+          </div>
         </div>
-      </motion.div>
-      <motion.div
-        className="container"
-        animate={{ height: ["0%", "100%"] }}
-        transition={{
-          ease: easeCustom,
-          duration: 1,
-          delay: 1.5,
-        }}
-      >
-        <motion.div
-          className="img-wrapper"
-          animate={{ scale: [1.5, 1] }}
-          transition={{
-            ease: easeCustom,
-            duration: 1,
-            delay: 1.5,
-          }}
-        >
+        <motion.p variants={textAnimation} animate="animate" className="grey">{showcase.attributes.year}</motion.p>
+      </div>
+
+      <div className="img-container row gap-32">
+        <div className="img-wrapper size-mid">
           <Image
             className="img"
             alt="image"
-            src={showcase.attributes.thumbnail}
+            src={showcase.attributes.showcase3}
             fill
           />
-        </motion.div>
-      </motion.div>
+        </div>
+        <div className="img-wrapper size-mid">
+          <Image
+            className="img"
+            alt="image"
+            src={showcase.attributes.showcase4}
+            fill
+          />
+        </div>
+      </div>
     </motion.div>
   );
 };
@@ -161,15 +184,6 @@ function ProductCard({ showProduct }) {
                 />
               </div>
               <div className="product-img row">
-                <div className="img-wrapper">
-                  <Image
-                    className="img"
-                    alt="image"
-                    src={showProduct.attributes.showcase1}
-                    fill
-                  />
-                </div>
-
                 <div className="img-wrapper">
                   <Image
                     className="img"

@@ -1,0 +1,38 @@
+.home-hero {
+margin-bottom: 28em;
+  .content-container {
+    padding: 10em 7.5em;
+
+    h1 {
+      position: relative;
+    }
+    .icon {
+      margin-bottom: 0.5em;
+    }
+    .about-text {
+      padding-top: 10em;
+      border-top: $border;
+    }
+  }
+}
+
+//////// Responsive Mobile ////////
+
+@media only screen and (max-width: 912px) {
+  .home-hero {
+    margin-bottom: 32em;
+    .content-container {
+      padding: 5em 1.5em;
+      gap: 5em;
+      .heading-container {
+        flex-direction: column;
+      }
+      .icon {
+        display: none;
+      }
+      .case-container {
+        gap: 5em;
+      }
+    }
+  }
+}

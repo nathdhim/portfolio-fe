@@ -1,21 +1,21 @@
 //////// Button ////////
 
-
 .btn-primary {
   @include paragraph;
-  padding: 1em 2em;
-  border: none;
-  background-color: $neutral-02;
-  border-radius: 100em;
-  transition:$transition;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75em;
+  padding:  2.5em;
+  background-color: $neutral-07;
+  border-radius: $border-radius;
+  transition: $transition;
   cursor: pointer;
+  transform: skew(0, 0);
+  h3 {
+    color: $neutral-01;
+  }
 
   &:hover {
-    background-color: $neutral-03;
+    background-color: $neutral-06;
+    transform: skew(1.2deg, 1.2deg);
+    
   }
 }
 
@@ -41,19 +41,18 @@
   transition: $transition;
   cursor: pointer;
   position: relative;
-  
-  
+
   &::after {
-  position: absolute;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background:$neutral-08;
-  bottom: -2px;
-  transform: scale(0, 1);
-  transition: transform 0.3s;
-  transform-origin: right top;
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: $neutral-08;
+    bottom: -2px;
+    transform: scale(0, 1);
+    transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 0.6s;
+    transform-origin: right top;
   }
 
   &:hover {
@@ -65,7 +64,60 @@
   }
 }
 
+//////////////// Scrollbar ////////////////////////////////////////////@at-root
 
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $neutral-03;
+  border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $neutral-04;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+.of-hidden {
+  overflow: hidden;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: $neutral-03;
+}
+
+.size-fhd {
+  aspect-ratio: 1920/1080;
+}
+
+.size-mid {
+  aspect-ratio: 800/600;
+}
+
+.img-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  .img {
+    object-fit: cover;
+  }
+}
 
 .pages-wrapper {
   position: absolute;
@@ -73,4 +125,9 @@
   height: 100%;
   background-color: $neutral-02;
   z-index: 5;
+}
+
+//////// Responsive Mobile ////////
+
+@media only screen and (max-width: 912px) {
 }

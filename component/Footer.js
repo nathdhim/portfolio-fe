@@ -1,164 +1,45 @@
 import Image from "next/future/image";
-function FooterSocial() {
-  return (
-    <>
-      <footer className="footer-social">
-        <div className="footer-container">
-          
-          <div className="footer-item-container">
-          <a
-                href="https://www.upwork.com/freelancers/~010554d3d91f1f3997"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="btn-link"
-              >
-                Upwork
-              </a>
-
-              <a
-                href="https://instagram.com/halodhimas"
-                className="btn-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
-
-              <a
-                href="https://dribbble.com/halodhimas"
-                className="btn-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Dribbble
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/halodhimas/"
-                className="btn-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Linkedin
-              </a>
-          </div>
-          
-        </div>
-      </footer>
-    </>
-  );
-}
+import { BtnPrimary } from "./Button";
+import { BtnLink } from "./Button";
 
 function FooterDefault() {
   return (
     <>
-      <footer className="footer-default">
-        <div className="footer-container row">
-          <p className="desc">©halodhimas.com • 2022</p>
-          <div className="footer-item-container">
-          <a
-                href="https://www.upwork.com/freelancers/~010554d3d91f1f3997"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="btn-link"
-              >
-                Upwork
-              </a>
-
-              <a
-                href="https://instagram.com/halodhimas"
-                className="btn-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
-
-              <a
-                href="https://dribbble.com/halodhimas"
-                className="btn-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Dribbble
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/halodhimas/"
-                className="btn-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Linkedin
-              </a>
+      <footer className="footer-default col center">
+        <div className="content-container col gap-80">
+          <div className="col gap-32">
+            <p className="grey">Have an awesome idea ?</p>
+            <div className="cta-container row sb gap-32">
+              <div className="cta-text row gap-12">
+                <h1>CONNECT YOUR BRAIN</h1>
+                <Image
+                  src="/icon/arrow-right-white.svg"
+                  width={56}
+                  height={56}
+                  alt="icon"
+                  className="icon"
+                />
+              </div>
+              <BtnPrimary to="mailto:connect@halodhimas.com" label="connect@halodhimas.com" />
+            </div>
           </div>
-          
-        </div>
-      </footer>
-    </>
-  );
-}
-
-function FooterCase() {
-  return (
-    <>
-      <footer className="footer-case">
-        <div className="footer-container">
-          
-         <div className="top-container">
-          <p className="desc">Have an awesome idea ?</p>
-          <div className="email-wrapper">
-          <a
-            className="email btn-link"
-            href="mailto:connect@halodhimas.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h1>connect@halodhimas.com</h1>
-          </a>
-          <Image alt="icon" className="img" src="/icon/dot.svg" width={72} height={72} />
-          </div>
-         </div>
-          <div className="bottom-container">
-            <p className="desc">©halodhimas.com • 2022</p>
-            
-          <div className="footer-item-container">
-          <a
-                href="https://www.upwork.com/freelancers/~010554d3d91f1f3997"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="btn-link"
-              >
-                Upwork
-              </a>
-
-              <a
-                href="https://instagram.com/halodhimas"
-                className="btn-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
-
-              <a
-                href="https://dribbble.com/halodhimas"
-                className="btn-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Dribbble
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/halodhimas/"
-                className="btn-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Linkedin
-              </a>
-          </div>
+          <div className="contact-container row sb gap-32">
+            <div className="row gap-12">
+              <Image
+                src="/icon/globe.svg"
+                width={24}
+                height={24}
+                alt="icon"
+                className="icon"
+              />
+              <p className="grey">Based in Indonesia</p>
+            </div>
+            <div className="social-item-container row gap-32">
+              <BtnLink to="#" label="Linkedin" />
+              <BtnLink to="#" label="Upwork" />
+              <BtnLink to="#" label="Dribbble" />
+              <BtnLink to="#" label="Instagram" />
+            </div>
           </div>
         </div>
       </footer>
@@ -166,4 +47,4 @@ function FooterCase() {
   );
 }
 
-export {FooterSocial, FooterCase, FooterDefault};
+export { FooterDefault };

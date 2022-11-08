@@ -1,41 +1,89 @@
 .contact-hero {
-    height: 100vh;
-    .content-container {
-     width: auto;
-      position: relative;
-      align-items: center;
-      justify-content: center;
-     gap: 2em;
-      height: 100vh;
-  
-      
-      .text-container {
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-        flex-direction: column;
-        position: absolute;
-        bottom: 4em;
-      }
-    }
-  }
-  .email {
-    
-    color: $neutral-01;
-    border-bottom: 1px solid $neutral-03;
-    transition: $transition;
-    margin: 1em 0;
-    h1 {
-      margin-bottom: 0.25em;
-    }
-  }
+  height: 100vh;
+  .content-container {
+    width: auto;
+    margin: 0;
+    height: 100%;
+    padding: 7.5em;
+    position: relative;
+    align-items: center;
 
-  @media only screen and (max-width: 786px) {
-   .contact-hero {
-    .content-container {
-      .text-container {
-        bottom: 0;
+    gap: 2em;
+
+    .email-container {
+      height: 100%;
+
+      .h1 {
+        @include h1();
+        font-weight: 400;
       }
     }
-   }
+
+    .btn-link {
+      display: inline-block;
+      &::before {
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $neutral-03;
+        bottom: -2px;
+        transform: scale(1, 1);
+      }
+    }
   }
+}
+
+//////// Responsive Mobile ////////
+
+@media only screen and (max-width: 1128px) {
+  .contact-hero {
+    .content-container {
+      .email-item-container {
+        .h1 {
+          @include h2();
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .contact-hero {
+    .content-container {
+      padding: 5em 1.5em;
+      gap: 5em;
+      .email-item-container {
+        display: block;
+        .btn-link {
+          .h1 {
+            @include h2();
+            font-weight: 400;
+          }
+          margin-bottom: 2em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-hero {
+    .content-container {
+      .email-item-container {
+        .btn-link {
+          .h1 {
+            @include h3();
+            font-weight: 400;
+          }
+        }
+      }
+      .social-item-container {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  }
+}

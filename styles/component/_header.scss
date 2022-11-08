@@ -1,87 +1,70 @@
 nav {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 4;
-  
-    .nav-container {
-     justify-content: space-between;
-      align-items: center;
-      padding: 0 2em;
-      height: 4em;
-  
-      .toggle-menu {
-        display: none;
-        .icon {
-          width: 2em;
-          height: 2em;
-        }
-      }
-  
-      .logo {
-        span {
-          @include paragraph();
-          font-size: 0.5em;
-        }
-        cursor: pointer;
-      }
-      .logo-container {
-        justify-content: left;
-        align-items: center;
-        gap: 2em;
-        .nav-item-container {
-          justify-content: center;
-          gap: 2em;
-        }
-    
-      }
-      
-      .contact-container, .right-container {
-        justify-content: right;
-        gap: 0.5em;
-      }
-  
-      
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+
+  .nav-container {
+    height: 6em;
+    padding:  0 7.5em;
+
+    .toggle-menu {
+      display: none;
     }
+
+   .logo-container {
+    .logo {
+      transition: $transition;
+      span {
+        @include paragraph();
+        transition: $transition;
+        font-weight: 700;
+        font-size: 0.6em;
+      }
+     
+    }
+    &:hover {
+     h2, span {
+      color: $neutral-05;
+     }
+    }
+   }
    
   }
-  
-  //////// Menu ////////@at-root
-  
-  .menu-item-container {
-    background-color: $neutral-01;
-    
-    
-    padding: 1.5em;
-    height: 100vh;
-   
-    .btn-link {
-      @include h2();
-      padding: 1.5em 0;
-      
-    }
-    
+}
+
+//////// Menu ////////@at-root
+
+.menu-item-container {
+  background-color: $neutral-01;
+  padding: 1.5em;
+  height: 100vh;
+
+  .btn-link {
+    @include h2();
+    padding: 1.5em 0;
   }
-  
+}
+
 //////// Responsive Mobile ////////
 
-@media only screen and (max-width: 786px) {
-    nav {
-      background-color: $neutral-01;
-      .nav-container {
-        padding: 0 1.5em;
-        
-        .nav-item-container {
-          gap: 1.5em;
-        }
-        .toggle-menu {
-          display: inline;
-        }
-        .nav-item-container, .contact-container {
-          display: none;
-        }
+@media only screen and (max-width: 912px) {
+  nav {
+    background-color: $neutral-01;
+    .nav-container {
+      padding: 0 1.5em;
+      height: 4em;
+
+      .nav-item-container {
+        gap: 1.5em;
+      }
+      .toggle-menu {
+        display: inline;
+      }
+      .nav-item-container,
+      .contact-container {
+        display: none;
       }
     }
-    
   }
-  
+}

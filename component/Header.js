@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import { useTransition, animated } from "react-spring";
+import { BtnLink } from "./Button";
 
 function NavigationBar() {
   const [isOpen, setOpen] = useState(false);
@@ -19,52 +20,32 @@ function NavigationBar() {
   let menu;
   if (isOpen) {
     menu = (
-     
       <div className="menu-item-container">
-         
-        <Link href="/#">
-          <a className="btn-link">Work</a>
-        </Link>
-        <Link href="/about">
-          <a className="btn-link">About</a>
-        </Link>
-        <Link href="/resource">
-          <a className="btn-link">Resource</a>
-        </Link>
-        <Link href="/contact">
-          <a className="btn-link">Contact</a>
-        </Link>
+        <BtnLink to="/#" label="Home" />
+        {/* <BtnLink to="/#" label="Resource" /> */}
+        <BtnLink to="/contact" label="Contact" />
       </div>
     );
   }
+
+  
   return (
     <>
       <nav>
-     
-        <div className="nav-container row">
+        <div className="nav-container row sb align-center">
           <div className="logo-container row">
-            <Link href="/#">
-              <h2 className="logo">
-                HD<span>©</span>{" "}
+            <Link href="/#" >
+             <a>
+             <h2 className="logo">
+                HD<span >©</span>
               </h2>
+             </a>
             </Link>
-            <div className="nav-item-container row">
-              <Link href="/#">
-                <a className="btn-link">Work</a>
-                
-              </Link>
-              <Link href="/about">
-                  <a className="btn-link">About</a>
-                </Link>
-              <Link href="/resource">
-                <a className="btn-link">Resource</a>
-              </Link>
-            </div>
           </div>
-          <div className="contact-container row">
-            <Link href="/contact">
-              <a className="btn-link">Contact</a>
-            </Link>
+          <div className="nav-item-container row gap-32">
+            <BtnLink to="/#" label="Home" />
+            {/* <BtnLink to="/#" label="Resource" /> */}
+            <BtnLink to="/contact" label="Contact" />
           </div>
           <div className="toggle-menu">
             <Hamburger
@@ -91,29 +72,5 @@ function NavigationBar() {
   );
 }
 
-function NavigationCase(props) {
-  return (
-    <>
-      <nav>
-        <div className="nav-container row">
-          <div className="logo-container">
-            <Link href="/#">
-              <a className="btn-link">Back</a>
-            </Link>
-          </div>
-          <div className="right-container row">
-            <Link href={props.prev}>
-              <a className="btn-link">Prev</a>
-            </Link>
-            <p className="desc">—</p>
-            <Link href={props.next}>
-              <a className="btn-link">Next</a>
-            </Link>
-          </div>
-        </div>
-      </nav>
-    </>
-  );
-}
 
-export { NavigationBar, NavigationCase };
+export { NavigationBar };
