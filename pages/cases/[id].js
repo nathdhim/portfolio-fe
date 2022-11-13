@@ -158,7 +158,7 @@ export default function Case({ showcase }) {
               <BtnLink
                 label="Prev"
                 to={`${
-                  showcase.id - 1 < 1 ? showcase.id + 3 : showcase.id - 1
+                  showcase.id - 1 < 1 ? showcase.id + 4 : showcase.id - 1
                 }`}
                 key={showcase.id}
               />
@@ -167,7 +167,7 @@ export default function Case({ showcase }) {
               <BtnLink
                 label="Next"
                 to={`${
-                  showcase.id + 1 > 4 ? showcase.id - 3 : showcase.id + 1
+                  showcase.id + 1 > 5 ? showcase.id - 4 : showcase.id + 1
                 }`}
                 key={showcase.id}
               />
