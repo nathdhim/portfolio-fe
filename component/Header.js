@@ -4,73 +4,82 @@ import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import { useTransition, animated } from "react-spring";
 import { BtnLink } from "./Button";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 
-function NavigationBar() {
-  const [isOpen, setOpen] = useState(false);
-  const transitions = useTransition(isOpen, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-    reverse: isOpen,
-    delay: 200,
+function AnimateNavbar() {
+  const [isSticky, setSticky] = useState(false);
+  useEffect(() => {
+    const scrollCallBack = window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    });
+    return () => {
+      window.removeEventListener("scroll", scrollCallBack);
+    };
+  }, []);
 
-    onRest: () => set(!isOpen),
-  });
+  const textOutput = ["#F8F8F8", "#0a0a0a"];
+  const { scrollYProgress } = useViewportScroll();
+  const color = useTransform(scrollYProgress, [0, 0.02], textOutput);
 
-  let menu;
-  if (isOpen) {
-    menu = (
-      <div className="menu-item-container">
-        <BtnLink to="/#" label="Home" />
-        {/* <BtnLink to="/#" label="Resource" /> */}
-        <BtnLink to="/contact" label="Contact" />
-      </div>
-    );
-  }
-
-  
   return (
     <>
       <nav>
-        <div className="nav-container row sb align-center">
+        <motion.div className="nav-container row sb align-center">
           <div className="logo-container row">
-            <Link href="/#" >
-             <a>
-             <h2 className="logo">
-                HD<span >©</span>
-              </h2>
-             </a>
+            <Link href="/#">
+              <a>
+                <motion.h2 className="logo" style={{ color }}>
+                  HD<motion.span style={{ color }}>©</motion.span>
+                </motion.h2>
+              </a>
             </Link>
           </div>
           <div className="nav-item-container row gap-32">
-            <BtnLink to="/#" label="Home" />
+            <BtnLink
+              to="/#"
+              label="Work"
+              addClass={`${isSticky ? null : "btn-link-white"} `}
+            />
             {/* <BtnLink to="/#" label="Resource" /> */}
-            <BtnLink to="/contact" label="Contact" />
-          </div>
-          <div className="toggle-menu">
-            <Hamburger
-              toggled={isOpen}
-              toggle={setOpen}
-              color="#281E09"
-              size={24}
-              onToggle={(toggled) => {
-                if (toggled) {
-                  //open a menu
-                } else {
-                  // close a menu
-                }
-              }}
+            <BtnLink
+              to="/contact"
+              label="Contact"
+              addClass={`${isSticky ? null : "btn-link-white"} `}
             />
           </div>
-        </div>
-        {transitions(
-          (styles, item) =>
-            item && <animated.div style={styles}>{menu}</animated.div>
-        )}
+        </motion.div>
       </nav>
     </>
   );
 }
 
+function Navbar() {
+  return (
+    <>
+      <nav>
+        <div className="nav-container row sb align-center">
+          <div className="logo-container row">
+            <Link href="/#">
+              <a>
+                <motion.h2 className="logo">
+                  HD<motion.span>©</motion.span>
+                </motion.h2>
+              </a>
+            </Link>
+          </div>
+          <div className="nav-item-container row gap-32">
+            <BtnLink to="/#" label="Work" />
+            {/* <BtnLink to="/#" label="Resource" /> */}
+            <BtnLink to="/contact" label="Contact" />
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+}
 
-export { NavigationBar };
+export { AnimateNavbar, Navbar };

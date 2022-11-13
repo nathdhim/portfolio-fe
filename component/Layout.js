@@ -1,17 +1,18 @@
 import Head from "next/head";
-import { NavigationBar } from "./Header";
+import { AnimateNavbar, Navbar } from "./Header";
 import { FooterDefault } from "./Footer";
 import { AnimatePresence, motion } from "framer-motion";
 
+
 const easeCustom = [0.8, 0, 0.28, 1];
 
-function Layout(props, router) {
+function AnimateLayout(props) {
   return (
-    <div className="main-container">
+    <div className="main-container" id="container">
       <Head>
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
-      <NavigationBar />
+      <AnimateNavbar />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -19,7 +20,33 @@ function Layout(props, router) {
         exit={{ opacity: 0 }}
         transition={{
           ease: easeCustom,
-          duration: 1,
+          duration: 1.5,
+        }}
+      >
+        {props.children}
+        <FooterDefault />
+      </motion.div>
+      
+    </div>
+  );
+}
+
+function Layout(props) {
+  return (
+    <div className="main-container" >
+      <Head>
+        <title>Dhimas Putra | Expert Product Designer</title>
+      </Head>
+      <Navbar />
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          ease: easeCustom,
+          duration: 1.5,
+          
         }}
       >
         {props.children}
@@ -29,13 +56,13 @@ function Layout(props, router) {
   );
 }
 
-function LayoutNoFooter(props, router) {
+function LayoutNoFooter(props) {
   return (
     <div className="main-container">
       <Head>
         <title>Dhimas Putra | Expert Product Designer</title>
       </Head>
-      <NavigationBar />
+      <Navbar />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -53,4 +80,4 @@ function LayoutNoFooter(props, router) {
   );
 }
 
-export { Layout, LayoutNoFooter };
+export {AnimateLayout, Layout, LayoutNoFooter };

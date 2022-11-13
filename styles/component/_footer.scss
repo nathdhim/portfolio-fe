@@ -3,7 +3,7 @@
   height: 28em;
   position: fixed;
   bottom: 0;
-  z-index: -1;
+  z-index: -2;
   background: $neutral-08;
  
   .content-container {
@@ -32,7 +32,7 @@
 
 @media only screen and (max-width: 912px) {
   .footer-default {
-    height: 32em;
+    height: 34em;
   .content-container {
     padding: 4em 1.5em;
     .cta-container {

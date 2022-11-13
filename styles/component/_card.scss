@@ -1,8 +1,4 @@
-
-
 .case-card {
-
-
   .category-container {
     padding: 0.7em 0;
     width: 10em;
@@ -23,15 +19,12 @@
       opacity: 0%;
       transition: $transition;
     }
-    
 
     &:hover {
       &::after {
         opacity: 24%;
       }
       transform: skew(1deg, 1deg);
-
-     
     }
   }
 }
@@ -39,24 +32,20 @@
 //////// Responsive Mobile ////////
 
 @media only screen and (max-width: 912px) {
+  .case-card {
+    .case-detail {
+      gap: 1em;
 
-.case-card {
-  .case-detail {
-    gap: 1em;
-  
-    .case-title-container {
-      flex-direction: column;
-      width: 100%;
-      .category-container {
+      .case-title-container {
+        flex-direction: column;
         width: 100%;
+        .category-container {
+          width: 100%;
+        }
       }
     }
-   
-   }
-   .img-container {
-    flex-direction: column;
+    .img-container {
+      flex-direction: column;
+    }
   }
 }
-
-}
-

@@ -1,7 +1,32 @@
-.home-hero {
-margin-bottom: 28em;
+.work-hero,
+.showcase-section {
+  background: transparent;
+}
+.work-hero {
+  width: 100vw;
+  height: 100vh;
+
   .content-container {
-    padding: 10em 7.5em;
+    padding: 7.5em;
+    width: 100%;
+
+    h1 {
+      position: relative;
+    }
+    .icon {
+      margin-bottom: 0.5em;
+    }
+    .about-text {
+      padding-top: 10em;
+      border-top: $border;
+    }
+  }
+}
+
+.showcase-section {
+  margin-bottom: 28em;
+  .content-container {
+    padding: 7.5em 7.5em 10em 7.5em;
 
     h1 {
       position: relative;
@@ -19,8 +44,8 @@ margin-bottom: 28em;
 //////// Responsive Mobile ////////
 
 @media only screen and (max-width: 912px) {
-  .home-hero {
-    margin-bottom: 32em;
+  .work-hero,
+  .showcase-section {
     .content-container {
       padding: 5em 1.5em;
       gap: 5em;
@@ -34,5 +59,9 @@ margin-bottom: 28em;
         gap: 5em;
       }
     }
+  }
+
+  .showcase-section {
+    margin-bottom: 34em;
   }
 }

@@ -24,29 +24,37 @@ $neutral-07: #151515;
 $neutral-06: #2D2D2D;
 $neutral-05: #6f6f6f;
 $neutral-04: #919191;
-$neutral-03: #b3b3b3;
+$neutral-03: #D9D9D9;
 $neutral-02: #e8e8e8;
 $neutral-01: #f8f8f8;
 
 $transition: all cubic-bezier(.165,.84,.44,1) .6s;
 $transition-custom: all cubic-bezier(0.8, 0, 0.16, 1) 1s;
-$border-radius: 0.2em;
+$border-radius: 0.15em;
 $border: 1px $neutral-03 solid;
 
 //////// Text Style ////////@at-root
 
+@mixin display {
+  font-family: "uncut", sans-serif;
+  font-size: 5em;
+  font-weight: 500;
+  line-height: 125%;
+  color: $neutral-08;
+}
+
 @mixin h1 {
   font-family: "uncut", sans-serif;
   font-size: 4em;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 125%;
   color: $neutral-08;
 }
 
 @mixin h2 {
   font-family: "uncut", sans-serif;
-  font-size: 2.2em;
-  font-weight: 600;
+  font-size: 2em;
+  font-weight: 500;
   line-height: 125%;
   color: $neutral-08;
 }
@@ -54,7 +62,7 @@ $border: 1px $neutral-03 solid;
 @mixin h3 {
   font-family: "uncut", sans-serif;
   font-size: 1.25em;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 125%;
   color: $neutral-08;
 }
@@ -69,7 +77,9 @@ $border: 1px $neutral-03 solid;
 
 //////// Container Style ////////@at-root
 
-
+.main-container {
+  position: relative;
+}
 
 html, body {
   box-sizing: border-box;
@@ -81,6 +91,7 @@ html, body {
 
 html {
   overflow-y: overlay;
+  
 }
 
 section {
@@ -92,11 +103,17 @@ section {
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: 500;
 }
+
 
 .regular {
   font-weight: 400;
+}
+
+.display {
+  @include display();
+  margin: 0;
 }
 
 h1 {
@@ -109,10 +126,16 @@ h2 {
   margin: 0;
 }
 
+.h2 {
+  font-size: 2em;
+  white-space: pre-wrap;
+}
+
 h3 {
   @include h3();
   margin: 0;
 }
+
 
 p {
   @include paragraph();
@@ -126,6 +149,16 @@ p {
 
 .w-100 {
   width: 100%;
+}
+
+.index-1 {
+  
+  z-index: -1;
+}
+
+.index-3 {
+  
+  z-index: -3;
 }
 
 a {
@@ -147,6 +180,14 @@ a {
   flex-direction: column;
 }
 
+.white {
+  color: $neutral-01;
+}
+
+.black {
+  color: $neutral-08;
+}
+
 .align-center {
   align-items: center;
 }
@@ -164,6 +205,10 @@ a {
 }
 
 .center {
+  justify-content: center;
+}
+
+.end {
   justify-content: center;
 }
 
@@ -225,7 +270,7 @@ a {
 
 
 @media only screen and (max-width: 912px) {
-  h1 {
+  h1, .display {
     @include h2();
   }
 

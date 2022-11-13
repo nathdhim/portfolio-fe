@@ -1,7 +1,8 @@
 import Image from "next/future/image";
 import Link from "next/link";
-import { useState, useRef } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+
+const easeCustom = [0.8, 0, 0.28, 1];
 
 function BtnPrimary(props) {
   return (
@@ -21,7 +22,7 @@ function BtnIcon(props) {
   return (
     <div>
       <Link href={props.to} target="_blank">
-        <a target="_blank" className="btn-icon row">
+        <a  className="btn-icon row">
           <Image
             alt="icon"
             className="icon"
@@ -39,22 +40,21 @@ function BtnLink(props) {
   return (
     <div>
       <Link href={props.to} >
-        <a className="btn-link" target={props.target}>{props.label}</a>
+        <a className={`btn-link ${props.addClass}`} target={props.target}>{props.label}</a>
       </Link>
     </div>
   );
 }
 
 function Container(props) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+ 
   return (
-    <motion.div className={props.classname} ref={ref}
-    style={{
-      
-      opacity: isInView ? 1 : 0,
-      transition: "all 1.5s cubic-bezier(0.8, 0, 0.16, 1) ",
-    }}>
+    <motion.div className={props.classname}
+    initial={{opacity: 0}}
+    whileInView={{
+      opacity: 1
+    }}
+    transition={{ease:easeCustom, duration:1}}>
      {props.children}
     </motion.div>
   );

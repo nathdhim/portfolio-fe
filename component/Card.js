@@ -3,13 +3,11 @@ import { BtnIcon, BtnPrimary } from "./Button";
 import Image from "next/future/image";
 import { FooterDefault } from "./Footer";
 import Modal from "react-modal";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
 const CaseCard = ({ showcase }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
   const textAnimation = {
     
@@ -20,12 +18,11 @@ const CaseCard = ({ showcase }) => {
   return (
     <motion.div
       className="case-card col gap-32"
-      ref={ref}
-      style={{
-        transform: isInView ? "none" : "translateY(5em)",
-        opacity: isInView ? 1 : 0,
-        transition: "all 1s cubic-bezier(0.8, 0, 0.16, 1) ",
+      initial={{opacity: 0}}
+      whileInView={{
+        opacity: 1
       }}
+      transition={{ease:easeCustom, duration:1}}
     >
       <div className="case-detail row sb align-end gap-120 of-hidden">
         <div className="case-title-container row gap-16 align-start">
@@ -37,7 +34,7 @@ const CaseCard = ({ showcase }) => {
           </div>
           <div className="case-title col gap-16">
           <div className="of-hidden">
-                <motion.h2 variants={textAnimation} animate="animate">{showcase.attributes.slug}</motion.h2>
+                <motion.h2 className="medium" variants={textAnimation} animate="animate">{showcase.attributes.slug}</motion.h2>
                 </div>
                 <div className="of-hidden">
                 <motion.p variants={textAnimation} animate="animate" className="grey">{showcase.attributes.subtitle}</motion.p>

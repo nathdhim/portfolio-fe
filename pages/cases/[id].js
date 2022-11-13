@@ -3,6 +3,8 @@ import { BtnLink, Container } from "../../component/Button";
 import { motion } from "framer-motion";
 import { fetcher } from "../../lib/api";
 import { Layout } from "../../component/Layout";
+import ScrollToTop from "../../component/ScrollToTop";
+import ReactMarkdown from "react-markdown";
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
@@ -17,7 +19,7 @@ export default function Case({ showcase }) {
         <div className="content-container col gap-160 align-center">
           <div className="case-header w-100 col gap-64">
             <div className="row gap-8">
-              <BtnLink to="/#" label="Home" />
+              <BtnLink to="/#" label="Work" />
               <Image
                 src="/icon/arrow-right-grey.svg"
                 alt="icon"
@@ -113,7 +115,9 @@ export default function Case({ showcase }) {
           <div className="line"></div>
           <div className="col gap-32 w-50">
             <p className="grey">Overview</p>
-            <h2 className="regular">{showcase.attributes.about}</h2>
+            <ReactMarkdown className="h2 regular" >
+              {showcase.attributes.about}
+            </ReactMarkdown>
           </div>
           <div className="img-container col gap-32 w-100">
             <Container classname="img-wrapper size-mid">
@@ -178,6 +182,7 @@ export default function Case({ showcase }) {
           </div>
         </div>
       </section>
+      <ScrollToTop/>
     </Layout>
   );
 }

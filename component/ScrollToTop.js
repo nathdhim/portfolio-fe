@@ -1,12 +1,13 @@
 
 import { useEffect, useState } from "react";
+import { BtnIcon } from "./Button";
 
 function ScrollToTop() {
     const [scrollToTop, setBackToTop] = useState(false);
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            if(window.scrollY > 100) {
+            if(window.scrollY > 200) {
                 setBackToTop(true)
             } else [
                 setBackToTop(false)
@@ -22,7 +23,10 @@ const scrollUp = () => {
   return (
     <div>
         {scrollToTop && (
-            <a className="btn-link" onClick={scrollUp}>Back to top</a>
+            <div className="btn-scroll"onClick={scrollUp}>
+                <BtnIcon to="#" src="/icon/arrow-down.svg"/>
+            </div>
+            
         )}
     </div>
   )

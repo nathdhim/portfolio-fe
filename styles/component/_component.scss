@@ -2,7 +2,7 @@
 
 .btn-primary {
   @include paragraph;
-  padding:  2.5em;
+  padding: 2.5em;
   background-color: $neutral-07;
   border-radius: $border-radius;
   transition: $transition;
@@ -15,7 +15,22 @@
   &:hover {
     background-color: $neutral-06;
     transform: skew(1.2deg, 1.2deg);
-    
+  }
+}
+
+.btn-scroll {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+
+  .btn-icon {
+    background: rgba(111, 111, 111, 0.4);
+    .icon {
+      transform: rotate(180deg);
+    }
+    &:hover {
+      background: rgba(111, 111, 111, 0.7);
+    }
   }
 }
 
@@ -64,12 +79,21 @@
   }
 }
 
+.btn-link-white {
+  &::after {
+    background: $neutral-01;
+  }
+
+  &:hover {
+    color: $neutral-01;
+  }
+}
+
 //////////////// Scrollbar ////////////////////////////////////////////@at-root
 
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
-  
 }
 
 /* Track */
@@ -79,13 +103,12 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $neutral-03;
+  background: rgba(111, 111, 111, 0.4);
+  transition: $transition;
   border-radius: 1em;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: $neutral-04;
+  &:hover {
+    background: rgba(111, 111, 111, 0.7);
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////
