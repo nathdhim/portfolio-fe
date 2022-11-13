@@ -3,7 +3,8 @@
   .content-container {
     padding: 10em 7.5em;
     width: 100%;
-
+    background-color: $neutral-01;
+    
     .detail-item-container {
       width: 100%;
     }
@@ -17,10 +18,9 @@
     }
 
     .img-screen {
-      width: 99.5%;
+      width: 100%;
       position: absolute;
-      top: .25em;
-      left: .25em;
+     
       aspect-ratio: 1184/740;
       border-radius: .5em;
       
