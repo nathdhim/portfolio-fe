@@ -9,23 +9,23 @@
   .content-container {
     padding: 7.5em;
     width: 100%;
+    height: 100%;
 
-    h1 {
-      position: relative;
+    .hero-illustration {
+      aspect-ratio: 1200/146;
     }
-    .icon {
-      margin-bottom: 0.5em;
-    }
-    .about-text {
-      padding-top: 10em;
-      border-top: $border;
-    }
+.text-container{
+  margin-bottom: 2em;
+}
+    
+   
   }
 }
 
 .showcase-section {
-  margin-bottom: 28em;
+ 
   .content-container {
+    width: 100%;
     padding: 7.5em 7.5em 10em 7.5em;
 
     h1 {
@@ -34,10 +34,7 @@
     .icon {
       margin-bottom: 0.5em;
     }
-    .about-text {
-      padding-top: 10em;
-      border-top: $border;
-    }
+    
   }
 }
 
@@ -61,7 +58,4 @@
     }
   }
 
-  .showcase-section {
-    margin-bottom: 34em;
-  }
 }

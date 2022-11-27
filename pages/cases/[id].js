@@ -3,18 +3,18 @@ import { BtnLink, Container } from "../../component/Button";
 import { motion } from "framer-motion";
 import { fetcher } from "../../lib/api";
 import { Layout } from "../../component/Layout";
-import ScrollToTop from "../../component/ScrollToTop";
 import ReactMarkdown from "react-markdown";
+import { Footer } from "../../component/Footer";
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
 export default function Case({ showcase }) {
   const textAnimation = {
-    animate: { y: [100, 0], transition: { ease: easeCustom, duration: 1.5 } },
+    animate: { y: [100, 0], transition: { ease: easeCustom, duration: 1.5, delay: .6 } },
   };
 
   return (
-    <Layout>
+    <Layout title={`Dhimas Putra • ${showcase.attributes.slug}`}>
       <section className="case-hero row">
         <div className="content-container col gap-160 align-center">
           <div className="case-header w-100 col gap-64">
@@ -158,7 +158,7 @@ export default function Case({ showcase }) {
               <BtnLink
                 label="Prev"
                 to={`${
-                  showcase.id - 1 < 1 ? showcase.id + 4 : showcase.id - 1
+                  showcase.id - 1 < 1 ? showcase.id + 3 : showcase.id - 1
                 }`}
                 key={showcase.id}
               />
@@ -167,7 +167,7 @@ export default function Case({ showcase }) {
               <BtnLink
                 label="Next"
                 to={`${
-                  showcase.id + 1 > 5 ? showcase.id - 4 : showcase.id + 1
+                  showcase.id + 1 > 4 ? showcase.id - 3 : showcase.id + 1
                 }`}
                 key={showcase.id}
               />
@@ -182,7 +182,7 @@ export default function Case({ showcase }) {
           </div>
         </div>
       </section>
-      <ScrollToTop/>
+      <Footer/>
     </Layout>
   );
 }

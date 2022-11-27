@@ -89,27 +89,6 @@
   }
 }
 
-//////////////// Scrollbar ////////////////////////////////////////////@at-root
-
-/* width */
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba(111, 111, 111, 0.4);
-  transition: $transition;
-  border-radius: 1em;
-  &:hover {
-    background: rgba(111, 111, 111, 0.7);
-  }
-}
 
 //////////////////////////////////////////////////////////////////////////////////
 

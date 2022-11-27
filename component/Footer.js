@@ -2,10 +2,10 @@ import Image from "next/future/image";
 import { BtnPrimary } from "./Button";
 import { BtnLink } from "./Button";
 
-function FooterDefault() {
+function Footer() {
   return (
     <>
-      <footer className="footer-default col center">
+      <footer className="footer col center">
         <div className="content-container col gap-80">
           <div className="col gap-32">
             <p className="grey">Have an awesome idea ?</p>
@@ -35,10 +35,10 @@ function FooterDefault() {
               <p className="grey">Based in Indonesia</p>
             </div>
             <div className="social-item-container row gap-32">
-              <BtnLink to="#" label="Linkedin" />
-              <BtnLink to="#" label="Upwork" />
-              <BtnLink to="#" label="Dribbble" />
-              <BtnLink to="#" label="Instagram" />
+              <BtnLink to="https://www.linkedin.com/in/halodhimas/" label="Linkedin" target="_blank"/>
+              <BtnLink to="https://www.upwork.com/freelancers/~010554d3d91f1f3997" label="Upwork" target="_blank"/>
+              <BtnLink to="https://dribbble.com/halodhimas" label="Dribbble" target="_blank"/>
+              <BtnLink to="https://www.instagram.com/halodhimas/" label="Instagram" target="_blank"/>
             </div>
           </div>
         </div>
@@ -47,4 +47,4 @@ function FooterDefault() {
   );
 }
 
-export { FooterDefault };
+export { Footer };

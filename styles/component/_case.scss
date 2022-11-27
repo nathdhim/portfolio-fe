@@ -1,31 +1,28 @@
 .case-hero {
-  margin-bottom: 28em;
   .content-container {
     padding: 10em 7.5em;
     width: 100%;
     background-color: $neutral-01;
-    
+
     .detail-item-container {
       width: 100%;
     }
 
-   .cover-container {
-    position: relative;
-    .cover-img {
-      width: 100%;
-      aspect-ratio: 1200/1024;
+    .cover-container {
       position: relative;
-    }
+      .cover-img {
+        width: 100%;
+        aspect-ratio: 1200/1024;
+        position: relative;
+      }
 
-    .img-screen {
-      width: 100%;
-      position: absolute;
-     
-      aspect-ratio: 1184/740;
-      border-radius: .5em;
-      
+      .img-screen {
+        width: 100%;
+        position: absolute;
+        aspect-ratio: 1200/754;
+        border-radius: 0.5em;
+      }
     }
-   }
   }
   .cta {
     .btn-link {
@@ -50,7 +47,7 @@
 @media only screen and (max-width: 912px) {
   .case-hero {
     width: auto;
-    margin-bottom: 32em;
+
     .content-container {
       padding: 5em 1.5em;
       gap: 5em;

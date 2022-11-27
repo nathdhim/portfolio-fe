@@ -1,5 +1,5 @@
 
-import { LayoutNoFooter } from "../component/Layout";
+import { Layout } from "../component/Layout";
 import { BtnLink, BtnPrimary } from "../component/Button";
 import { motion } from "framer-motion";
 
@@ -7,11 +7,11 @@ const easeCustom = [0.8, 0, 0.28, 1];
 
 export default function contact({ showcases }) {
   const textAnimation = {
-    animate: { y: [100, 0], transition: { ease: easeCustom, duration: 1.5 } },
+    animate: { y: [100, 0], transition: { ease: easeCustom, duration: 1.5, delay: .6 } },
   };
 
   return (
-    <LayoutNoFooter>
+    <Layout title="Dhimas Putra • Contact">
       <section className="contact-hero col ">
         <div className="content-container col  sb">
           <div className="email-container col gap-32 w-100 center">
@@ -28,10 +28,10 @@ export default function contact({ showcases }) {
             <p className="grey">Get in touch</p>
             <div className="social-item-container row sb w-100 gap-24">
               <div className="row gap-32">
-                <BtnLink to="#" label="Linkedin" />
-                <BtnLink to="#" label="Upwork" />
-                <BtnLink to="#" label="Dribbble" />
-                <BtnLink to="#" label="Instagram" />
+              <BtnLink to="https://www.linkedin.com/in/halodhimas/" label="Linkedin" target="_blank"/>
+              <BtnLink to="https://www.upwork.com/freelancers/~010554d3d91f1f3997" label="Upwork" target="_blank"/>
+              <BtnLink to="https://dribbble.com/halodhimas" label="Dribbble" target="_blank" />
+              <BtnLink to="https://www.instagram.com/halodhimas/" label="Instagram" target="_blank"/>
               </div>
               <div className="row gap-8">
                 <p className="grey">Designer based in</p><BtnLink to="https://www.google.com/search?gs_ssp=eJzj4tDP1TcwLqrMM2D04szMS8nPSy3OTAQARUgG2A&q=indonesia&rlz=1C1UEAD_enID997ID997&oq=indonesia&aqs=chrome.1.0i271j46i433i512j69i59j0i131i433i512j0i433i512j69i61l3.3567j0j7&sourceid=chrome&ie=UTF-8" label="Indonesia" target="_blank" />
@@ -40,6 +40,6 @@ export default function contact({ showcases }) {
           </div>
         </div>
       </section>
-    </LayoutNoFooter>
+    </Layout>
   );
 }

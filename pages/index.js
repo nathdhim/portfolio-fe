@@ -1,101 +1,95 @@
-import Image from "next/future/image";
 import { CaseCard } from "../component/Card";
-import { AnimateLayout } from "../component/Layout";
+import { Layout } from "../component/Layout";
 import { fetcher } from "../lib/api";
 import Link from "next/link";
-import ScrollToTop from "../component/ScrollToTop";
-import {
-  motion,
-  useScroll,
-  useViewportScroll,
-  useTransform,
-} from "framer-motion";
-
+import { motion } from "framer-motion";
+import { Footer } from "../component/Footer";
+import Image from "next/future/image";
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
 export default function Work({ showcases }) {
   const textAnimation = {
-    animate: { y: [100, 0], transition: { ease: easeCustom, duration: 1.5 } },
+    animate: {
+      y: [100, 0],
+      transition: { ease: easeCustom, duration: 1.5, delay: 0.6 },
+    },
   };
 
-  const colorOutput = ["#0a0a0a", "#F8F8F8"];
-  const textOutput = ["#F8F8F8", "#0a0a0a"];
-  const { scrollYProgress } = useViewportScroll();
-  const background = useTransform(scrollYProgress, [0, 0.05], colorOutput);
-  const color = useTransform(scrollYProgress, [0, 0.02], textOutput);
-
   return (
-    <AnimateLayout>
-      <motion.div className="section-wrapper" style={{ background }}>
-      <section
-        className="work-hero row align-end"
-        
-      >
-        <div className="content-container col ">
-          <div className="text-container col gap-32">
-            <div className="of-hidden">
-              <motion.p
-                variants={textAnimation}
-                animate="animate"
-                className="grey"
-              >
-                Halo, I'm Dhimas Putra
-              </motion.p>
+    <Layout title="Dhimas Putra • Work">
+      <motion.div className="section-wrapper">
+        <section className="work-hero row ">
+          <div className="content-container col ">
+            <div className="row h-100">
+              <div className="of-hidden row w-100 ">
+                <motion.div
+                  className="img-wrapper w-100 hero-illustration"
+                  animate={{
+                    y: ["115%", "0%"],
+                    transition: { ease: easeCustom, duration: 1.5, delay: 0.6 },
+                  }}
+                >
+                  <Image
+                    className="img"
+                    src="/img/hero-illustration.svg"
+                    fill
+                    alt="hero text"
+                  />
+                </motion.div>
+              </div>
             </div>
-            <div className="heading-container row sb align-end ">
-              <motion.h1 className="w-100 display" style={{ color }}>
-                <div className="of-hidden">
-                  <motion.span
-                    className="col"
-                    variants={textAnimation}
-                    animate="animate"
-                  >
-                    Expert Product Designer
-                  </motion.span>
-                </div>
-                <div className="of-hidden">
-                  <motion.span
-                    className="col"
-                    variants={textAnimation}
-                    animate="animate"
-                  >
-                    Building Digital Experiences
-                  </motion.span>
-                </div>
-              </motion.h1>
+            <div className="text-container row">
+              <div className="of-hidden w-100">
+                <motion.p
+                  className="text-start w-100"
+                  variants={textAnimation}
+                  animate="animate"
+                >
+                  Product designer building digital experiences.
+                </motion.p>
+              </div>
+              <div className="of-hidden w-100">
+                <motion.p
+                  className="text-center w-100"
+                  variants={textAnimation}
+                  animate="animate"
+                >
+                  UIUX & Branding
+                </motion.p>
+              </div>
+              <div className="of-hidden w-100">
+                <motion.p
+                  className="text-end w-100"
+                  variants={textAnimation}
+                  animate="animate"
+                >
+                  Experienced since 2018
+                </motion.p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="showcase-section row">
-        <div className="content-container col gap-160 ">
-          <div className="case-container col gap-160">
-            {showcases &&
-              showcases.data.map((showcase) => {
-                return (
-                  <Link href={`cases/` + showcase.id} key={showcase} >
-                    <a className="card-wrapper">
-                      <CaseCard showcase={showcase} key={showcase} />
-                    </a>
-                  </Link>
-                );
-              })}
+        <section className="showcase-section row">
+          <div className="content-container col gap-160 ">
+            <div className="case-container col gap-160">
+              {showcases &&
+                showcases.data.map((showcase) => {
+                  return (
+                    <Link href={`cases/` + showcase.id} key={showcase}>
+                      <a className="card-wrapper">
+                        <CaseCard showcase={showcase} key={showcase} />
+                      </a>
+                    </Link>
+                  );
+                })}
+            </div>
           </div>
-          <div className="about-text col gap-32">
-            <p className="grey">About Me</p>
-            <h2 className="regular">
-              Interface crafter based in somewhere in the universe.
-              Experimenting with prototyping and user interfaces. Focused on
-              simplicity, accessibility and interactions to my work.
-            </h2>
-          </div>
-        </div>
-      </section>
+        </section>
       </motion.div>
-      <ScrollToTop/>
-    </AnimateLayout>
+      <Footer />
+    </Layout>
   );
 }
 
@@ -109,4 +103,3 @@ export async function getStaticProps() {
     revalidate: 10,
   };
 }
-

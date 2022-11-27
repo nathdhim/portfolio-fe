@@ -12,23 +12,7 @@ nav {
       display: none;
     }
 
-   .logo-container {
-    .logo {
-      transition: $transition;
-      span {
-        @include paragraph();
-        transition: $transition;
-        font-weight: 700;
-        font-size: 0.6em;
-      }
-     
-    }
-    &:hover {
-     h2, span {
-      color: $neutral-05;
-     }
-    }
-   }
+   
    
   }
 }

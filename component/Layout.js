@@ -1,20 +1,44 @@
 import Head from "next/head";
-import { AnimateNavbar, Navbar } from "./Header";
-import { FooterDefault } from "./Footer";
-import { AnimatePresence, motion } from "framer-motion";
-
+import { Navbar } from "./Header";
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const easeCustom = [0.8, 0, 0.28, 1];
 
-function AnimateLayout(props) {
+function Layout(props) {
+  const scrollRef = useRef();
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    let scroll;
+    import("locomotive-scroll").then((locomotiveModule) => {
+      scroll = new locomotiveModule.default({
+        el: scrollRef.current,
+        smooth: true,
+        smoothMobile: false,
+        resetNativeScroll: true,
+        lerp: 0.05,
+      });
+    });
+
+    // `useEffect`'s cleanup phase
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  });
+
   return (
     <div className="main-container" id="container">
       <Head>
-        <title>Dhimas Putra | Expert Product Designer</title>
+        <title>{props.title}</title>
       </Head>
-      <AnimateNavbar />
+      <Navbar />
 
       <motion.div
+        ref={scrollRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -22,62 +46,12 @@ function AnimateLayout(props) {
           ease: easeCustom,
           duration: 1.5,
         }}
+        data-scroll-container
       >
         {props.children}
-        <FooterDefault />
-      </motion.div>
-      
-    </div>
-  );
-}
-
-function Layout(props) {
-  return (
-    <div className="main-container" >
-      <Head>
-        <title>Dhimas Putra | Expert Product Designer</title>
-      </Head>
-      <Navbar />
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{
-          ease: easeCustom,
-          duration: 1.5,
-          
-        }}
-      >
-        {props.children}
-        <FooterDefault />
       </motion.div>
     </div>
   );
 }
 
-function LayoutNoFooter(props) {
-  return (
-    <div className="main-container">
-      <Head>
-        <title>Dhimas Putra | Expert Product Designer</title>
-      </Head>
-      <Navbar />
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{
-          ease: easeCustom,
-          duration: 1,
-        }}
-      >
-        {props.children}
-       
-      </motion.div>
-    </div>
-  );
-}
-
-export {AnimateLayout, Layout, LayoutNoFooter };
+export { Layout };
