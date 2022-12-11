@@ -1,7 +1,7 @@
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { BtnIcon, BtnPrimary } from "./Button";
 import Image from "next/future/image";
-import { FooterDefault } from "./Footer";
+
 import Modal from "react-modal";
 import { useState } from "react";
 
@@ -218,7 +218,7 @@ function ProductCard({ showProduct }) {
                   <span> Mb</span>
                 </p>
               </div>
-              <FooterDefault />
+              
             </div>
           </section>
         </AnimatePresence>
