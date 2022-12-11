@@ -49,7 +49,7 @@ const CaseCard = ({ showcase }) => {
           <Image
             className="img"
             alt="image"
-            src={showcase.attributes.showcase3}
+            src={showcase.attributes.thumbnail1}
             fill
           />
         </div>
@@ -57,7 +57,7 @@ const CaseCard = ({ showcase }) => {
           <Image
             className="img"
             alt="image"
-            src={showcase.attributes.showcase4}
+            src={showcase.attributes.thumbnail2}
             fill
           />
         </div>
